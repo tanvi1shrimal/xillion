@@ -1,0 +1,42 @@
+mixin header(page_name)
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		if(page_name == "add-client")
+			title Add Client
+		else if(page_name == "admin-settings")
+			title Admin Settings
+		else if(page_name == "client-list")
+			title Client List
+		else if(page_name == "reg-confirm")
+			title Confirm
+		else if(page_name == "contact-ack")
+			title Thank you for contacting
+		else if(page_name == "dashboard")
+			title Dashboard
+		else if(page_name == "emp-list")
+			title Employee List
+		else if(page_name == "forgot-pw")
+			title Forgot Pasword
+		else if(page_name == "ind-client")
+			title Individual Client
+		else if(page_name == "ind-emp")
+			title Individual Employee
+		else if(page_name == "ind-job")
+			title Individual Job
+		else if(page_name == "mappings")
+			title Mappings
+		else if(page_name == "onboard")
+			title Onboarding
+		else if(page_name == "reset-pw")
+			title Reset Password
+		else if(page_name == "signup")
+			title Signup
+		else if(page_name == "signin")
+			title Signin
+		else if(page_name == "timesheet")
+			title Update your timesheet
+
+		meta(name='description', content='')
+		link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+		link(rel='stylesheet', href='css/main.css')

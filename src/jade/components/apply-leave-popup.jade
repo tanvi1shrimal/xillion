@@ -1,0 +1,126 @@
+// modal dialog for client-list
+#apply-leave.modal.fade.add-member-pop
+	.modal-dialog.modal-dialog--add-popup
+		.modal-content
+			.modal-header
+				a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.sub-title.sidebar-header__header Apply Leave
+			.modal-body
+				//Form 1
+
+				//Form 1
+				form.form-section-wrapper.form-section-wrapper--popup#add-employee
+					.form-section
+
+						.form-wrapper.form-wrapper--add-popup
+							.form-parts
+								.col-md-4
+									.form-element
+										select.select-menu
+											option(value="" data-option="")
+											option(value="sl" data-option="option-1") inr
+											option(value="pl" data-option="option-2") dollar
+											option(value="cl" data-option="option-3") euro
+										.dropdown.dropdown--input
+											a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+												span.selected-valueLeave Type
+												span.icon-arrow-down
+											ul.dropdown-menu.dropdown-select
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Sick Leave
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Paid Leave
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") Casual Leave
+
+								.col-md-8
+
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Email Address*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Contact Number*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Residence Address
+										input.input-style-detail.field-text.form-element__input
+
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Date of Birth*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Date of joining*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4
+									.form-element
+										select.select-menu
+											option(value="" data-option="")
+											option(value="inr" data-option="option-1") inr
+											option(value="dollar" data-option="option-2") dollar
+											option(value="euro" data-option="option-3") euro
+										.dropdown.dropdown--input
+											a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+												span.selected-value Salary
+												span.icon-arrow-down
+											ul.dropdown-menu.dropdown-select
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") INR
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") DOLLAR
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") EURO
+
+
+							.form-parts
+								.col-md-4
+									.form-element
+										select.select-menu
+											option(value="" data-option="")
+											option(value="6" data-option="option-1") 6
+											option(value="7" data-option="option-2") 7
+											option(value="8" data-option="option-3") 8
+										.dropdown.dropdown--input
+											a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+												span.selected-value Working Hours
+												//i.fa.fa-angle-down.fa-down(aria-hidden='true')
+												span.icon-arrow-down
+											ul.dropdown-menu.dropdown-select
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") 6
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") 7
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") 8
+								.col-md-4
+									.form-element
+										select.select-menu
+											option(value="" data-option="")
+											option(value="admin" data-option="option-1") admin
+											option(value="manager" data-option="option-2") manager
+											option(value="employee" data-option="option-3") employee
+										.dropdown.dropdown--input
+											a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+												span.selected-value Permission Level
+												span.icon-arrow-down
+												//i.fa.fa-angle-down.fa-down(aria-hidden='true')
+											ul.dropdown-menu.dropdown-select
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Admin
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Manager
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") Employee
+
+
+					button.btn.btn--no-margin.btn--popup-btn(type="submit") Save

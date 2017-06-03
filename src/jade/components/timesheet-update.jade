@@ -1,0 +1,40 @@
+table.timesheet-table
+	tr.timesheet-row
+		th.sub-form-header-text.end-header
+			span.table-header-txt Assigned Jobs
+		th.step-header(scope="col")
+			span.steps-block.table-header-txt
+				span.table-header-sm.steps-block__no Step 1
+				span.sub-form-header-text.steps-block__day-name Monday
+		th.step-header(scope="col")
+			span.steps-block.table-header-txt
+				span.table-header-sm.steps-block__no Step 2
+				span.sub-form-header-text.steps-block__day-name Tuesday
+		th.step-header(scope="col")
+			span.steps-block.table-header-txt
+				span.table-header-sm.steps-block__no Step 3
+				span.sub-form-header-text.steps-block__day-name Wednesday
+		th.step-header(scope="col")
+			span.steps-block.table-header-txt
+				span.table-header-sm.steps-block__no Step 4
+				span.sub-form-header-text.steps-block__day-name Thursday
+		th.step-header(scope="col")
+			span.steps-block.table-header-txt
+				span.table-header-sm.steps-block__no Step 5
+				span.sub-form-header-text.steps-block__day-name Friday
+		th.step-header(scope="col")
+			span.steps-block.table-header-txt
+				span.table-header-sm.steps-block__no Step 6
+				span.sub-form-header-text.steps-block__day-name Saturday
+		th.end-header(scope="col")
+			span.steps-block.table-header-txt
+				span.sub-form-header-text.steps-block__day-name Status
+
+	include mixins/timesheet-update-row.jade
+	+timesheet_row("Audit", "RK", "RKSV", "")
+	+timesheet_row("Audit", "RK", "RKSV", "")
+	+timesheet_row("Audit", "RK", "RKSV", "")
+	+timesheet_row("Audit", "RK", "RKSV", "")
+	+timesheet_row("Audit", "RK", "RKSV", "")
+	+timesheet_row("Non Client Work", "", "", "", "one-type")
+	+timesheet_row("Break Time", "", "", "", "one-type")

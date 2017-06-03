@@ -1,0 +1,17 @@
+mixin employee_list_cell(name, designation, cur_client_1, cur_client_2, cur_client_3, pending_job, salary, allocate_hr_week, profit)
+	tr.add-member-row
+		td.name-spacing
+			=name
+			span.designation= designation
+		td
+			ul.company-inline-list
+				if(cur_client_1!=="")
+					li: span.round= cur_client_1
+				if(cur_client_2!=="")
+					li: span.round= cur_client_2
+				if(cur_client_3!=="")
+					li: span.round= cur_client_3
+		td= pending_job
+		td= salary+" LPA"
+		td.text-center= allocate_hr_week
+		td= profit

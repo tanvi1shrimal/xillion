@@ -1,0 +1,25 @@
+#leaves.tab-pane.active.activity-section.job-status-parent-wrapper.clearfix
+	.col-md-10.col-md-offset-1
+		.calender-container
+		.leave-chart
+
+	.col-md-10.col-md-offset-1
+		.leave-history-wrapper
+			h3.header-3.lined.leave-history-wrapper__header Leave History
+			.leaves-history-table-container
+				table.leaves-history-table
+					thead
+						tr
+							th.table-headers From
+							th.table-headers To
+							th.table-headers Status
+							th.table-headers Leave Type
+							th.table-headers Action
+					tbody
+						include mixins/leaves-history.jade
+						+leaves_history_cell("10 Aug 2016", "20 Aug 2016", "Approved", "Sick Leave")
+						+leaves_history_cell("10 Aug 2016", "20 Aug 2016", "Approved", "Sick Leave")
+						+leaves_history_cell("10 Aug 2016", "20 Aug 2016", "Approved", "Sick Leave")
+						+leaves_history_cell("10 Aug 2016", "20 Aug 2016", "Approved", "Sick Leave")
+						+leaves_history_cell("10 Aug 2016", "20 Aug 2016", "Approved", "Sick Leave")
+						+leaves_history_cell("10 Aug 2016", "20 Aug 2016", "Approved", "Sick Leave")

@@ -1,0 +1,164 @@
+.header{
+	background: $black;
+//	padding: 15px 30px;
+	
+	.nav-bar{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.nav-block-1{
+		display: inline-flex;
+		align-items: center;
+		
+		.nav-company-logo{
+			margin-left: 45px;
+		}
+		
+		.menu-icon{
+			font-size: 20px;
+			color: white;
+		}
+	}
+	
+	.logo-section{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 24px 30px;
+		padding-right: 20px;
+		transition: 0.3s ease;
+		
+		&.animate{
+			background: white;
+			border-bottom: 1px solid $lighter-gray-2;
+			
+			.menu-icon{
+				color: $black;
+			}
+		}
+	}
+	
+	.search-form-wrapper{
+		padding: 15px 30px;
+		padding-left: 0px;
+		margin-left: 15px;
+		
+		
+		.search-form{
+			display: flex;
+	//		margin-left: 35px;
+			background: $dark-gray;
+			border-radius: 4px;
+			overflow: hidden;
+
+			&__input-field{
+				background: $dark-gray;
+				border: 0;
+				padding: 0px 25px;
+				@include font-style(Poppins-regular, 14px, $white);
+				width: 372px;
+			}
+
+			&__cta{
+				border: 0;
+				padding: 0;
+				background: $dark-gray;
+				cursor: pointer;
+				padding: 12px 25px;
+			}
+		}
+	}
+	
+	.notifications-block{
+		display: flex;
+
+	}
+	
+	.circular-link-blocks{
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid $dark-gray;
+		@include font-style(Poppins-regular, 14px, $white);
+		
+		&:first-child{
+			margin-right: 20px;
+		}
+	}
+}
+.nav-block-2{
+	padding-right: 30px;
+	
+	.dropdown-menu{
+		top: 55px;
+		left: inherit;
+		right: -28px;
+		border-radius: 0;
+		border: none;
+		width: 180px;
+		.dropdown-items{
+			@include font-style(Poppins-regular, 14px, $black);
+			border-bottom: 1px solid #f8f8f8;
+			@include padding-spacing(10px, 10px);
+			&:last-child{
+				border-bottom: none;
+			}
+			a:hover{
+				color: $lightblue;
+				background: none;
+			}
+		}
+
+	}
+
+}
+
+
+/*White header patch after nav*/
+.header-block{
+	display: flex;
+	
+	.view-list{
+		display: flex;
+		margin-left: 50px;
+		
+		&.nav-tabs{
+			border: 0;
+			
+			& > li > a{
+				border: 0;
+			}
+			
+			& > li > a:hover{
+				background: none;
+				border: 0;
+				color: $black;
+			}
+		}
+		
+		.view-list-item{
+			margin-left: 35px;
+			
+			&.active{
+				.view-link{
+					color: $black;
+				}
+			}
+			
+			&:first-child{
+				margin-left: 0px;
+			}
+		}
+		
+		.view-link{
+			font-size: 20px;
+			color: $gray-2;
+		}
+	}
+}
+/*END: White header patch after nav*/

@@ -1,0 +1,222 @@
+//comman font style
+body{
+	font-family: Poppins-Light;
+}
+*:focus{
+	outline: none;
+}
+a:link{
+	text-decoration:none;
+	}
+
+//h3 heading and spacing
+
+.main-form-spacing{
+	padding-left: 70px;
+	margin-top: 135px;
+	.main-form-head{
+	@include font-style(Poppins-Light, 22px, $black);
+	padding-bottom: 50px;
+	}
+}
+//form inputbox styles
+.input-style-detail{
+    @include font-style(Poppins-regular, 14px, $black);
+	border: none;
+	border-bottom: 1px solid #b8b8b8;
+	margin-bottom: 40px;
+	width: 245px;
+	display :block;
+	/*padding-top: 5px;*/
+	}
+//checkbox spacing
+.checkbox-spacing{
+	padding-left: 15px;
+	padding-bottom: 30px;
+}
+
+//conformation-button
+.conformation-btn{
+	/*padding:30px 0;*/
+	padding-left: 15px;
+	.btn{
+		padding: 8px 32px;
+		@include font-style(Poppins-Medium, 14px, $white);
+		background: $lightblue;
+		border-radius: 3px;
+		.btn-primary{
+		border-color: none;
+		}
+	}
+	p{
+		padding: 30px 0;
+	}
+}
+//remove space in row
+.remove-space{
+	padding-left:0;
+	margin:0;
+	}
+
+//add-button
+.add-button-style{
+	.btn{
+		@include font-style(Poppins-regular, 14px, $white);
+		padding: 10px 15px;	
+		background: $lightblue;
+		margin-left: 20px;
+		}
+		.fa{
+			padding-right: 10px;
+		}
+		.import-btn{
+		color: $lightblack;
+		background: $white;
+		border: 1px solid #cccccc;
+		.small-info{
+			margin-right: 5px;
+		}
+	}
+
+}
+	
+//fontawesome sort icon rotate
+.add-member-table-structure{
+	.fa{
+		transform: rotate(90deg);
+		margin-left: 10px;
+	}
+	.fa-exchange{
+		font-size: 10px;
+		color: $lightblack;
+	}
+}
+.round{
+	width: 42px;
+	height: 42px;
+	background: $black;
+	border:1px solid $lightgray;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include font-style(Poppins-semibold, 12px, $white);
+	
+	&--white{
+		color: $black;
+		background: white;
+		border: 1px solid $black;
+	}
+
+}
+
+//back to link
+.back-to-link{
+	@include font-style(Poppins-semibold, 14px, $orange);
+	text-transform: uppercase;
+}
+
+
+//image-position
+.img-position{
+	vertical-align: middle;
+}
+.upper{
+	text-transform: uppercase;
+}
+
+//updated status card
+.updated-status-card{
+	background: $white;
+	border: 1px solid $border-line;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
+.status-card-inner{
+	position: relative;
+	border-bottom: 1px solid $border-line;
+	padding: 20px;		
+}
+.block-display{
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 20px;
+	.round{
+		background: $black;
+		color: $white;
+		}
+	}
+
+.status-card-details{
+	display: inline-block;
+	.status-card-sub-head{
+		text-transform: uppercase;
+		@include font-style(Poppins-medium, 18px, $black);
+		padding-bottom: 20px;
+	}
+	.status-small-details{
+		@include font-style(Poppins-regular, 14px, $lightgray);
+		padding: 20px 0;
+	}
+	.status-contact-list{
+		@include font-style(Poppins-semibold, 14px, $lightblack);
+		display:flex;
+		.status-contact-items{
+			padding-top: 20px;
+			padding-right: 25px;
+			display: flex;
+			align-items: flex-end;
+			span{
+				padding-left: 10px;
+				padding-right: 25px;
+			}
+
+		}
+	}
+}
+.status-card-patch{
+	@include font-style(Poppins-medium, 12px, $white);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	.work-note{
+		background: #68cb25;
+		width: 75px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		}
+	.pending{
+		background: $brightred;	
+	}
+	.pending-notes{
+		color: $brightred;
+	}
+}
+
+.status-comment-line-list{
+	display: flex;
+	padding: 20px 25px;
+	.status-comment-line-item{
+		display: flex;
+		align-items: flex-end;
+		padding-right: 70px;
+		.status-comment-link{
+			display: inline-block;
+			@include font-style(Poppins-regular, 14px, $lightblue);
+			padding-left: 10px;
+		}
+	}
+}
+.splited-line:after{
+	content: "";
+	top: 0;
+	border-left: 2px solid $border-line;
+	height: 15px;
+	position: relative;
+}

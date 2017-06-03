@@ -1,0 +1,82 @@
+mixin timesheet_row(job_name, company_initials, company_name, hours_allocated, row_type)
+	if(row_type==null)
+		tr.timesheet-row.timesheet-row--content
+			th(scope="row")
+				.jobs-block
+					span.round= company_initials
+					span.timesheet-job
+						a.link-text.big.job-name(href="#")= job_name
+						span.company-name= company_name
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				//span= hours_allocated
+				.status-card-patch.status-card-patch-dropdown
+				.dropdown.dropdown--status.dropdown--timesheet
+					a.dropdown-toggle.work-note.status-display(href='#', data-toggle='dropdown' data-status="open")
+						.selected-value!= 'Open'
+						i.fa.fa-angle-down.fa-down(aria-hidden='true')
+					ul.dropdown-menu.dropdown-menu--status
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="open") Open
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="wip") WIP
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="approved") Approved
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="finished") Finished
+	else
+		tr.timesheet-row.timesheet-row--content
+			th(scope="row")
+				.jobs-block
+					.job-name(href="#")= job_name
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				.form-element
+					input.small-bordered-field.centered-text
+			td
+				//span= hours_allocated
+				.status-card-patch.status-card-patch-dropdown
+				.dropdown.dropdown--status.dropdown--timesheet
+					a.dropdown-toggle.work-note.status-display(href='#', data-toggle='dropdown' data-status="open")
+						.selected-value!= 'Open'
+						i.fa.fa-angle-down.fa-down(aria-hidden='true')
+					ul.dropdown-menu.dropdown-menu--status
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="open") Open
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="wip") WIP
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="approved") Approved
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="finished") Finished

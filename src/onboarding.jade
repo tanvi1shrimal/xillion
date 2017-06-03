@@ -1,0 +1,117 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "onboard";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			section.section
+				.container
+					.intro-block
+						h3.orange Hey Anil, Welcome!
+						h3.default-header Here are the 4 simple steps to get you started
+					.card-wrapper
+						ul.card-list.row
+							// Card for adding clients
+							li.col-md-3
+								.card-list-item.card-popup
+									//Tick mark
+									span.step-completed
+										span.icon-check
+									.card-type
+										.card-type-block-1
+											.card-type-img-wrapper
+												img(src='img/icons/add-client.png', alt='')
+											a.card-text.card-type-text.uppercase(href='#', data-toggle='modal', data-target='#client-popup') add your Clients
+										a.card-type-block-2(href='#', data-toggle='modal', data-target='#card-popup1')
+											span.short-description.short-text
+												| Add Clients
+												br
+												| 	in bulk
+								// </a>
+							// Card popup for Add client
+							// modal dialog for client-list
+
+							// Card for adding jobs
+							li.col-md-3
+								.card-list-item.card-popup.inactive
+									.card-type
+										.card-type-block-1
+											.card-type-img-wrapper
+												img(src='img/icons/add-job.png', alt='')
+											a.card-text.card-type-text.uppercase(href='#', data-toggle='modal', data-target='#job-popup') add your jobs
+										.card-type-block-2
+											a.short-description.short-text(href='#', data-toggle='modal', data-target='#card-popup2')
+												| Add jobs
+												br
+												| 	in bulk
+								// </a>
+
+
+
+							// Card for adding team
+							li.col-md-3
+								.card-list-item.inactive
+									.card-type
+										.card-type-block-1
+											.card-type-img-wrapper
+												img(src='img/icons/add-team.png', alt='')
+											a.card-text.card-type-text.uppercase(href='#', data-toggle='modal', data-target='#employee-popup') add your team
+										.card-type-block-2
+											a.short-description.short-text(href='#', data-toggle='modal', data-target='#card-popup3')
+												| Add employees
+												br
+												| 	in bulk
+
+
+							// Card for mapping all 3
+							li.col-md-3
+								a.card-list-item.activate.inactive(href="mappings.html")
+									.card-type
+										.card-type-block-2
+											.card-type-img-wrapper
+												img(src='img/icons/share.png', alt='')
+											span.card-text.card-type-text.uppercase
+												| now
+												br
+												|  map all three
+							// END: Card for mapping all 3
+
+							//Upload popups
+							include jade/components/upload-client-popup.jade
+							include jade/components/job-category-popup.jade
+							include jade/components/employee-list-popup.jade
+
+							//Add popups
+							include jade/components/client-popup.jade
+							include jade/components/job-popup.jade
+							include jade/components/add-employee-popup.jade
+
+			.sidebar
+				.sidebar-header
+					h2.sidebar-header__header Notifications
+					a.close-notification-sidebar(href='#')
+						img(src='img/icons/close.png', alt='Close image')
+				.notification-list-container
+					ul.notification-list
+						li.notification-list-item
+							a.notification-list-item__link(href='#')
+								span.logo-block.round
+									| AM
+								span.notification-list-brief
+									| Welcome to Xillion! Here are
+									| some tips and tricks for you.
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/input-anim.js')
+		script(src='js/dropdown.js')
+		script(src='js/validation.js')

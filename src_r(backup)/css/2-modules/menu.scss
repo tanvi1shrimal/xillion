@@ -1,0 +1,42 @@
+.icon-hambuger{
+	display: flex;
+}
+
+.hamburger-menu{
+	position: absolute;
+	background: white;
+	width: 191px;
+	height: 100%;
+	z-index: 100;
+	padding-left: 30px;
+	padding-top: 40px;
+	transform: translateX(-100%);
+	transition: 0.4s ease;
+
+	&.active{
+		transform: translateX(0%);
+	}
+	
+	.menu-list-item{
+		padding-top: 40px;
+		
+		&:first-child{
+			padding-top: 0px;
+		}
+	}
+}
+
+main{
+	position: relative;
+	
+	.nav-overlay{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		background: rgba(0,0,0,0.2);
+		display: none;
+	}
+}

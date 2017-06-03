@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Onboarding Page</title>
+    <meta name="description" content="">  
+<!--    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />-->
+    <link rel="stylesheet" href="css/main.css">
+   
+</head>
+<body>
+	
+<!--	Nav header-->
+	<header class="header">
+		
+		<nav class="nav-bar">
+			<div class="nav-block-1">
+				<div class="logo-section">
+					<a href="#" class="menu-icon">
+						<span class="icon-hamburger"></span>
+					</a>
+					<a href="#" class="nav-company-logo">
+						<img src="img/logo/logo.png" alt="">
+					</a>
+				</div>
+				<div class="search-form-wrapper">
+					<form action="#" class="search-form">
+						<input class="search-form__input-field" type="text" placeholder="Search">
+						<button class="search-form__cta" type="submit">
+							<img src="img/icons/search.png" alt="Search icon">
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="nav-block-2">
+				
+				<div class="notifications-block">
+					
+					<a href="#" class="circular-link-blocks open-notification">
+						<img src="img/icons/notification.png" alt="Notifications Image">
+						<span class="round">1</span>
+					</a>
+					<div class="dropdown">
+					<a href="#" class="circular-link-blocks dropdown-toggle" data-toggle="dropdown">
+						<span class="circular-link-text">AR</span>
+					</a>
+					<ul class="dropdown-menu">
+            			<li class="dropdown-items"><a href="#">Profile</a></li>
+            			<li class="dropdown-items"><a href="#">Preferences</a></li>
+            			<li class="dropdown-items"><a href="#">Settings</a></li>
+            			<li class="dropdown-items"><a href="#">Sign Out</a></li>
+        			</ul>
+				</div>
+			</div>
+				
+			</div>
+			
+		</nav>
+		
+		<!--		Hamburger menu-->
+		<div class="hamburger-menu">
+			<ul class="menu-list">
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Dashboard</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Jobs</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Clients</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Employees</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Timesheet</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Settings</a>
+				</li>
+			</ul>
+		</div>
+		<!--		END: Hamburger menu-->
+		
+	</header>
+<!--	END: Nav header-->
+
+	<main>
+		
+		<div class="nav-overlay"></div>
+		
+		<section class="add-member-section">
+		<div class="container">
+			<div class="add-member-subhead">
+				<div class="header-block dashboard-header">
+					<span class="member-side-head header-text">Dashboard </span>
+					<ul class="nav nav-tabs view-list" role="tablist">
+						<li class="active view-list-item"><a href="#grid-view" class="view-link" aria-controls="grid-view" role="tab" data-toggle="tab"><span class="icon-grid"></span></a></li>
+						<li class="view-list-item"><a href="#list-view" class="view-link" aria-controls="list-view" role="tab" data-toggle="tab"><span class="icon-list"></span></a></li>
+						<li class="view-list-item"><a href="#" class="view-link"><span class="icon-graph-bar"></span></a></li>
+					</ul>
+				</div>
+				<li class="add-button-style pull-right">
+					<button type="button" class="btn"><i class="fa fa-plus" aria-hidden="true"></i>
+					Add Job</button>
+					<button type="button" class="import-btn btn"><img src="images/chart.png" alt=""> <span class="small-info">Import Clients</span></button>
+				</li>
+			</div>
+		</div>
+	</section>
+	
+<!--	Views section-->
+	<section>
+		<div class="job-views tab-content">
+			
+	<!--		Grid view-->
+			<div role="tabpanel" class="view-pane view-pane--grid tab-pane active" id="grid-view">
+
+				<div class="container">
+	<!--				Pending Jobs list-->
+					<div class="col-md-3">
+						<div class="job-status-cards-wrapper">
+						<div class="card-header card-wrapper-type card-wrapper-type--pending">
+							<h4 class="card-header-text">Pending Jobs</h4>
+							<span class="status-count card-count-text">24</span>
+						</div>
+						<ul class="job-card-list">
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+						</ul>
+					</div>
+					</div>
+	<!--				END: Pending Jobs list-->
+
+	<!--				Work in progress list-->
+					<div class="col-md-3">
+						<div class="job-status-cards-wrapper">
+						<div class="card-header card-wrapper-type card-wrapper-type--in-progress">
+							<h4 class="card-header-text">Work in Progress</h4>
+							<span class="status-count card-count-text">04</span>
+						</div>
+						<ul class="job-card-list">
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--completed">On Time</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--completed">On Time</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+	<!--						Job Card-->
+							<li class="job-card-list-item">
+								<div class="job-status-card">
+									<div class="job-card-detail job-card-detail--1">
+										<div class="job-status-logo">
+											<span class="round">RK</span>
+										</div>
+										<div class="job-status-company-detail">
+											<h4 class="card-company-text card-company-header">RKSV</h4>
+											<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+											<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+										</div>
+									</div>
+									<div class="job-status-job-person job-detail">
+										<span class="icon-user job-detail-icon"></span>
+										<span class="detail-text-user job-detail-text">Ram Kumar</span>
+									</div>
+									<div class="job-status-job-date job-detail">
+										<span class="icon-calender job-detail-icon"></span>
+										<div class="detail-text-user job-duration job-detail-text">
+											<span class="job-duration__from">23 Aug</span>
+											<span class="dash"> - </span>
+											<span class="job-duration__to">04 Sep</span>
+										</div>
+									</div>
+								</div>
+							</li>
+	<!--						END: Job Card-->
+						</ul>
+					</div>
+					</div>
+	<!--				END: Work in progress Jobs list-->
+
+	<!--				Finished  list-->
+					<div class="col-md-3">
+						<div class="job-status-cards-wrapper">
+							<div class="card-header card-wrapper-type card-wrapper-type--finished">
+								<h4 class="card-header-text">Finished Jobs</h4>
+								<span class="status-count card-count-text">04</span>
+							</div>
+							<ul class="job-card-list">
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--completed">On Time</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--completed">On Time</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--completed">On Time</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+							</ul>
+						</div>
+					</div>
+	<!--				END: Finished Jobs list-->
+
+	<!--				Approved  list-->
+					<div class="col-md-3">
+						<div class="job-status-cards-wrapper">
+							<div class="card-header card-wrapper-type card-wrapper-type--approved">
+								<h4 class="card-header-text">Approved Jobs</h4>
+								<span class="status-count card-count-text">04</span>
+							</div>
+							<ul class="job-card-list">
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--completed">On Time</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--completed">On Time</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--completed">On Time</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+		<!--						Job Card-->
+								<li class="job-card-list-item">
+									<div class="job-status-card">
+										<div class="job-card-detail job-card-detail--1">
+											<div class="job-status-logo">
+												<span class="round">RK</span>
+											</div>
+											<div class="job-status-company-detail">
+												<h4 class="card-company-text card-company-header">RKSV</h4>
+												<span class="detail-text job-type">Audit - Non-Coy- Tax Audit</span>
+												<span class="detail-text job-status job-status--delayed">Delayed by 2 days</span>
+											</div>
+										</div>
+										<div class="job-status-job-person job-detail">
+											<span class="icon-user job-detail-icon"></span>
+											<span class="detail-text-user job-detail-text">Ram Kumar</span>
+										</div>
+										<div class="job-status-job-date job-detail">
+											<span class="icon-calender job-detail-icon"></span>
+											<div class="detail-text-user job-duration job-detail-text">
+												<span class="job-duration__from">23 Aug</span>
+												<span class="dash"> - </span>
+												<span class="job-duration__to">04 Sep</span>
+											</div>
+										</div>
+									</div>
+								</li>
+		<!--						END: Job Card-->
+							</ul>
+					</div>
+						</div>
+	<!--				END: Approved Jobs list-->
+
+				</div>
+
+			</div>
+	<!--		END: Grid view-->
+
+	<!--			List view-->
+			<div role="tabpanel" class="view-pane view-pane--list tab-pane" id="list-view">
+
+				<div class="container">
+
+					<div class="job-tabs-pane-container">
+
+						<div class="job-tabs-wrapper">
+							<ul class="nav nav-tabs job-tabs-list" role="tablist">
+								<li class="active job-tabs-list-item">
+									<a href="#all-jobs" class="tab-text job-tab" aria-controls="all-job" role="tab" data-toggle="tab">All (<span class="job-count">100</span>)</a>
+								</li>
+								<li class="job-tabs-list-item">
+									<a href="#pending-jobs" class="tab-text job-tab" aria-controls="pending-jobs" role="tab" data-toggle="tab">Pending (<span class="job-count">24</span>)</a>
+								</li>
+								
+								<li class="job-tabs-list-item">
+									<a href="#in-progress-jobs" class="tab-text job-tab" aria-controls="in-progress-jobs" role="tab" data-toggle="tab">WIP (<span class="job-count">36</span>)</a>
+								</li>
+								<li class="job-tabs-list-item">
+									<a href="#finished-jobs" class="tab-text job-tab" aria-controls="finished-jobs" role="tab" data-toggle="tab">Finished (<span class="job-count">20</span>)</a>
+								</li>
+								<li class="job-tabs-list-item">
+									<a href="#approved-jobs" class="tab-text job-tab" aria-controls="approved-jobs" role="tab" data-toggle="tab">Approved (<span class="job-count">20</span>)</a>
+								</li>
+							</ul>
+						</div>
+						<div class="job-list-container tab-content">
+
+<!--							All Jobs list-->
+							<div role="tabpanel" class="tab-pane active job-list job-list--all-job" id="all-jobs">
+								<table class="jobs-table">
+									<thead>
+										<tr class="table-row table-row--heading">
+											<th class="table-headings"><span class="table-text t-header table-header">Client Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Job Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Priority</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Status</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">End Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Days to Due Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Team Assigned</span></th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finshed</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">In Progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">In Progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">In Progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							
+							</div>
+<!--							END: All Jobs list-->
+						
+<!--							Pending Jobs list-->
+							<div role="tabpanel" class="tab-pane job-list job-list--pending-jobs" id="pending-jobs">
+								<table class="jobs-table">
+									<thead>
+										<tr class="table-row table-row--heading">
+											<th class="table-headings"><span class="table-text t-header table-header">Client Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Job Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Priority</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Status</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">End Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Days to Due Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Team Assigned</span></th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">High</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">High</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">High</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">High</td>
+											<td class="table-text table-content job-status job-status--pending">Pending</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+<!--							END: Pending Jobs list-->
+							
+<!--							WIP Jobs list-->
+							<div role="tabpanel" class=" tab-pane job-list job-list--in-progress-jobs" id="in-progress-jobs">
+								<table class="jobs-table">
+									<thead>
+										<tr class="table-row table-row--heading">
+											<th class="table-headings"><span class="table-text t-header table-header">Client Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Job Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Priority</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Status</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">End Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Days to Due Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Team Assigned</span></th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--wip">Work in progress</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+<!--							END: WIP Jobs list-->
+						
+<!--							Finished Jobs list-->
+							<div role="tabpanel" class=" tab-pane job-list job-list--finished-jobs" id="finished-jobs">
+								<table class="jobs-table">
+									<thead>
+										<tr class="table-row table-row--heading">
+											<th class="table-headings"><span class="table-text t-header table-header">Client Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Job Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Priority</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Status</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">End Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Days to Due Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Team Assigned</span></th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--finished">Finished</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+<!--							END: Finished Jobs list-->
+							
+<!--							Approved Jobs list-->
+							<div role="tabpanel" class=" tab-pane job-list job-list--approved-jobs" id="approved-jobs">
+								<table class="jobs-table">
+									<thead>
+										<tr class="table-row table-row--heading">
+											<th class="table-headings"><span class="table-text t-header table-header">Client Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Job Name</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Priority</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Status</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">End Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Days to Due Date</span></th>
+											<th class="table-headings"><span class="table-text t-header table-header">Team Assigned</span></th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+										<tr class="table-row">
+											<td class="table-text table-content">RKSV</td>
+											<td class="table-text table-content">Audit</td>
+											<td class="table-text table-content">Regular</td>
+											<td class="table-text table-content job-status job-status--approved">Approved</td>
+											<td class="table-text table-content">2 Aug</td>
+											<td class="table-text table-content">2</td>
+											<td class="table-text table-content table-content--multiple">
+												<span class="round round--white">AM</span>
+												<span class="round round--white">LP</span>
+												<span class="round round--white">OB</span>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+<!--							END: Approved Jobs list-->
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+	<!--			END: List view-->
+		
+		</div>
+	</section>
+<!--	END: Views section-->
+		
+		<div class="sidebar">
+			
+			<div class="sidebar-header">
+				<h2 class="sidebar-header__header">Notifications</h2>
+				<a href="#" class="close-notification-sidebar">
+					<img src="img/icons/close.png" alt="Close image">
+				</a>
+			</div>
+			
+			<div class="notification-list-container">
+				
+				<ul class="notification-list">
+					
+					<li class="notification-list-item">
+						
+						<a href="#" class="notification-list-item__link">
+							<span class="logo-block round">
+								AM
+							</span>
+							<span class="notification-list-brief">
+								Welcome to Xillion! Here are
+some tips and tricks for you.
+							</span>
+						</a>
+						
+					</li>
+					
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+	</main>
+	
+	<script src="js/jquery.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="js/open-sidebar.js"></script>
+	<script src="javascripts/main.js"></script>
+	<script src="js/hamburger-menu.js"></script>
+	<script src="js/tabs-style.js"></script>
+</body>
+</html>

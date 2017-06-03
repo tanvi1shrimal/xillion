@@ -1,0 +1,7 @@
+mixin list_item(item_id, item_text)
+	li.job-list-item
+		label.label-wrapper(for= "job-"+item_id)
+			.radio-btn-wrapper
+				input(type="radio" name="job" id= "job-"+item_id)
+				span.custom-radio
+			span.label-text.label-wrapper__text= item_text

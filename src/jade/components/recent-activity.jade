@@ -1,0 +1,13 @@
+#recent-activity.tab-pane.activity-section.clearfix
+	.col-md-10.col-md-offset-1
+		h3.recent-sub-head Recent Activity
+		.updated-status-card
+			ul.detail-recent-activity
+				include mixins/recent-activity.jade
+				+recent_activity("RK", "Ram Kumar changed status of", "job from WIP to finished", "RKSV", "29")
+				+recent_activity("RK", "Ram Kumar changed status of", "job from WIP to finished", "RKSV", "29")
+				+recent_activity("RK", "Ram Kumar changed status of", "job from WIP to finished", "RKSV", "29")
+				+recent_activity("RK", "Ram Kumar changed status of", "job from WIP to finished", "RKSV", "29")
+				+recent_activity("RK", "Ram Kumar changed status of", "job from WIP to finished", "RKSV", "29")
+			span.upper
+				a.load-more(href='#') load more

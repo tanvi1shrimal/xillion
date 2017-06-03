@@ -1,0 +1,71 @@
+.tab-pane.add-tabs-pane.active(id="client")
+	a.add-popup(href='#', data-toggle='modal', data-target='#client-popup')
+		span.icon-plus
+		span.add-text.add-popup__text add new client
+	h4.header-4.add-tabs-pane__header Select a Client
+
+	.search-field-wrapper
+		form.search-form-input(action="#")
+			input.search-form-input__input-field(placeholder="Search For Client")
+			button.search-form-input__btn.icon-search(type="submit")
+
+
+	h3.header-3.semibold.add-tabs-pane__header--middle Recently active Clients
+
+	//Table Section
+	.activity-wrapper
+		table.activity-table
+			thead
+				tr.activity-table-row
+					th
+					th.table-header-sm.activity-tab-header Client Name
+					th.table-header-sm.activity-tab-header Client Code
+					th.table-header-sm.activity-tab-header Contact Person
+					th.table-header-sm.activity-tab-header Phone Number
+
+			tbody
+				tr.activity-table-row.activity-table-row__body.select-row
+					td.radio-table-cell: .radio-btn-wrapper
+							input(type="radio" name="client")
+							span.custom-radio
+					td: h3.header-3 RKSV
+					td.simple-text.dark 1001
+					td.simple-text.dark Ravi Kumar
+					td.simple-text.dark ravik@rksv.com
+
+				tr.activity-table-row.activity-table-row__body.select-row
+					td.radio-table-cell: .radio-btn-wrapper
+							input(type="radio" name="client")
+							span.custom-radio
+					td: h3.header-3 AKA Media
+					td.simple-text.dark 1009
+					td.simple-text.dark Shyam K
+					td.simple-text.dark shyam@aka.in
+
+				tr.activity-table-row.activity-table-row__body.select-row
+					td.radio-table-cell: .radio-btn-wrapper
+							input(type="radio" name="client")
+							span.custom-radio
+					td: h3.header-3 Lollypop Studio
+					td.simple-text.dark 1020
+					td.simple-text.dark Satish H
+					td.simple-text.dark satish@lollypop.biz
+
+				tr.activity-table-row.activity-table-row__body.select-row
+					td.radio-table-cell: .radio-btn-wrapper
+							input(type="radio" name="client")
+							span.custom-radio
+					td: h3.header-3 Titan
+					td.simple-text.dark 1003
+					td.simple-text.dark Pinto Shine
+					td.simple-text.dark pintos@titan.com
+
+				tr.activity-table-row.activity-table-row__body.select-row
+					td.radio-table-cell: .radio-btn-wrapper
+							input(type="radio" name="client")
+							span.custom-radio
+					td: h3.header-3 Bosch
+					td.simple-text.dark 1002
+					td.simple-text.dark Dhruvi Shah
+					td.simple-text.dark dhruvi@bosch.com
+	//END: Table Section

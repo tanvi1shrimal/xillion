@@ -1,0 +1,55 @@
+.forgot-pw-link{
+	margin-top: 20px;
+}
+
+.fa{
+	padding: 0;
+}
+
+.signup-form{
+	.signup-detail{
+		@include font-style(Poppins-Light, 12px, $lightblack);
+		a:hover{
+			color: $lightblue;
+		}
+	}
+	.check-space{
+		/*padding-left: 15px;*/
+		padding-top: 30px;
+	}
+	.checkbox-click{
+		padding-right: 10px;
+	}
+	.conformation-btn{
+//		padding-top: 30px;
+	}
+
+	.exist-account{
+//		padding-left: 14px;
+		padding-top: 20px;
+	}
+
+	&--emp{
+		.conformation-btn{
+			margin-top: 20px;
+		}
+	}
+}
+
+.signup-form.signup-login-form{
+	padding-top: 20px;
+}
+
+.status-message{
+	font-size: 12px;
+    padding-top: 12px;
+    display: block;
+
+	&.success{
+		color: $green;
+	}
+
+	&.error{
+		color: red;
+	}
+}

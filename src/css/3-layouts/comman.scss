@@ -1,0 +1,358 @@
+//comman font style
+body{
+	font-family: Poppins-Light;
+}
+*:focus{
+	outline: none;
+}
+a:link{
+	text-decoration:none;
+	}
+
+//h3 heading and spacing
+
+.main-form-spacing{
+	padding-left: 70px;
+	margin-top: 135px;
+	.main-form-head{
+	@include font-style(Poppins-Light, 22px, $black);
+//	padding-bottom: 50px;
+
+		&--space-bottom{
+			padding-bottom: 50px;
+		}
+
+	}
+}
+//form inputbox styles
+.input-style-detail, .dropdown--input, .choose-file-text{
+    @include font-style(Poppins-regular, 14px, $black);
+	border: none;
+//	border: 1px solid $gray;
+	border-bottom: 1px solid #b8b8b8;
+//	margin-bottom: 40px;
+	width: 245px;
+	display :block;
+
+	&:focus{
+		border-color: $blue;
+	}
+	/*padding-top: 5px;*/
+}
+
+.input-style-detail{
+	height: 0px;
+	transition: 0.2s ease;
+
+	&--default{
+		height: auto;
+	}
+}
+
+//checkbox spacing
+.checkbox-spacing{
+	padding-left: 15px;
+	padding-bottom: 30px;
+}
+
+//conformation-button
+.conformation-btn{
+	/*padding:30px 0;*/
+	padding-left: 15px;
+//	.btn{
+//		padding: 8px 32px;
+//		@include font-style(Poppins-Medium, 14px, $white);
+//		background: $lightblue;
+//		border-radius: 3px;
+//		.btn-primary{
+//		border-color: none;
+//		}
+//	}
+	p{
+		padding: 30px 0;
+	}
+}
+
+.conditional-text{
+	margin-left: 5px;
+}
+//remove space in row
+.remove-space{
+	padding-left:0;
+	margin:0;
+	}
+
+//add-button
+//.add-button-style{
+	.btn{
+		@include font-style(Poppins-regular, 14px, $white);
+		padding: 10px 15px;
+		background: $lightblue;
+		margin-left: 20px;
+
+		&--no-margin{
+			margin: 0;
+		}
+
+		&:hover, &:active, &:focus{
+			color: white;
+		}
+
+		&.import-btn{
+			&:hover, &:active, &:focus{
+				color: $black;
+			}
+		}
+	}
+		.fa{
+			padding-right: 10px;
+		}
+		.import-btn{
+		color: $lightblack;
+		background: $white;
+		border: 1px solid #cccccc;
+		.small-info{
+			margin-right: 5px;
+		}
+	}
+
+//}
+
+
+
+//fontawesome sort icon rotate
+.add-member-table-structure{
+	.fa{
+		transform: rotate(90deg);
+		margin-left: 10px;
+	}
+	.fa-exchange{
+		font-size: 10px;
+		color: $lightblack;
+	}
+}
+/*.round{
+	width: 42px;
+	height: 42px;
+	background: $black;
+	border:1px solid $lightgray;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include font-style(Poppins-semibold, 12px, $white);
+
+}*/
+.round{
+	width: 42px;
+	height: 42px;
+	background: $black;
+	border:1px solid $lightgray;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include font-style(Poppins-semibold, 12px, $white);
+
+	&--white{
+		color: $black;
+		background: white;
+		border: 1px solid $black;
+	}
+
+	&--big{
+		height: 60px;
+		width: 60px;
+	}
+
+	&.inactive{
+		color: $icon-gray;
+		background: white;
+		border-color: $icon-gray;
+	}
+
+}
+.checkbox-shape{
+	width: 11px;
+    height: 11px;
+    border: 1px solid #c6c6c6;
+    display: inline-block;
+}
+//back to link
+.back-to-link{
+	@include font-style(Poppins-semibold, 14px, $orange);
+	text-transform: uppercase;
+	color: $blue;
+	.fa-left{
+		padding-right: 10px;
+		font-size: 20px;
+	}
+
+	&:hover, &:active, &:focus{
+		color: $orange;
+	}
+
+}
+
+
+//image-position
+.img-position{
+	vertical-align: middle;
+}
+.upper{
+	text-transform: uppercase;
+}
+
+//updated status card
+.updated-status-card{
+	background: $white;
+	border: 1px solid $border-line;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
+.status-card-inner{
+	position: relative;
+	border-bottom: 1px solid $border-line;
+	padding: 20px;
+}
+.block-display{
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 20px;
+	.round{
+		background: $black;
+		color: $white;
+		}
+	}
+
+.status-card-details{
+	display: inline-block;
+	padding-top: 5px;
+	.status-card-sub-head{
+		text-transform: uppercase;
+		@include font-style(Poppins-medium, 18px, $black);
+		padding-bottom: 10px;
+	}
+	.status-small-details{
+		@include font-style(Poppins-regular, 14px, $lightgray);
+	}
+
+}
+.status-contact-list{
+		@include font-style(Poppins-semibold, 14px, $lightblack);
+		display:flex;
+		justify-content: space-between;
+		padding: 0 0px 0 66px;
+		.status-contact-items{
+			padding-top: 30px;
+
+			display: flex;
+			align-items: flex-end;
+			.status-card-item-link{
+				padding-left: 10px;
+
+				color: $lightblack;
+			}
+
+		}
+	}
+.status-card-patch{
+	@include font-style(Poppins-medium, 12px, $white);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	.pending{
+		background: $brightred;
+	}
+	.pending-notes{
+		padding-top: 20px;
+		color: $brightred;
+	}
+	.dropdown{
+		.dropdown-menu{
+			min-width: 82px;
+			border-radius: 0;
+			padding: 0;
+			.dropdown-menu-link{
+				@include font-style(Poppins-medium, 12px, $black);
+				padding: 5px 10px;
+				&:hover{
+					color:$black;
+				}
+				&:active{
+					color: $black;
+				}
+				&focus{
+					color: $black;
+				}
+
+			}
+
+		}
+	}
+}
+.work-note{
+		background: #68cb25;
+		width: 80px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		.fa-down{
+			padding-left: 5px;
+		}
+		&:hover{
+			color: $white;
+		}
+		&:focus{
+			color: $white;
+		}
+		&:active{
+			color: $white;
+		}
+
+	}
+.splited-line:after{
+	content: "";
+	top: 0;
+	border-left: 2px solid $border-line;
+	height: 15px;
+	position: relative;
+}
+.square:before {
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent $white transparent;
+    z-index: 9999;
+}
+.square:after {
+    content:"";
+    position: absolute;
+    right: 4px;
+    top: -18px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $border-line transparent;
+    z-index:9998;
+
+}
+.square {
+    position: absolute;
+    margin: 0;
+    top: 8px;
+    z-index: 99999;
+    left: 33%;
+}

@@ -1,0 +1,27 @@
+.back-to-client{
+	float: none;
+//	border-bottom: 1px solid #ededed;
+	.add-member-subhead{
+		padding: 10px 0;
+	    border-bottom: 1px solid $border-line;
+	}
+}
+.add-member-section{
+//	border-bottom: 1px solid #ededed;
+}
+.add-member-subhead{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include padding-spacing(30px, 40px);
+	li{
+		@include font-style(Poppins-light, 24px, $lightgray);
+		.count{
+			color: #ff6600;
+		}
+	}
+	.member-side-head{
+		text-transform: uppercase;
+	}
+
+}

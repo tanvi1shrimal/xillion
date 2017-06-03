@@ -1,0 +1,110 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "ind-client";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			.fixed-side-bar
+				.tabs-left.column-width1
+					.side-nav-head
+						span.round
+							i.icon-user
+						h3.side-head-name
+							| RKSV
+							span.side-head-id 1000
+					ul.nav.nav-tabs.job-activity-list
+						li.active.job-activity-item
+							a(href='#all-jobs', data-toggle='tab')
+								i.icon-briefcase.fixed-nav-icon
+								|  All jobs
+						li.job-activity-item
+							a(href='#recent-activity', data-toggle='tab')
+								i.icon-calender.fixed-nav-icon
+								| Recent Activity
+						li.job-activity-item
+							a(href='#time-sheet', data-toggle='tab')
+								i.icon-statistics.fixed-nav-icon
+								| statistics
+						li.job-activity-item
+							a(href='#billing-history', data-toggle='tab')
+								i.icon-bill.fixed-nav-icon
+								| billing details
+						li.job-activity-item
+							a(href='#client-profile', data-toggle='tab')
+								i.icon-user.fixed-nav-icon
+								| client profile
+				.column-width2
+					// fixed section top
+					include jade/components/mixins/individual-pg-header.jade
+					+individual_pg_hd("client-list.html", "#add-job-popup", "#card-popup2", "back to client list", "Add Job", "Import Job")
+					//.back-to-client
+						ul.add-member-subhead
+							li.member-side-head
+								a.back-to-link(href='#')
+									i.fa.fa-angle-left.fa-left(aria-hidden='true')
+									| back to client list
+							li.add-button-style.pull-right
+								a.btn(href='client-list.html', data-toggle='modal', data-target='#add-job-popup')
+									i.fa.fa-plus(aria-hidden='true')
+									| 					Add Job
+								a.import-btn.btn(href='#', data-toggle='modal', data-target='#card-popup2')
+									img(src='img/chart.png', alt='')
+									span.small-info Import Job
+					// fixed top section ended
+					.tab-content
+						// All job section starts
+						include jade/components/all-jobs.jade
+						// All job section ended
+						// Recent activity
+						include jade/components/recent-activity.jade
+						// Recent activity
+						//Billing History
+						include jade/components/billing-history.jade
+						//END: Billing History
+						//Client Profile
+						include jade/components/client-profile.jade
+						//END: Client Profile
+					// /tab-content
+				// column width2
+			// wrap section
+			// Side bar
+
+			//Modal for invoice
+			include jade/components/view-file-popup.jade
+			//END: Modal for invoice
+
+			//Add popups
+			include jade/components/add-job-small-popup.jade
+			include jade/components/job-category-popup.jade
+
+			.sidebar
+				.sidebar-header
+					h2.sidebar-header__header Notifications
+					a.close-notification-sidebar(href='#')
+						img(src='img/icons/close.png', alt='Close image')
+				.notification-list-container
+					ul.notification-list
+						li.notification-list-item
+							a.notification-list-item__link(href='#')
+								span.logo-block.round
+									| AM
+								span.notification-list-brief
+									| Welcome to Xillion! Here are
+									| some tips and tricks for you.
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/select2.min.js')
+		script(src='js/multi-select.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/show-note.js')
+		script(src='js/input-anim.js')
+		script(src='js/dropdown.js')

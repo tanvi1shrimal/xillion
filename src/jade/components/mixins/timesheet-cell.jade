@@ -1,0 +1,86 @@
+mixin timesheet_cell(job_name, firm, hours, hrs_week, cost, revenue)
+	tr.time-sheet-table-row
+		td.time-sheet-data= job_name
+			span.company-names= firm
+		td.time-sheet-data= hours+" hr"
+		td.time-sheet-data= hrs_week
+		td.time-sheet-data= cost
+		td.time-sheet-data= revenue
+
+mixin attendence_cell(date, time_in, time_out, status)
+	tr.time-sheet-table-row.time-sheet-table-row--attendence
+		td.time-sheet-data.caps= date
+		td.time-sheet-data= time_in
+		td.time-sheet-data= time_out
+		td.time-sheet-data= status
+
+mixin table_cell(info1, info2, info3, cell_no)
+	tr.time-sheet-table-row
+		form
+			td.time-sheet-data.caps= info1
+			td.time-sheet-data= info2
+			td.time-sheet-data
+				//.upload-invoice(href="#")= info3
+				.attach-file
+					label.upload-file-text.upload-invoice(for="file-upload"+cell_no) Upload
+					//label.attachment-text(for="file-upload") No file chosen
+					input(id="file-upload"+cell_no type="file" style="width:200px" accept="image/jpeg")
+			td.time-sheet-data= info3
+
+mixin timesheet_brief(hd1, hd2, hd3, hd4, info1, info2, info3, info4, mod)
+	if(mod==null)
+		ul.timesheet-inner-list
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd1
+				span.time-sheet-date.caps= info1
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd2
+				span.time-sheet-date= info2
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd3
+				span.time-sheet-date= info3
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd4
+				span.time-sheet-date= info4
+	else
+		ul.timesheet-inner-list(class= mod)
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd1
+				input.time-sheet-date.caps.editable-info(value=info1 readonly)
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd2
+				input.time-sheet-date.editable-info(value=info2 readonly)
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd3
+				input.time-sheet-date.editable-info(value=info3 readonly)
+			li.col-md-3.time-sheet-items
+				label.timesheet-brief-label= hd4
+				input.time-sheet-date.editable-info(value=info4 readonly)
+
+mixin timesheet_hd(hd1, hd2, hd3, hd4, hd5)
+	tr.time-sheet-table-row
+		th= hd1
+		th.width-space= hd2
+		th= hd3
+		th= hd4
+
+		if(hd5!=null)
+			th= hd5
+
+mixin attendence_hd(hd1, hd2, hd3, hd4, mod)
+	if(mod==null)
+		tr.time-sheet-table-row
+			th= hd1
+			th.width-space= hd2
+			th= hd3
+			th= hd4
+	else
+		tr.time-sheet-table-row(class="time-sheet-table-row--"+mod)
+			th
+				span.timesheet-cell= hd1
+			th.width-space
+				span.timesheet-cell= hd2
+			th
+				span.timesheet-cell= hd3
+			th
+				span.timesheet-cell= hd4

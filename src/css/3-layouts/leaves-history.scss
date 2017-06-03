@@ -1,0 +1,40 @@
+.leaves-history-table-container{
+	padding: 40px;
+}
+
+.leave-history-wrapper{
+	background: white;
+	border: 1px solid $border-line;
+	padding-top: 20px;
+
+	&__header{
+		padding-left: 20px;
+		position: relative;
+	}
+
+	.leaves-history-table{
+		width: 100%;
+
+		.leaves-history-row{
+			border-top: 1px solid $border-line;
+		}
+
+		.table-headers, .table-cell{
+
+		}
+	}
+
+	.dropdown-cell{
+		.form-element{
+			display: inline-flex;
+			align-items: flex-end;
+			height: 28px;
+			padding: 0;
+		}
+
+		.dropdown--bordered{
+			padding: 0 10px;
+   			width: 80%;
+		}
+	}
+}

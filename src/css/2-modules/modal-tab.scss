@@ -1,0 +1,105 @@
+.modal-tabs-wrapper{
+	overflow: auto;
+	display: flex;
+	
+	.steps-tabs{
+		border-right: 1px solid $border-line;
+		height: 100%;
+		background: $lighter-gray;
+		
+		.nav > li > a:hover, .nav > li > a:focus{
+			background: none;
+			border: 0;
+		}
+		
+		.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+			border: 0;
+		}
+	}
+	
+	.steps-tabs-list-item{
+		padding: 15px 0;
+		border-bottom: 1px solid $border-line;
+		
+		.step-tab-text{
+			color: $lightgray;
+			border: 0;
+    		margin: 0;
+		}
+		
+		.step-no{
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			height: 30px;
+			width: 30px;
+			border: 1px solid $lightgray;
+			border-radius: 50%;
+		}
+		
+		&.active{
+			background: white;
+			
+			.step-tab-text{
+				color: $orange;
+			}
+			
+			.step-no{
+				border-color: $orange;
+			}
+		}
+	}
+	
+	.steps-tabs-list{
+		text-align: center;
+		
+		&.nav-tabs {
+			border: 0;
+			
+			& > li{
+				float: none;
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.col-md-3, .col-md-9{
+		padding: 0;
+	}
+}
+
+.modal-body{
+	margin: 0;
+	padding: 0;
+}
+
+/*Tab content container styles*/
+
+.steps-tabs-content-container{
+	padding: 35px 20px;
+	padding-right: 80px;
+	
+	&.tab-content{
+		.tab-pane{
+			background: none;
+		}
+	}
+	
+	.file-wrapper{
+		margin-top: 100px;
+		margin-bottom: 160px;
+		text-align: center;
+		
+		.file-link{
+			color: $blue;
+			margin-top: 20px;
+			text-decoration: underline;
+			
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+/*END: Tab content container styles*/

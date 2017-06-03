@@ -1,0 +1,580 @@
+
+/****Register page starts****/
+//sign_up image 
+.login-bgimage_position{
+	padding-left: 0px;
+	background: url("../images/Admin_Signup.png") no-repeat;
+	@include bgimages(cover, 100vh);
+	.logo-spacing{
+		position: absolute;
+		top:25px;
+		left: 30px;
+	}
+}
+.signup-form-spacing{
+	.main-form-spacing{
+		margin-top: 80px;
+	}
+}
+.signup-form{
+	.signup-detail{
+	@include font-style(Poppins-Light, 12px, $lightblack);
+	a:hover{
+		color: $lightblue;
+		}
+	}
+	.check-space{
+		padding-left: 15px;
+		padding-top: 30px;
+	}
+	.checkbox-click{
+	padding-right: 10px;
+	}
+	.conformation-btn{
+		padding-top: 30px;
+	}
+}
+.condition-color{
+	@include font-style(Poppins-semibold, 12px, $lightblue);
+	display: inline-block;
+}
+.photo-capture{
+	position: absolute;
+    right: 50px;
+}
+.exist-account{
+	@include font-style(Poppins-light, 14px, $black);
+
+	.exist-account-color{ 
+	 @include font-style(Poppins-semibold, 14px, $lightblue);
+	 display: inline-block;
+
+	}
+}
+/****Register page ended****/
+
+/****Forget password starts****/
+
+.forget-pwd{
+	p{
+	@include font-style(Poppins-light, 14px, $black);
+	padding-bottom: 30px;	
+		}
+	.input-style-detail{
+		padding-bottom: 10px;
+		margin: 0;
+	}
+	.conformation-btn{
+		padding:50px 0;
+	}
+}
+/****Forget password ended****/
+
+/****sign-in-form starts****/
+.sign-in-form{
+	@include font-style(Poppins-Light, 12px, $lightblack);
+	.input-style-detail{
+		margin-bottom: 60px;
+	}
+	.conformation-btn{
+		padding-bottom: 40px;
+	}
+	p{
+		padding-left: 15px;
+	}
+}
+.sign-in-pwd-spacing{
+	.input-style-detail{
+		margin-bottom: 20px;
+	}	
+	.pwd-right-move{
+		padding-right: 20px;
+		@include font-style(Poppins-Light, 12px, $lightblack);
+	}
+}
+/****sign-in-form ended****/
+
+/***Reset password***/
+.reset-pwd-spacing{
+	@include font-style(Poppins-Light, 12px, $lightblack);	
+	.reset-form{
+		.conformation-btn{
+		padding-top: 20px;
+		}
+	}
+}
+/***Reset password ended***/
+
+/***confirmation page starts***/
+.confirm-page{
+	padding: 0;
+	h3{
+		@include font-style(Poppins-regular, 18px, $black);
+	}
+	p{
+		@include font-style(Poppins-Light, 14px, $lightblack);
+		line-height: 25px;
+		padding-top:20px;
+		padding-bottom: 20px;
+	}
+	.conformation-btn{
+		padding:0;
+	}
+}
+/***confirmation page ended***/
+
+/***contact page starts***/
+.contact-page{
+	padding: 0;
+	h3{
+		@include font-style(Poppins-regular, 18px, $black);
+	}
+	p{
+		@include font-style(Poppins-Light, 14px, $lightblack);
+		line-height: 25px;
+		padding-top:20px;
+		padding-bottom: 50px;
+	}
+	a{
+		@include font-style(Poppins-regular, 14px, $lightblue);
+	}
+}
+/***contact page ended***/
+
+/***Employee signup page***/
+.employee-login{
+	.login-bgimage_position{
+	background: url("../images/Employee_login.png") no-repeat;
+	@include bgimages(cover, 100vh);
+	}
+}
+.emp-sign-up{
+	.conformation-btn{
+		padding: 0;
+	}
+}
+/***Employee signup ended***/
+
+/***Client list and employee list page styling***/
+.add-member-section{
+	border-bottom: 1px solid #ededed;
+}
+.add-member-subhead{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include padding-spacing(30px, 40px);
+	li{
+		@include font-style(Poppins-light, 24px, $lightgray);
+		.count{
+			color: #ff6600;
+		}
+	}
+	.member-side-head{
+		text-transform: uppercase;
+	}
+	
+}
+
+.add-member-table-wrap{
+	@include padding-spacing(70px, 70px);
+	.next-link{
+		padding-right: 80px;
+		@include font-style(Poppins-semibold, 12px, #1ab1f7);
+		span{
+			color: $lightblack;
+		}
+	}
+}
+
+.add-member-table-structure{
+	@include font-style(Poppins-regular, 14px, $lightblack);
+	thead{
+		.client-table-head-spacing{
+			th{
+				@include padding-spacing(0, 20px);
+				border-bottom: 1px solid #ededed;
+				
+			}	
+		}
+		.emp-table-head-spacing{
+			@include font-style(Poppins-regular, 14px, $lightblack);
+			th{
+				/*width: 20%;*/
+				border-bottom: 1px solid #ededed;
+				@include padding-spacing(0, 20px);
+			}
+			.item-spacing{
+				width: 20%;
+				text-align: center;
+			}
+		}
+	}
+	tbody{
+		.add-member-row{
+			@include font-style(Poppins-regular, 14px, $lightgray);
+			td{
+				@include padding-spacing(18px, 18px);
+				border-bottom: 1px solid #ededed;
+			  }				
+			}
+		}
+	}
+.emp-table-body{
+	td{
+		@include font-style(Poppins-regular, 16px, $lightgray);
+	} 
+	 .name-spacing{
+	 	@include font-style(Poppins-regular, 16px, $lightblack);
+	 	.designation{
+		display: block;
+		@include font-style(Poppins-regular, 14px, $lightgray);
+		}
+	 }
+}	
+.add-member-table-structure{
+	.emp-table-head-spacing{
+		.fa{
+		margin-left: 0px;
+	}
+   }
+}
+.employee-data{
+	.next-link{
+		padding-right: 40px;
+	}
+}
+.company-inline-list{
+	display: flex;
+	.round{
+		background: $white;
+		border-color: $lightgray;
+		color: $lightgray;
+	}
+	li{
+		margin-left:5px;
+		@include font-style(Poppins-semibold, 12px, $lightgray);
+
+	}
+}
+/***Client list and employee list page ended***/	
+	
+/***onboarding page***/
+h3.default-header{
+	@include font-style(Poppins-regular, 20px, $black);
+	@include padding-spacing(20px, 20px);
+}
+.notifications-block{
+	.open-notification{
+		position: relative;
+	}
+	.round{
+		width: 25px;
+		height: 25px;
+		font-size: 14px;
+		position: absolute;	
+		top: 0;
+		background: $orange;
+		color: $white;
+		border:none;
+		transform: translate(50%, -50%);
+	}
+}
+.sidebar-header__header{
+	@include font-style(Poppins-regular, 20px, $black);
+}
+.notification-list-item__link{
+	display: flex;
+	.logo-block {
+		@include font-style(Poppins-semibold, 12px, $white);
+	}
+	.round{
+		background: $black;
+		padding: 13px;
+		color: $white;
+		border: none;
+	}
+	.notification-list-brief{
+		@include font-style(Poppins-regular, 14px, $lightblack);
+		padding: 0 15px;
+		line-height: 25px;
+	}
+}
+.card-type-text{
+	line-height: 24px;
+}
+
+//individual client section
+
+.column-width{
+	width: 75%;
+	background: $lighter-gray;
+}
+.activity-section{
+	@include padding-spacing(45px, 45px);
+}
+.back-to-client{
+	.add-member-subhead{
+	    padding: 40px 30px 40px 50px;
+	    border-bottom: 1px solid $border-line;
+	}
+}
+.job-detail-nav-list{
+	display: flex;
+	padding-bottom: 30px;
+	.job-detail-nav-item{
+		padding: 0 20px;
+		.job-detail-nav-links{
+			display: block;
+			@include font-style(Poppins-medium, 14px, $lightgray);
+		}	
+	}
+}
+.view-card-inner{
+		border: 1px solid $border-line;
+		padding:0;
+	}
+.view-note-card{
+	.view-note-card-item{
+		padding: 25px;
+		border-bottom: 1px solid $border-line;
+		padding-bottom: 30px;
+		display: flex;
+		align-items: center;
+		.view-note-content{
+		@include font-style(Poppins-regular, 14px, $lightblack);
+		padding-top: 10px;
+		padding-right: 60px;
+		span{
+			color: $lightgray;
+		}
+	}
+		.last-seen{
+			padding-top: 30px;
+			padding-left: 64px;
+			@include font-style(Poppins-regular, 12px, $lightgray);
+		}
+	}
+	.round{
+		background: $white;
+		color: $lightgray;
+		width: 35px;
+		height: 35px;
+	}
+	
+}
+
+//recent activity code
+.detail-recent-activity{
+	padding: 0px 35px 40px 35px;
+}
+.recent-sub-head{
+		@include font-style(Poppins-medium, 14px, $black);
+		padding-bottom: 30px;
+	}
+.activity-inner-list{
+	border-bottom: 1px solid $border-line;
+	@include font-style(Poppins-regular, 16px, $lightblack);
+	padding: 40px 0;
+	.last-seen{
+		padding-top: 10px;
+		@include font-style(Poppins-regular, 12px, $lightgray);
+		}
+	}
+	.activity-inner-items{
+		display: flex;
+		align-items: center;
+		.recent-inner-content{
+			padding-left: 20px;
+			.highlight-text{
+				@include font-style(Poppins-regular, 16px, $black);
+				text-decoration: underline;
+				font-weight: bold;
+			}
+		}
+
+}
+.load-more{
+	@include font-style(Poppins-semibold, 12px, $lightblue);
+	padding: 0 20px 20px 50px;
+	&:hover{
+		color: $lightblue;
+	}
+}
+
+//client profile
+.client-section{
+	.recent-sub-head{
+		padding: 30px 0;
+	}
+	.detail-recent-activity{
+		padding-right:30px;	
+	}
+}
+.edit-link {
+	@include font-style(Poppins-semibold, 12px, $blue);
+	padding: 30px;
+}
+.client-profile{
+	padding-bottom: 20px;
+}
+
+.client-base-details{
+	display: flex;
+	flex-wrap: wrap;
+	@include font-style(Poppins-light, 12px, $lightblack);
+	.client-base-items{
+		display: flex;
+		flex-direction: column;
+		line-height: 25px;
+		padding-left: 0;
+		.client-base-details{
+			@include font-style(Poppins-regular, 14px, $black);
+			font-weight: 600px;
+		}
+	}
+}
+
+//side bar------
+
+.fixed-side-bar{
+	display: flex;
+	
+}
+.side-nav-head{
+	display: flex;
+	align-items: center;
+	@include padding-spacing(30px, 50px);
+	.side-head-name{
+		@include font-style(Poppins-light, 20px, $lightgray);
+		display: flex;
+		flex-direction: column;
+		padding-left: 10px;
+		line-height: 24px;
+		span{
+			@include font-style(Poppins-regular, 18px, $lightblack);
+		}
+
+	}
+	.round{
+			background: $white;
+			color: #d7d7d7;
+			border-color: #d7d7d7	;
+		}
+}
+.job-activity-list{
+	 border-bottom: 0;
+	.job-activity-item{
+		border-top: 1px solid $border-line;
+		padding: 20px 0;
+		float: none;
+	}
+	a{
+		@include font-style(Poppins-regular, 14px, #928f8f);
+		text-transform: uppercase;
+
+	}	
+}
+.column-width1{
+	width: 25%;
+	height: 100vh;
+	background: $white;
+	padding: 0 50px;
+	
+}
+.column-width2{
+	width: 75%;
+	background: #fafafa;
+	height: 100vh;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  border: transparent;
+  color: $orange;
+}
+
+.tab-content {
+  .tab-pane {
+    display: none;
+    background: #fafafa;
+    /*padding: 1.6rem;*/
+    overflow-y: auto;
+  }
+  .active { 
+  	display: block; 
+
+  }
+}
+
+
+//timesheet
+.timesheet-inner-list{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	@include font-style(Poppins-regular, 14px, $lightgray);
+
+	.time-sheet-items{
+		display: flex;
+		flex-direction: column;
+		line-height: 25px;
+		position: relative;
+		padding-right: 40px;
+		&:after{
+			content: "";
+			top: 10px;
+			right: 0;
+			width: 2px;
+			height: 28px;
+			background: $border-line;
+			position: absolute;
+		}
+		.time-sheet-date{
+			@include font-style(Poppins-semibold, 18px, $black);
+		}
+	}
+	li.time-sheet-items:last-child:after{
+			width: 0;
+			height: 0;
+		}
+}
+//timesheet table
+.time-sheet-block2{
+	padding: 0 40px 30px 40px;
+	.prev-back{
+		a{
+			@include font-style(Poppins-medium, 14px, $lightgray);	
+		}
+	}		
+}
+.time-sheet-table{
+
+	thead{
+		.time-sheet-table-row{
+			th{
+				padding: 40px 0;
+				@include font-style(Poppins-regular, 14px, $lightblack);
+				border-bottom: 1px solid #f3f3f3;
+			}
+		}
+
+	}
+	tbody{
+		.time-sheet-table-row{			
+			.time-sheet-data{
+				border-bottom: 1px solid #f3f3f3;
+				@include font-style(Poppins-regular, 16px, $lightblack);
+				padding: 20px 0;
+				.company-names{
+					display: flex;
+					@include font-style(Poppins-regular, 14px, $lightgray);
+				}
+			}
+		}
+
+	}
+}
+.width-space{
+	width:125px;
+}

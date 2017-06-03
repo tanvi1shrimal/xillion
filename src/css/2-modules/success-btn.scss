@@ -1,0 +1,31 @@
+
+//Success button
+.checkmark{
+   position: absolute;
+   top: 5px;
+   right: 56px;
+
+   .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    background: #66cc00;
+    position: absolute;
+    }
+    .tick{
+     display:inline-block; 
+    &:after{
+        content: '';
+        display: block;
+        width: 6px;
+        height: 10px;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: relative;
+        left: 7px;
+        display:block;
+        top: 3px;
+        }
+    }
+}

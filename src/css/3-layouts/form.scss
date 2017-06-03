@@ -1,0 +1,458 @@
+form{
+	.btn{
+		padding: 8px 32px;
+		@include font-style(Poppins-Medium, 14px, $white);
+		background: $lightblue;
+		border-radius: 3px;
+		.btn-primary{
+			border-color: none;
+		}
+		&:hover, &:visited, &:active{
+			color: white;
+		}
+
+		&--no-margin{
+			margin: 0;
+		}
+
+		&--popup-btn{
+			margin-top: 40px;
+		}
+	}
+}
+
+.dropdown-menu>li>a{
+	padding: 10px 15px;
+		font:{
+		family: $p-regular;
+		size: 12px;
+	}
+	line-height: 24px;
+	color: $lightgray;
+	transition: 0.2s ease;
+
+	&:hover{
+		background: white;
+		color: $blue;
+	}
+
+	&.dropdown-menu-link--add-more{
+		color: $black;
+	}
+}
+
+.form-content-wrapper{
+	width: 860px;
+}
+
+.form-section{
+	margin-top: 60px;
+
+	&:first-child{
+		margin-top: 0px;
+	}
+
+	&-wrapper{
+		padding-top: 60px;
+		padding-bottom: 80px;
+		border-bottom: 1px solid $border-line;
+
+		&:first-child{
+			padding-top: 20px;
+		}
+
+		&--no-border{
+			border: 0;
+		}
+
+		&--popup{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+.form-wrapper{
+	display: flex;
+	justify-content: space-between;
+
+	&--add-popup{
+		flex-direction: column;
+	}
+
+	.form-parts{
+		width: 100%;
+
+		.col-md-4{
+			width: 33.33333%;
+		}
+	}
+
+	&:after, &:before{
+		content: none;
+	}
+
+	.col-md-4{
+		width: 245px;
+
+		&:first-child{
+			padding-left: 0px;
+
+			.status-message{
+				left: 0px;
+			}
+		}
+
+//		&:last-child{
+//			padding-right: 0px;
+//		}
+	}
+}
+
+.dropdown{
+
+	.status-display{
+		&[data-status="open"]{
+			background: red;
+		}
+		&[data-status="finished"]{
+			background: $green;
+		}
+		&[data-status="wip"]{
+			background: $yellow;
+		}
+		&[data-status="approved"]{
+//			background: $orange;
+			background: $turquoise;
+		}
+	}
+	&--i-job-status{
+
+		.dropdown-toggle{
+			@include font-style(Poppins-medium, 12px, $white);
+			padding: 8px 15px;
+			border-radius: 2px;
+			.fa-down{
+				font-size: 14px;
+				padding-left:10px;
+			}
+			&:hover, &:focus,&:active{
+				color: $white;
+			}
+		}
+	}
+
+	&-toggle{
+		display: flex;
+		align-items: center;
+
+
+	}
+
+	.dropdown-icon{
+		font-size: 15px !important;
+	}
+	&-select{
+		overflow-y: auto;
+		max-height: 200px;
+	}
+
+	&-menu{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		margin-top: 25px;
+		z-index: 10;
+
+		&-list-item{
+			border-bottom: 1px solid $border-line;
+
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+
+		&-link{
+			position: relative;
+			padding: 10px 15px;
+			font-family: "Poppins-Regular";
+			font-size: 12px;
+			line-height: 24px;
+			color: #999;
+			-webkit-transition: 0.2s ease;
+			transition: 0.2s ease;
+
+			&:before{
+				position: absolute;
+				content: "";
+				background: none;
+				height: 100%;
+				width: 3px;
+				top: 0;
+				left: 0;
+				transition: 0.2s ease;
+			}
+
+			&:hover{
+				&::before{
+					background: $blue;
+				}
+			}
+		}
+
+		&:before, &:after{
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			right: 10px;
+			border-style: solid;
+		}
+
+		&:before{
+			top: -30px;
+			border-color: transparent transparent rgba(0,0,0,0.25) transparent;
+			border-width: 15px;
+		}
+
+		&:after{
+			top: -28px;
+			border-color: transparent transparent white transparent;
+			border-width: 14px;
+			right: 11px;
+		}
+
+		&--small{
+			margin-top: 0px;
+
+			&:before, &:after{
+				content: none;
+			}
+
+			.dropdown-list-item{
+				border-bottom: 1px solid $border-line;
+
+				&:last-child{
+					border-bottom: 0;
+				}
+			}
+
+			.dropdown-menu-link{
+				padding: 10px 20px;
+			}
+		}
+	}
+
+	&--input{
+		position: absolute;
+		width: 100%;
+
+		.dropdown-toggle{
+			padding-bottom: 8px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: auto;
+		}
+
+		.add-more{
+			color: $blue;
+			margin-left: 10px;
+		}
+
+		.icon-arrow-down{
+			font-size: 10px;
+		}
+	}
+
+
+
+	&--bordered{
+		padding: 10px 20px;
+		border: 1px solid $border-line;
+		border-radius: 4px;
+
+		background: white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.dropdown-toggle{
+			padding: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: $gray-2;
+
+			.icon-arrow-down{
+				display: flex;
+			}
+		}
+
+	}
+}
+
+/*--------------File upload--------------*/
+#file-upload{
+	display: none;
+}
+
+.form-element{
+	position: relative;
+	display: inline-block;
+	height: 55px;
+	padding-top: 20px;
+	width: 100%;
+
+	&--input{
+//		padding-top: 20px;
+		position: relative;
+//		width: 220px;
+//		height: 55px;
+		transition: 0.2s ease;
+
+		&.float-up{
+			padding-top: 0px;
+
+			label{
+				cursor: default;
+				font-size: 10px;
+				color: #999;
+			}
+
+			.input-style-detail{
+				height: 26px;
+			}
+		}
+
+		label{
+			display: block;
+			cursor: auto;
+			transition: 0.2s ease;
+		}
+	}
+
+	&__input{
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.select-menu{
+		display: none;
+	}
+}
+
+.choose-file-text{
+	padding-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $dark-gray;
+	cursor: pointer;
+
+	/*Font style*/
+	font-family: "Poppins-Light";
+	font-size: 14px;
+	line-height: 26px;
+	color: #494949;
+}
+
+.choose-file-text{
+	width: 100%;
+}
+/*--------------END: File upload--------------*/
+
+/*------------Permissions block------------*/
+.permissions-wrapper{
+	margin-top: 20px;
+}
+
+.permission-detail, .permission-block-list{
+	list-style: disc;
+}
+
+.permission-detail{
+	margin-top: 5px;
+
+	&:first-child{
+		margin-top: 0px;
+	}
+}
+
+.permission-block-list{
+	padding-left: 17px;
+	margin-top: 10px;
+}
+/*------------END: Permissions block------------*/
+
+/*---------------Add page popups---------------*/
+.modal-dialog{
+	&--add-popup{
+		width: 800px;
+
+		&-small{
+			width: 600px;
+		}
+	}
+}
+/*---------------END: Add page popups---------------*/
+
+/*----------------Forms having a single input field with a submit btn----------------*/
+.form-element-wrapper{
+	float: none;
+	padding: 0;
+}
+/*----------------END: Forms having a single input field with a submit btn----------------*/
+
+/*--------------For signup and signin type forms--------------*/
+.signup-login-form{
+
+	.col-md-4{
+		margin-top: 5px;
+
+		&:nth-child(1){
+			margin-top: 0px;
+		}
+		&:nth-child(2){
+			margin-top: 0px;
+		}
+	}
+}
+
+.invite-signup-form{
+	.no-float{
+		float: none;
+	}
+
+	margin-top: 30px;
+	&:nth-child(1){
+		margin-top: 0px;
+	}
+}
+/*--------------END: For signup and signin type forms--------------*/
+
+/*----------------Editable form----------------*/
+.client-base-details{
+	display: flex;
+	flex-wrap: wrap;
+	@include font-style(Poppins-light, 12px, $lightblack);
+	.client-base-items{
+		display: flex;
+		flex-direction: column;
+		line-height: 25px;
+		padding-left: 0;
+		margin-bottom: 20px;
+		.client-base-details{
+			@include font-style(Poppins-regular, 14px, $black);
+			font-weight: 600px;
+		}
+
+		.profile-field-label{
+			font-size: 10px;
+		}
+	}
+}
+/*----------------END: Editable form----------------*/

@@ -1,0 +1,131 @@
+/*-----Tabs section-----*/
+.view-pane{
+	padding: 60px 0px;
+}
+
+.job-views{
+	
+	&.tab-content .tab-pane.view-pane{
+		background: white;
+		
+		&--grid{
+			background: $lighter-gray;
+		}
+	}
+}
+/*-----END: Tabs section-----*/
+
+/*------Tabs wrapper------*/
+.job-tabs-wrapper{
+	
+	.nav-tabs{
+		border-bottom-color: $border-line;
+	}
+	
+	.job-tabs-list-item{
+		
+		.job-tab{
+			position: relative;
+
+			&::after{
+				position: absolute;
+				content: "";
+				right: 0;
+				background: $border-line;
+				height: 40%;
+				width: 1px;
+			}
+		}
+		
+		&:first-child{
+			.job-tab{
+				&::after{
+					content: none;
+				}
+			}
+		}
+		
+		&:last-child{
+			.job-tab{
+				&::after{
+					content: none;
+				}
+			}
+		}
+		
+		&.active{
+			.job-tab{
+				&::after{
+					content: none;
+				}
+			}
+		}
+	}
+	
+	.nav-tabs > li{
+		& > a{
+			background: $lighter-gray;
+			border-radius: 0px;
+			color: $gray-2;
+			margin: 0;
+			border: 0;
+			border: 1px solid transparent;
+			border-bottom-color: $border-line;
+			padding: 15px 30px;
+		}
+	}
+	
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+		background: white;
+		color: $blue;
+		border: 1px solid $border-line;
+		border-bottom-color: transparent;
+	}
+}
+/*------END: Tabs wrapper------*/
+
+/*---------Tabs content---------*/
+
+.job-list-container{
+	.jobs-table{
+		width: 100%;
+		background: white;
+		
+		.table-row{
+			border-bottom: 1px solid $border-line;
+		}
+		
+		.table-headings{
+			width: calc(100% / 7);
+			padding: 15px 0;
+		}
+		
+		.table-content{
+			padding: 18px 0;
+			
+			&--multiple{
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			&.job-status{
+				&--pending{
+					color: $brightred
+				}
+				
+				&--wip{
+					color: $yellow;
+				}
+				
+				&--finished{
+					color: $green;
+				}
+				
+				&--approved{
+					color: $orange;
+				}
+			}
+		}
+	}
+}
+/*END: Tabs content*/

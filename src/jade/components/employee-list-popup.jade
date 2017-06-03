@@ -1,0 +1,38 @@
+// modal dialog
+#card-popup3.modal.fade.add-member-pop
+	.modal-dialog
+		.modal-content
+			.modal-header
+				a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.sub-title.sidebar-header__header Upload employee list
+			.modal-body
+				.modal-tabs-wrapper
+					.col-md-3
+						.steps-tabs
+							ul.nav.nav-tabs.steps-tabs-list
+								li.active.steps-tabs-list-item
+									a.step-tab-text.tab-step(href='#download', aria-controls='download', role='tab', data-toggle='tab')
+										span.step-no 1
+										|  step 1
+								li.steps-tabs-list-item
+									a.step-tab-text.tab-step(href='#upload', aria-controls='upload', role='tab', data-toggle='tab')
+										span.step-no 2
+										|  step 2
+					.col-md-9
+						.tab-content.steps-tabs-content-container
+							#download.active.tab-pane.browse-step-pane
+								p.detail-text Download the sample document and fill it in with your company data
+								.file-wrapper.file-wrapper--download
+									img(src='img/icons/download-img.png', alt='Download Icon')
+									a.tab-text.file-link.file-link--download(href='#') Download Sample
+							#upload.tab-pane.upload-step-pane
+								p.detail-text Upload the edited file with your company’s data
+								.file-wrapper.file-wrapper--upload
+									img(src='img/icons/browse-img.png', alt='Upload Icon')
+									a.tab-text.file-link.file-link--upload(href='#') Upload Document
+			//
+				<div class="modal-footer download-link">
+				<a href="#" class=" pull-left"> <img src="img/download.png" alt=""><span>Download Sample</span></a>
+				</div>
+// modal dialog
+// END: Card for adding team

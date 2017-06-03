@@ -1,0 +1,99 @@
+.card-type{
+	width: 100%;
+	.card-type-text{
+		display: block;
+		text-transform: uppercase;
+		margin-top: 30px;
+		@include font-style(Poppins-medium, 18px, $blue);
+		font-weight: normal;
+	}
+
+	.card-type-block-1, .card-type-block-2{
+		padding: 53px 0px;
+	}
+
+	.card-type-block-1{
+		position: relative;
+
+		&:before{
+			position: absolute;
+			content: "";
+			width: calc(100% - 30px);
+			height: 1px;
+			left: 15px;
+			bottom: 0;
+			background: rgba(0,0,0,0.2);
+		}
+
+		&:after{
+			position: absolute;
+			content: "or";
+			bottom: 0px;
+			left: 50%;
+    		transform: translate(-50%, 50%);
+			background: $gray;
+			color: white;
+			border-radius: 50%;
+			height: 35px;
+			width: 35px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.card-list{
+	display: flex;
+
+	.card-list-item{
+		position: relative;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		background: white;
+		text-align: center;
+		border: 1px solid rgba(0,0,0,0.1);
+
+		filter: grayscale(0);
+		pointer-events: all;
+		box-shadow: 0 0 30px -4px rgba(0,0,0, 0.2);
+
+		&.inactive{
+			filter: grayscale(100%);
+			pointer-events: none;
+			box-shadow: none;
+		}
+
+		&.activate{
+			background: $lighter-gray-2;
+		}
+
+		/*---------For tick mark on finshed step card---------*/
+		.step-completed{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			background: $green;
+			color: white;
+			font-size: 10px;
+			height: 20px;
+			width: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+
+			.icon-check{
+				display: flex;
+			}
+		}
+		/*---------END: For tick mark on finshed step card---------*/
+
+	}
+}
+
+.card-wrapper{
+	margin-top: 70px
+}

@@ -1,0 +1,107 @@
+/*----------For form field to be validated----------*/
+.form-field-container, .form-dropdown-container{
+	padding-bottom: 15px;
+    position: relative;
+
+	.form-element{
+		background: white;
+		z-index: 1;
+	}
+}
+
+.form-field-container{
+
+//	.form-element--input{
+
+	.status-message{
+		color: $green;
+		font-size: 10px;
+		position: absolute;
+		bottom: 20px;
+		display: block;
+		width: 100%;
+		left: 15px;
+		transition: 0.2s ease;
+	}
+
+	&.pass-len-msg{
+		.input-style-detail {
+			border-bottom-color: $blue;
+		}
+
+		.status-message{
+			bottom: 0px;
+			color: $blue;
+		}
+	}
+
+	&.pass-matches{
+		.input-style-detail {
+			border-bottom-color: $green;
+		}
+
+		.status-message{
+			bottom: 0px;
+			color: $green;
+		}
+	}
+
+	&.pass-not-matched{
+		.input-style-detail {
+			border-bottom-color: red;
+		}
+
+		.status-message{
+			bottom: 0px;
+			color: red;
+		}
+	}
+
+	&.error{
+		.input-style-detail {
+			border-bottom-color: red;
+		}
+
+		.status-message{
+			bottom: 0px;
+			color: red;
+		}
+	}
+
+	&.success{
+		.input-style-detail {
+			border-bottom-color: $green;
+		}
+
+		.status-message{
+			color: $green;
+		}
+	}
+}
+/*----------END: For form field to be validated----------*/
+
+/*----------For form dropdown to be validated----------*/
+.form-dropdown-container{
+	.status-message{
+		color: $green;
+		font-size: 10px;
+		position: absolute;
+		bottom: 20px;
+		display: block;
+		width: 100%;
+		left: 15px;
+		transition: 0.2s ease;
+	}
+
+	&.error{
+		.dropdown--input{
+			border-bottom-color: red;
+		}
+
+		.status-message{
+			bottom: 0px;
+			color: red;
+		}
+	}
+}
+/*----------END: For form dropdown to be validated----------*/

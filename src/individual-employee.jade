@@ -1,0 +1,190 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "ind-emp";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			.fixed-side-bar
+				.tabs-left.column-width1
+					.side-nav-head
+						span.round
+							i.icon-user
+						h3.side-head-name
+							| Ram kumar
+							span.side-head-id Manager-3001
+					ul.nav.nav-tabs.job-activity-list
+						li.active.job-activity-item
+							a(href='#all-jobs', data-toggle='tab')
+								span.icon-briefcase.fixed-nav-icon
+								|  All jobs
+						li.job-activity-item
+							a(href='#recent-activity', data-toggle='tab')
+								span.icon-calender.fixed-nav-icon
+								| Recent Activity
+						li.job-activity-item
+							a(href='#time-sheet', data-toggle='tab')
+								span.icon-timesheet.fixed-nav-icon
+								| timesheet
+						li.job-activity-item
+							a(href='#', data-toggle='tab')
+								span.icon-payroll.fixed-nav-icon
+								| pay roll
+						li.job-activity-item
+							a(href='#attendence', data-toggle='tab')
+								span.icon-attendence.fixed-nav-icon
+								| attendance
+						li.job-activity-item
+							a(href='#leaves', data-toggle='tab')
+								span.icon-leaves.fixed-nav-icon
+								| Leave Information
+						li.job-activity-item
+							a(href='#employee-profile', data-toggle='tab')
+								i.icon-user.fixed-nav-icon
+								| employee profile
+
+				.column-width2
+					// fixed section top
+					include jade/components/mixins/individual-pg-header.jade
+					+individual_pg_hd("employee-list.html", "#add-job-popup", "#card-popup2", "back to employee list", "Add Job", "Import Job")
+					// fixed top section ended
+					.tab-content
+						// All job section starts
+						#all-jobs.tab-pane.active.activity-section.job-status-parent-wrapper.clearfix
+							.col-md-10.col-md-offset-1
+								ul.nav.nav-tabs.job-detail-nav-list
+									li.job-detail-nav-item.active
+										a.job-detail-nav-links(href='#al-j' aria-controls="al-j" role="tab" data-toggle="tab")
+											span.job-link-text All Jobs
+									li.job-detail-nav-item
+										a.job-detail-nav-links(href='#pending-jobs' aria-controls="pending-jobs" role="tab" data-toggle="tab")
+											span.job-link-text Open
+									li.job-detail-nav-item
+										a.job-detail-nav-links.upper(href='#wip-jobs' aria-controls="wip-jobs" role="tab" data-toggle="tab")
+											span.job-link-text Wip
+									li.job-detail-nav-item
+										a.job-detail-nav-links(href='#finished-jobs' aria-controls="finished-jobs" role="tab" data-toggle="tab")
+											span.job-link-text Finished
+									li.job-detail-nav-item
+										a.job-detail-nav-links(href='#approved-jobs' aria-controls="approved-jobs" role="tab" data-toggle="tab")
+											span.job-link-text Approved
+
+								.job-status-cards-wrapper
+									.tab-pane.status-card-wrapper-job.active#al-j
+										include jade/components/mixins/individual-client-card.jade
+										+card_type("finished", "Finished")
+										+card_type("open", "Open")
+										+card_type("approved", "Approved")
+										+card_type("wip", "WIP")
+										+card_type("open", "Open")
+									.tab-pane.status-card-wrapper-job#pending-jobs
+										+card_type("open", "Open")
+										+card_type("open", "Open")
+									.tab-pane.status-card-wrapper-job#wip-jobs
+										+card_type("wip", "WIP")
+										+card_type("wip", "WIP")
+									.tab-pane.status-card-wrapper-job#finished-jobs
+										+card_type("finished", "Finished")
+										+card_type("finished", "Finished")
+									.tab-pane.status-card-wrapper-job#approved-jobs
+										+card_type("approved", "Approved")
+										+card_type("approved", "Approved")
+
+						// All job section ended
+
+						//Leaves tab
+						include jade/components/leaves-tab.jade
+						//END: Leaves tab
+
+						// Recent activity
+						include jade/components/recent-activity.jade
+						// END: Recent activity
+
+						// Employee profile
+						include jade/components/employee-profile.jade
+						// END: Employee profile
+						// Timesheet starts
+						#time-sheet.tab-pane.activity-section.clearfix
+							.col-md-10.col-md-offset-1
+								h3.recent-sub-head Timesheet
+								.updated-status-card.time-sheet-block1
+									include jade/components/mixins/timesheet-cell.jade
+									+timesheet_brief("Week", "Total Weekly Hours", "Total Cost (INR)", "Total Revenue (INR)", "2 SEP - 7 SEP", "113", "20000", "2,260,000")
+								.updated-status-card.time-sheet-block2
+									table.table.time-sheet-table
+										thead
+											+timesheet_hd("Job Name", "Today", "Weekly Hours", "Allocated Hours", "Revenue(INR)")
+										tbody
+											+timesheet_cell("Income Tax", "Lollypop Studio", "2", "10", "10", "5000000")
+											+timesheet_cell("Income Tax", "Lollypop Studio", "2", "10", "10", "5000000")
+											+timesheet_cell("Income Tax", "Lollypop Studio", "2", "10", "10", "5000000")
+											+timesheet_cell("Income Tax", "Lollypop Studio", "2", "10", "10", "5000000")
+											+timesheet_cell("Income Tax", "Lollypop Studio", "2", "10", "10", "5000000")
+
+									span.prev-back
+										a(href='#') Prev Week
+						// Timesheet ended
+						// Attendence starts
+						#attendence.tab-pane.activity-section.clearfix
+							.col-md-10.col-md-offset-1
+								h3.recent-sub-head Attendence
+								.updated-status-card.time-sheet-block1
+									include jade/components/mixins/timesheet-cell.jade
+									+timesheet_brief("Month", "Attendence %", "Total Leave", "Sick Leave", "Aug 2016", "85%", "1 Day", "2 Days")
+								.updated-status-card.time-sheet-block2
+									table.table.time-sheet-table
+										thead
+											+attendence_hd("Date", "Time in", "Time out", "Status")
+										tbody
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+											+attendence_cell("1 Aug 2016", "9.30", "18.30", "Present")
+
+									span.prev-back
+										a(href='#') Prev Week
+						// Attendence ended
+					// /tab-content
+				// column width2
+			// wrap section
+
+			//Add popups
+			include jade/components/add-job-small-popup.jade
+			include jade/components/job-category-popup.jade
+
+			// Side bar
+			.sidebar
+				.sidebar-header
+					h2.sidebar-header__header Notifications
+					a.close-notification-sidebar(href='#')
+						img(src='img/icons/close.png', alt='Close image')
+				.notification-list-container
+					ul.notification-list
+						li.notification-list-item
+							a.notification-list-item__link(href='#')
+								span.logo-block.round
+									| AM
+								span.notification-list-brief
+									| Welcome to Xillion! Here are
+									| some tips and tricks for you.
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/select2.min.js')
+		script(src='js/multi-select.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/dropdown.js')
+		script(src='js/show-note.js')
+		script(src='js/input-anim.js')
+		script(src='js/validation.js')
+		script(src='js/leaves-page.js')

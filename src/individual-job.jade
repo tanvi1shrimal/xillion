@@ -1,0 +1,261 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "ind-job";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			.fixed-side-bar.individual-job-wraper
+				.tabs-left.column-width1.column-width1--spacing
+					h3.side-head-name
+						| RKSV
+						span.small-light  : Income Tax
+					ul.side-nav-head.employee-job-list
+						li.employee-drop.status-contact-items
+							.dropdown.dropdown--i-job-status
+								a.dropdown-toggle.status-display(href='#', data-toggle='dropdown' data-status="open")
+									.selected-value Open
+									i.fa.fa-angle-down.fa-down(aria-hidden='true')
+								ul.dropdown-menu.dropdown-menu--small.dropdown-menu--status
+									li.dropdown-list-item
+										a.dropdown-menu-link(href='#' data-status-link="open") Open
+									li.dropdown-list-item
+										a.dropdown-menu-link(href='#' data-status-link="wip") WIP
+									li.dropdown-list-item
+										a.dropdown-menu-link(href='#' data-status-link="finished") Finished
+									li.dropdown-list-item
+										a.dropdown-menu-link(href='#' data-status-link="approved") Approved
+						li.status-contact-items
+							img.img-position(src='img/person.png', alt='name')
+							span.fa-spacing
+								| Ram Kumar
+								a.icon-link(href='#')
+									i.fa.fa-plus(aria-hidden='true')
+						li.status-contact-items
+							img.img-position(src='img/calender.png', alt='calender')
+							span.fa-spacing
+								| 23 Aug
+								img.img-position(src='img/arrow.png', alt='name')
+								|  04 Sep
+					ul.nav.nav-tabs.job-activity-list
+						li.job-activity-item.active
+							a(href='#time-sheet', data-toggle='tab')
+								i.icon-timesheet.fixed-nav-icon
+								| timesheet
+						li.job-activity-item
+							a(href='#recent-activity', data-toggle='tab')
+								i.icon-calender.fixed-nav-icon
+								| Recent Activity
+						li.job-activity-item
+							a(href='#billing-history', data-toggle='tab')
+								i.icon-bill.fixed-nav-icon
+								| billing history
+				.column-width2
+					// fixed section top
+					include jade/components/mixins/individual-pg-header.jade
+					+individual_pg_hd("#", "#add-job-popup", "#card-popup2", "back to job list", "Add Job", "Import Job")
+					// fixed top section ended
+					.tab-content
+						// Timesheet starts
+						#time-sheet.tab-pane.activity-section.clearfix.active
+							.col-md-10.col-md-offset-1
+								h3.recent-sub-head Timesheet
+								.updated-status-card.time-sheet-block1.time-sheet-block1--job-sheet
+									a.pull-right.edit-link(href='#') EDIT
+									include jade/components/mixins/timesheet-cell.jade
+									+timesheet_brief("Week", "Total Weekly Hours", "Total Cost (INR)", "Total Revenue (INR)", "2 SEP - 7 SEP", "113", "20000", "2,260,000", "editable-section")
+								.updated-status-card.time-sheet-block2
+									table.table.time-sheet-table
+										thead
+											+timesheet_hd("Employee Name", "Today", "Weekly Hours", "Allocated Hours", "Revenue (INR)")
+										tbody
+											+timesheet_cell("Ram Kumar", "Manager", "2", "10", "5", "5000000")
+											+timesheet_cell("Ram Kumar", "Manager", "2", "10", "5", "5000000")
+											+timesheet_cell("Ram Kumar", "Manager", "2", "10", "5", "5000000")
+											+timesheet_cell("Ram Kumar", "Manager", "2", "10", "5", "5000000")
+											+timesheet_cell("Ram Kumar", "Manager", "2", "10", "5", "5000000")
+											+timesheet_cell("Ram Kumar", "Manager", "2", "10", "5", "5000000")
+									span.prev-back
+										a(href='#') Prev Week
+						// Timesheet ended
+						// Billing History
+						include jade/components/billing-history.jade
+						// END: Billing History
+						// Recent activity
+						#recent-activity.tab-pane.activity-section.individual-card1.clearfix
+							.col-md-10.col-md-offset-1
+								h3.recent-sub-head Recent Activity
+								// activity card section starts
+								.updated-status-card
+									.individual-job-activity
+										.individual-job-activity-subhead
+											img.img-position(src='img/compose.png', alt='name')
+											h3.status-card-sub-head Ram Kumar
+											span.status-small-details Dec 23, 2016 at 9.30am
+											i.fa.fa-ellipsis-v.pull-right.fa-dots(aria-hidden='true')
+										.individual-job-activity-content
+											p.individual-job-inner-content
+												| Client final document required. Document must be submitted on or before Dec 30th without fail.
+								// activity card section ended
+								// activity card2 section starts
+								.updated-status-card
+									.individual-job-activity
+										.individual-job-activity-subhead
+											img.img-position(src='img/alarm.png', alt='name')
+											h3.status-card-sub-head Ram Kumar
+											span.status-small-details Dec 23, 2016 at 9.30am
+											i.fa.fa-ellipsis-v.pull-right.fa-dots(aria-hidden='true')
+										.individual-job-activity-content
+											p.individual-job-inner-content.content-color
+												| Follow up for the Pan documents.
+											span.follow-up-time Reminder Dec 23, 2016 at 9.30am
+											span.finished-color
+												i.fa.fa-check(aria-hidden='true')
+												| Finished
+								// activity card section ended
+								// activity card3 section starts
+								.updated-status-card
+									.individual-job-activity
+										.individual-job-activity-subhead
+											img.img-position(src='img/compose.png', alt='name')
+											h3.status-card-sub-head Ram Kumar
+											span.status-small-details Dec 23, 2016 at 9.30am
+											i.fa.fa-ellipsis-v.pull-right.fa-dots(aria-hidden='true')
+										.individual-job-activity-content
+											p.individual-job-inner-content
+												| Client final document required. Document must be submitted on or before Dec 30th without fail.
+								// activity card section ended
+						// Recent activity
+						//Client Profile
+						include jade/components/client-profile.jade
+						//END: Client Profile
+					// /tab-content
+				// column width2
+			// wrap section
+			// -edit popup
+			#edit-popup.modal.fade.add-member-pop.employee-edit-pop
+				.modal-dialog
+					.modal-content
+						.modal-header
+							a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+							h4.sub-title.sidebar-header__header Edit this Employee
+						.modal-body
+							form.client-popup-form(action='')
+								.row
+									.col-md-4.signup-detail
+										label(for='first_name') Employee ID
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') First Name
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Last Name
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Date of Birth
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Date of joining
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Address
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Phone
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Email Address
+										input.input-style-detail(type='text', name='firstname')
+									.col-md-4.signup-detail
+										label(for='first_name') Position
+										input.input-style-detail(type='text', name='firstname')
+									.dropdown.col-md-4.employee-drop
+										a.dropdown-toggle.input-style-detail(href='#', data-toggle='dropdown')
+											| Reports to
+											i.fa.fa-angle-down.fa-down(aria-hidden='true')
+										ul.dropdown-menu
+											li
+												a.dropdown-menu-link(href='#') Admin
+											li
+												a.dropdown-menu-link(href='#') Manager
+											li
+												a.dropdown-menu-link(href='#') Employee
+									.dropdown.col-md-4.employee-drop
+										a.dropdown-toggle.input-style-detail(href='#', data-toggle='dropdown')
+											| Reports to
+											i.fa.fa-angle-down.fa-down(aria-hidden='true')
+										ul.dropdown-menu
+											li
+												a.dropdown-menu-link(href='#') Admin
+											li
+												a.dropdown-menu-link(href='#') Manager
+											li
+												a.dropdown-menu-link(href='#') Employee
+									.dropdown.col-md-4.employee-drop
+										a.dropdown-toggle.input-style-detail(href='#', data-toggle='dropdown')
+											| Reports to
+											i.fa.fa-angle-down.fa-down(aria-hidden='true')
+										ul.dropdown-menu
+											li
+												a.dropdown-menu-link(href='#') Admin
+											li
+												a.dropdown-menu-link(href='#') Manager
+											li
+												a.dropdown-menu-link(href='#') Employee
+								.radio-selection
+									h3.recent-sub-head Company
+									ul.radio-selection-list
+										li.radio-selection-items
+											input(type='radio', name='gender', value='male', checked='')
+											span.radio-name
+											| Manager
+										li.radio-selection-items
+											input(type='radio', name='gender', value='male', checked='')
+											span.radio-name
+											| Manager
+										li.radio-selection-items
+											input(type='radio', name='gender', value='male', checked='')
+											span.radio-name
+											| Manager
+								.conformation-btn
+									a.btn.save-btn(type='submit', href='#') Save
+			// edit popup ended
+
+			//Modal for invoice
+			include jade/components/view-file-popup.jade
+			//END: Modal for invoice
+
+			//Add popups
+			include jade/components/add-job-small-popup.jade
+			include jade/components/job-category-popup.jade
+
+			// Side bar
+			.sidebar
+				.sidebar-header
+					h2.sidebar-header__header Notifications
+					a.close-notification-sidebar(href='#')
+						img(src='img/icons/close.png', alt='Close image')
+				.notification-list-container
+					ul.notification-list
+						li.notification-list-item
+							a.notification-list-item__link(href='#')
+								span.logo-block.round
+									| AM
+								span.notification-list-brief
+									| Welcome to Xillion! Here are
+									| some tips and tricks for you.
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/select2.min.js')
+		script(src='js/multi-select.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/dropdown.js')
+		script(src='js/input-anim.js')

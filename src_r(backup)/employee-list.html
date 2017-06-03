@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xillion-employee-list</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--	Nav header-->
+	<header class="header">
+		
+		<nav class="nav-bar">
+			<div class="nav-block-1">
+				<div class="logo-section">
+					<a href="#" class="menu-icon">
+<!--						<img src="img/icons/hamburger.png" alt="Hamburger menu icon">-->
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="nav-company-logo">
+						<img src="img/logo/logo.png" alt="">
+					</a>
+				</div>
+				<div class="search-form-wrapper">
+					<form action="#" class="search-form">
+						<input class="search-form__input-field" type="text" placeholder="Search">
+						<button class="search-form__cta" type="submit">
+							<img src="img/icons/search.png" alt="Search icon">
+						</button>
+					</form>
+				</div>
+				
+			</div>
+			<div class="nav-block-2">
+				
+				<div class="notifications-block">
+					
+					<a href="#" class="circular-link-blocks open-notification">
+						<img src="img/icons/notification.png" alt="Notifications Image">
+						<span class="round">1</span>
+					</a>
+					<div class="dropdown">
+					<a href="#" class="circular-link-blocks dropdown-toggle" data-toggle="dropdown">
+						<span class="circular-link-text">AR</span>
+					</a>
+					<ul class="dropdown-menu">
+            			<li class="dropdown-items"><a href="#">Profile</a></li>
+            			<li class="dropdown-items"><a href="#">Preferences</a></li>
+            			<li class="dropdown-items"><a href="#">Settings</a></li>
+            			<li class="dropdown-items"><a href="#">Sign Out</a></li>
+        			</ul>
+				</div>
+			</div>
+				
+			</div>
+			
+		</nav>
+		
+		<!--		Hamburger menu-->
+		<div class="hamburger-menu">
+			<ul class="menu-list">
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Dashboard</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Jobs</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Clients</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Employees</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Timesheet</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Settings</a>
+				</li>
+			</ul>
+		</div>
+		<!--		END: Hamburger menu-->
+		
+	</header>
+<!--	END: Nav header-->
+
+<!--Employee list page starts-->
+<main>
+	<div class="nav-overlay"></div>
+	<section class="add-member-section">
+		<div class="container">
+			<ul class="add-member-subhead">
+				<li class="member-side-head">employees: <span class="count">50</span></li>
+				<li class="add-button-style pull-right">
+					<button type="button" class="btn"><i class="fa fa-plus" aria-hidden="true"></i>Add Employee</button>
+					<button type="button" class="import-btn btn">
+					<img src="images/chart.png" alt=""> <span class="small-info">Import Employee</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="add-member-table-wrap employee-data">
+				<table class="table add-member-table-structure">
+			        <thead>
+			            <tr class="emp-table-head-spacing">
+			                <th>Name <i class="fa fa-exchange" aria-hidden="true"></th>
+			                <th>Current Clients <i class="fa fa-exchange" aria-hidden="true"></th>
+			                <th>Pending Jobs <i class="fa fa-exchange" aria-hidden="true"></th>
+			                <th>Salary <i class="fa fa-exchange" aria-hidden="true"></th>
+			                <th class="item-spacing">Allocated Hours/Week <i class="fa fa-exchange" aria-hidden="true"></th>
+			                <th>Profit <i class="fa fa-exchange" aria-hidden="true"></th>
+			            </tr>
+			        </thead>
+			        <tbody class="emp-table-body">
+			            <tr class="add-member-row">
+			                <td class="name-spacing">Ram Kumar <span class="designation">Manager</span></td>
+			                <td>
+			                <ul class="company-inline-list">
+			                	<li class="round">
+			                		AM
+			                	</li>
+			                	<li class="round">
+			                		LP
+			                	</li>
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                </ul>
+			                </td>
+			                <td>8</td>
+			                <td>5LPA</td>
+			                <td class="text-center">30</td>
+			                <td>30%</td>
+			            </tr>
+			            <tr class="add-member-row">
+			                <td class="name-spacing">Ram Kumar <span class="designation">Manager</span></td>
+			                <td><ul class="company-inline-list">
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                	<li class="round">
+			                		RK
+			                	</li>		             
+			                </ul></td>
+			                <td>8</td>
+			                <td>5LPA</td>
+			                <td class="text-center">30</td>
+			                <td>30%</td>
+			            </tr>
+			            <tr class="add-member-row">
+			                <td class="name-spacing">Ram Kumar <span class="designation">Manager</span></td>
+			                <td><ul class="company-inline-list">
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                </ul></td>
+			                <td>8</td>
+			                <td>5LPA</td>
+			                <td class="text-center">30</td>
+			                <td>30%</td>
+			            </tr>
+			            <tr class="add-member-row">
+			                <td class="name-spacing">Ram Kumar <span class="designation">Manager</span></td>
+			                <td><ul class="company-inline-list">
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                	<li class="round">
+			                		RK
+			                	</li>
+			                	
+			                </ul></td>
+			                <td>8</td>
+			                <td>5LPA</td>
+			                <td class="text-center">30</td>
+			                <td>30%</td>
+			            </tr>
+			        </tbody>
+    			</table>
+    			<a href="#" class="next-link pull-right">Next <span>(10-20 OF 25)</span></a>
+			</div>
+		</div>
+	</section>
+
+	<div class="sidebar">
+			
+			<div class="sidebar-header">
+				<h2 class="sidebar-header__header">Notifications</h2>
+				<a href="#" class="close-notification-sidebar">
+					<img src="img/icons/close.png" alt="Close image">
+				</a>
+			</div>
+			
+			<div class="notification-list-container">
+				
+				<ul class="notification-list">
+					
+					<li class="notification-list-item">
+						
+						<a href="#" class="notification-list-item__link">
+							<span class="logo-block round">
+								AM
+							</span>
+							<span class="notification-list-brief">
+								Welcome to Xillion! Here are
+some tips and tricks for you.
+							</span>
+						</a>
+						
+					</li>
+					
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+	<!--Employee page ended-->	
+</main>	
+</body>
+    <script src="js/jquery.js"></script>
+	<script src="javascripts/jquery-2.1.4.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="js/open-sidebar.js"></script>
+	<script src="js/hamburger-menu.js"></script>
+</html>

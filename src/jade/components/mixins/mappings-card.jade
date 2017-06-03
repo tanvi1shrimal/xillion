@@ -1,0 +1,61 @@
+mixin mappings_card(card_no)
+	.mappings-card.clearfix
+		.card-header-wrapper
+			h5.header-5.caps.mappings-card__header= "Assignment "+card_no
+		.card-form-section
+			//Card form
+			form.mappings-card-form.form-inline.clearfix
+				.job-block.clearfix
+					.form-group.col-md-3
+						.input-wrapper
+							input.form-control(placeholder='Client Name')
+					.form-group.col-md-3
+						.form-control.search-box
+							input.search-box__field(placeholder="Search For Client")
+							button.search-box__btn.icon-search(type="submit")
+					.form-group.col-md-4
+						.input-wrapper
+							input.form-control(placeholder='Employee Name or ID')
+					.form-group.col-md-2.clearfix
+						.dropdown.dropdown--input.form-control
+							a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+								| End Date
+								i.fa.fa-angle-down.fa-down(aria-hidden='true')
+							ul.dropdown-menu
+								li.dropdown-menu-list-item
+									a.dropdown-text.dropdown-menu-link(href='#') Finished
+								li.dropdown-menu-list-item
+									a.dropdown-text.dropdown-menu-link(href='#') WIP
+								li.dropdown-menu-list-item
+									a.dropdown-text.dropdown-menu-link(href='#') Approved
+
+				.job-block.clearfix
+					.form-group.col-md-3
+					.form-group.col-md-3
+						.form-control.search-box
+							input.search-box__field(placeholder="Search For Client")
+							button.search-box__btn.icon-search(type="submit")
+					.form-group.col-md-4
+						.input-wrapper
+							input.form-control(placeholder='Employee Name or ID')
+					.form-group.col-md-2.clearfix
+						.dropdown.dropdown--input.form-control
+							a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+								| End Date
+								i.fa.fa-angle-down.fa-down(aria-hidden='true')
+							ul.dropdown-menu
+								li.dropdown-menu-list-item
+									a.dropdown-text.dropdown-menu-link(href='#') Finished
+								li.dropdown-menu-list-item
+									a.dropdown-text.dropdown-menu-link(href='#') WIP
+								li.dropdown-menu-list-item
+									a.dropdown-text.dropdown-menu-link(href='#') Approved
+
+				.job-block.clearfix
+					.col-md-3
+					.col-md-3
+						a.link-text.caps.add-mapping-card(href='#')
+							span.icon-plus
+							span.add-mapping-card__text add more
+
+			//END: Card form

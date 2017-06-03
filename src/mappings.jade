@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "mappings";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			section.section--welcome.section--white
+				.container
+					.header-text.section-header LET'S MAP YOUR DATA
+			section.section
+				.container
+					h3.sidebar-header__header Mapping
+
+
+					.mappings-cards-wrapper
+						//Mappings card
+						include jade/components/mixins/mappings-card.jade
+						+mappings_card("1")
+						//END: Mappings card
+
+						//Mappings card
+						include jade/components/mixins/mappings-card.jade
+						+mappings_card("2")
+						//END: Mappings card
+
+
+					//Submit button
+					.form-section-wrapper
+						button.btn.btn--no-margin.save-mappings-btn(type="submit") Save
+					//END: Submit button
+
+
+
+			include jade/components/sidebar.jade
+
+
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/input-anim.js')

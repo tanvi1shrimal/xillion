@@ -1,0 +1,143 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "dashboard";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			section.add-member-section
+				.container
+					.add-member-subhead
+						.header-block.dashboard-header
+							span.member-side-head.header-text Dashboard
+							ul.nav.nav-tabs.view-list(role='tablist')
+								li.active.view-list-item
+									a.view-link(href='#list-view', aria-controls='list-view', role='tab', data-toggle='tab')
+										span.icon-list
+								li.view-list-item
+									a.view-link(href='#')
+										span.icon-graph-bar
+						li.add-button-style.pull-right
+							a.btn(href="#" data-toggle='modal', data-target='#add-job-popup')
+								i.fa.fa-plus(aria-hidden='true')
+								| 					Add Job
+							a.import-btn.btn(href="#" data-toggle='modal', data-target='#card-popup2')
+								img(src='img/chart.png', alt='')
+								span.small-info Import Job
+			// Views section
+			section
+				.job-views.tab-content
+					// Grid view
+					// Place the grid-view component here if needed
+					// END: Grid view
+					// List view
+					#list-view.view-pane.view-pane--list.tab-pane.active(role='tabpanel')
+						.container
+							.job-tabs-pane-container
+								.job-tabs-wrapper
+									ul.nav.nav-tabs.job-tabs-list(role='tablist')
+										li.active.job-tabs-list-item
+											a.tab-text.job-tab(href='#all-jobs', aria-controls='all-job', role='tab', data-toggle='tab')
+												| All
+												span.job-count 100
+										li.job-tabs-list-item
+											a.tab-text.job-tab(href='#pending-jobs', aria-controls='pending-jobs', role='tab', data-toggle='tab')
+												| Open
+												span.job-count 24
+										li.job-tabs-list-item
+											a.tab-text.job-tab(href='#in-progress-jobs', aria-controls='in-progress-jobs', role='tab', data-toggle='tab')
+												| WIP
+												span.job-count 36
+										li.job-tabs-list-item
+											a.tab-text.job-tab(href='#finished-jobs', aria-controls='finished-jobs', role='tab', data-toggle='tab')
+												| Finished
+												span.job-count 20
+										li.job-tabs-list-item
+											a.tab-text.job-tab(href='#approved-jobs', aria-controls='approved-jobs', role='tab', data-toggle='tab')
+												| Approved
+												span.job-count 20
+								.job-list-container.tab-content
+									// All Jobs list
+									#all-jobs.tab-pane.active.job-list.job-list--all-job(role='tabpanel')
+										table#myTable-1.jobs-table.tablesorter
+											thead
+												include jade/components/mixins/dashboard-tb-cell.jade
+												+table_hd
+											tbody
+												+table_row("RKSV", "Audit", "High", "Open", "open", "2 Aug", "2 Days", "AM", "LP", "OB")
+												+table_row("Lollypop", "Audit", "Regular", "WIP", "wip", "5 Aug", "2 Days", "AM", "LP", "OB")
+												+table_row("Bosch", "Audit", "Regular", "Open", "open", "10 Aug", "2 Days", "AM", "LP", "OB")
+												+table_row("Lollypop", "Audit", "High", "Finished", "finished", "6 Aug", "8 Days", "AM", "LP", "")
+									// END: All Jobs list
+									// Pending Jobs list
+									#pending-jobs.tab-pane.job-list.job-list--pending-jobs(role='tabpanel')
+										table#myTable-2.jobs-table.tablesorter
+											thead
+												+table_hd
+											tbody
+												+table_row("Lollypop", "Audit", "High", "Open", "open", "5 Aug", "8 Days", "AM", "LP", "")
+									// END: Pending Jobs list
+									// WIP Jobs list
+									#in-progress-jobs.tab-pane.job-list.job-list--in-progress-jobs(role='tabpanel')
+										table#myTable-3.jobs-table.tablesorter
+											thead
+												+table_hd
+											tbody
+												+table_row("Lollypop", "Audit", "High", "Work in Progress", "wip", "5 Aug", "8 Days", "AM", "LP", "")
+									// END: WIP Jobs list
+									// Finished Jobs list
+									#finished-jobs.tab-pane.job-list.job-list--finished-jobs(role='tabpanel')
+										table#myTable-4.tablesorter.jobs-table
+											thead
+												+table_hd
+											tbody
+												+table_row("Lollypop", "Audit", "High", "Finished", "finished", "5 Aug", "8 Days", "AM", "LP", "")
+									// END: Finished Jobs list
+									// Approved Jobs list
+									#approved-jobs.tab-pane.job-list.job-list--approved-jobs(role='tabpanel')
+										table#myTable-5.tablesorter.jobs-table
+											thead
+												+table_hd
+											tbody
+												+table_row("Lollypop", "Audit", "High", "Approved", "approved", "5 Aug", "8 Days", "AM", "LP", "")
+									// END: Approved Jobs list
+					// END: List view
+			// END: Views section
+
+			//Popups
+			include jade/components/add-job-small-popup.jade
+			include jade/components/job-category-popup.jade
+			//END: Popups
+
+			.sidebar
+				.sidebar-header
+					h2.sidebar-header__header Notifications
+					a.close-notification-sidebar(href='#')
+						img(src='img/icons/close.png', alt='Close image')
+				.notification-list-container
+					ul.notification-list
+						li.notification-list-item
+							a.notification-list-item__link(href='#')
+								span.logo-block.round
+									| AM
+								span.notification-list-brief
+									| Welcome to Xillion! Here are
+									| some tips and tricks for you.
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/select2.min.js')
+		script(src='js/multi-select.js')
+		script(src='js/jquery.sortElements.js')
+		script(src='js/table-sort.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		//
+			<script src="js/jquery.tablesorter.min.js"></script>
+			<script src="js/table-sort.js"></script>

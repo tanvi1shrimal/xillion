@@ -1,0 +1,134 @@
+// modal dialog for client-list
+#client-popup.modal.fade.add-member-pop
+	.modal-dialog.modal-dialog--add-popup
+		.modal-content
+			.modal-header
+				a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.sub-title.sidebar-header__header Add a Client
+			.modal-body
+				//Form 1
+				form.form-section-wrapper.form-section-wrapper--popup#add-client
+					.form-section
+
+						.form-wrapper.form-wrapper--add-popup
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Client Code
+										input.input-style-detail.field-text.form-element__input
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Company Name*
+										input.input-style-detail.field-text.form-element__input
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Address
+										input.input-style-detail.field-text.form-element__input
+
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Contact Person*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Contact Number*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Email Address
+										input.input-style-detail.field-text.form-element__input
+
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Date of incorporation
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label PAN*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label TAN*
+										input.input-style-detail.field-text.form-element__input
+
+
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Service Tax Number*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label TIN*
+										input.input-style-detail.field-text.form-element__input
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label VAT*
+										input.input-style-detail.field-text.form-element__input
+
+
+							.form-parts
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Start Date
+										input.input-style-detail.field-text.form-element__input
+
+								//Latest dropdown copy
+								.col-md-4.form-dropdown-container
+									.form-element
+										select.select-menu
+											option(value="" data-option="")
+											option(value="inr" data-option="option-1") inr
+											option(value="dollar" data-option="option-2") dollar
+											option(value="euro" data-option="option-3") euro
+										.dropdown.dropdown--input
+											a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+												span.selected-value(data-selcted-option="") Billing Type*
+												span.icon-arrow-down
+											ul.dropdown-menu.dropdown-select
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") 1 - 3 lakhs
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") 4 - 6 lakhs
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") 7 - 9 lakhs
+								//END: Latest dropdown copy
+
+								.col-md-4.form-field-container
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Monthly Revenvue
+										input.input-style-detail.field-text.form-element__input
+
+
+							.form-parts
+								.col-md-4.form-dropdown-container
+									.form-element
+										select.select-menu
+											option(value="" data-option="")
+											option(value="inr" data-option="option-1") inr
+											option(value="dollar" data-option="option-2") dollar
+											option(value="euro" data-option="option-3") euro
+										.dropdown.dropdown--input
+											a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+												span.selected-value(data-selcted-option="") Client Priority*
+												span.icon-arrow-down
+											ul.dropdown-menu.dropdown-select
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") INR
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") DOLLAR
+												li.dropdown-menu-list-item
+													a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") EURO
+
+
+					button.btn.btn--no-margin.btn--popup-btn Save
+
+				//END: Form 1

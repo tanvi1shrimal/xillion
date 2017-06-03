@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "signin";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// SignIn page starts
+		main
+			section
+				.container-fluid
+					.row
+						.col-md-5.login-bgimage_position
+							a(href='#')
+								img.img-responsive.logo-spacing(src='img/logo.png', alt='logo')
+						.col-md-7
+							.main-form-spacing
+								h3.main-form-head Sign In
+								span.status-message Congratulations! Your Email has been successfully verified!
+								.row
+									form.signup-form.signup-login-form(action='')
+										.col-md-4.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Email
+												input.input-style-detail.field-text.form-element__input(type='email', name='mail')
+										.col-md-4.col-md-offset-1.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Password
+												input.input-style-detail.field-text.form-element__input(type='password', name='pwd')
+											a.pull-right.pwd-right-move.form-link-text.forgot-pw-link(href='forgetpwd.html') Forgot password?
+										.clearfix
+										// checkbox
+										.checkbox-spacing.checkbox-wrapper
+											label.checkbox-label(for='remember-me')
+												input#remember-me(type='checkbox')
+												span.radio-btn-container
+													span.checkbox-shape.custom-checkbox
+														i.fa.fa-check(aria-hidden='true')
+													span.checkbox-text.form-link-text Remember me
+										// button
+										.conformation-btn
+											button.btn.btn--no-margin(type='submit') Sign In
+										p.exist-account
+											| Dont have an account?
+											a.exist-account-color.conditional-text(href='signup.html')  Sign Up
+
+			// SignIn page ended
+	script(src='js/jquery-2.1.4.js')
+	script(src='js/checkbox.js')
+	script(src='js/input-anim.js')

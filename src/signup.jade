@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "signup";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Signup page starts
+		main
+			section
+				.container-fluid
+					.row
+						.col-md-5.login-bgimage_position
+							a(href='#')
+								img.img-responsive.logo-spacing(src='img/logo.png', alt='logo')
+						.col-md-7.signup-form-spacing
+							.main-form-spacing
+								h3.main-form-head Register
+								.row
+									form.signup-form.signup-login-form.validate-form(action='' id="signup-form")
+										.col-md-4.form-field-container.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label First Name
+												input.input-style-detail.field-text.form-element__input(name='firstname')
+										.col-md-4.form-field-container.col-md-offset-1.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Last Name
+												input.input-style-detail.field-text.form-element__input(name='lastname')
+										.col-md-4.form-field-container.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Company Name
+												input.input-style-detail.field-text.form-element__input(name='company_name')
+										.col-md-4.form-field-container.col-md-offset-1.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Work Email ID
+												input.input-style-detail.field-text.form-element__input(name='email_id')
+										.col-md-4.form-field-container.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Password
+												input.input-style-detail.field-text.form-element__input(type='password', name='pwd' id="password")
+										.col-md-4.form-field-container.col-md-offset-1.signup-detail.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Confirm Password
+												input.input-style-detail.field-text.form-element__input(type='password', name='pwd' id="confirm-password")
+										.clearfix
+										.signup-detail.check-space
+											// checkbox
+											.checkbox-spacing.checkbox-wrapper
+												label.checkbox-label(for='remember-me')
+													input#remember-me(type='checkbox')
+													span.radio-btn-container
+														span.checkbox-shape.custom-checkbox
+															i.fa.fa-check(aria-hidden='true')
+														span.checkbox-text  I accept the
+														a.condition-color.conditional-text(href='#') Terms & Conditions
+										.conformation-btn
+											button.btn.btn--no-margin(type='submit') Sign Up
+											p.exist-account
+												| Already have an account?
+												a.exist-account-color.conditional-text(href='signIn.html')  Sign In
+			// Signup page ended
+	script(src='js/jquery-2.1.4.js')
+	script(src='js/checkbox.js')
+	script(src='js/input-anim.js')
+	script(src='js/validation.js')

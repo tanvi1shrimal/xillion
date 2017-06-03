@@ -1,0 +1,34 @@
+.status-comment-line-list{
+	display: flex;
+	padding: 20px 25px;
+	.status-comment-line-item{
+		display: flex;
+		align-items: flex-end;
+		margin-left: 60px;
+
+		&:first-child{
+			margin-left: 0px;
+		}
+
+		.status-comment-link{
+			display: inline-block;
+			@include font-style(Poppins-regular, 14px, $lightblue);
+//			padding-left: 10px;
+			margin-left: 10px;
+		}
+
+		.notes-count{
+			color: white;
+			font-weight: bold;
+			font-size: 16px;
+			margin-left: 5px;
+			display: inline-flex;
+			background: #ff6600;
+			height: 22px;
+			width: 22px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+		}
+	}
+}

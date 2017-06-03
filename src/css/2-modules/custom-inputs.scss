@@ -1,0 +1,229 @@
+/*--------------label styling--------------*/
+.label-wrapper{
+	display: flex;
+	cursor: pointer;
+
+	&__text{
+		margin-left: 35px;
+	}
+
+	.radio-btn-wrapper{
+		.custom-radio{
+			top: 4px;
+		}
+	}
+}
+/*--------------END: label styling--------------*/
+
+.custom-checkbox{
+	background: transparent;
+	transition: 0.2s ease;
+}
+
+.checkbox-label{
+	.radio-btn-container{
+		display: flex;
+		align-items: center;
+	}
+
+	.checkbox-shape{
+		width: 15px;
+		height: 15px;
+		border: 1px solid #c6c6c6;
+		display: inline-flex;
+		font-size: 10px;
+		justify-content: center;
+		align-items: center;
+		color: white;
+	}
+
+	.checkbox-text{
+		margin-left: 10px;
+	}
+
+	input[type="checkbox"]{
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+
+	&.anim{
+		.checkbox-shape{
+			border-color: $blue;
+		}
+
+		.custom-checkbox{
+			background: $blue;
+		}
+	}
+}
+
+/*-----------radio button-----------*/
+
+.radio-btn-wrapper{
+	position: relative;
+
+	input[type="radio"]{
+		height: 0;
+		width: 0;
+		margin: 0;
+	}
+
+	.custom-radio{
+		position: absolute;
+		top: 2px;
+		height: 15px;
+		width: 15px;
+		border: 1px solid $gray;
+		border-radius: 50%;
+
+		&:after{
+			position: absolute;
+			height: 3px;
+			width: 3px;
+			top: 50%;
+			left: 53%;
+			background: none;
+			content: "";
+			transform: translate(-50%, -50%);
+		}
+
+		&.active{
+			border-color: $blue;
+
+			&:after{
+				background: $blue;
+			}
+		}
+	}
+}
+/*-----------END: radio button-----------*/
+
+[data-toggle="dropdown"]{
+	i{
+		font-size: 15px;
+	}
+}
+
+/*----------Changing the readonly elements to editable elements----------*/
+.editable-info{
+	border: 0;
+	border-bottom: 1px solid transparent;
+
+	&.enable-edit{
+		border-bottom-color: $blue;
+	}
+}
+/*----------END: Changing the readonly elements to editable elements----------*/
+
+/*---------Image Preview---------*/
+.invoice-preview-image{
+	width: 100%;
+}
+/*---------END: Image Preview---------*/
+
+/*-------Bordered input elements-------*/
+.search-form-input, .bordered-form-input{
+	width: 420px;
+	padding: 10px 20px;
+	border: 1px solid $border-line;
+	border-radius: 4px;
+	color: $gray-2;
+
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	.placeholder-ele{
+		display: block;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+	}
+
+	&__input-field{
+		border: 0;
+		width: 95%;
+	}
+
+	&__btn{
+		border: 0;
+		background: transparent;
+		color: $gray;
+		padding: 0;
+		width: 5%;
+		cursor: pointer;
+	}
+}
+
+input{
+	&.small-bordered-field{
+		width: 60px;
+		border: 1px solid $border-line-2;
+
+		&:focus{
+			border-color: $blue;
+		}
+
+		&.done{
+			border-color: $blue;
+		}
+	}
+
+	&.centered-text{
+		text-align: center;
+	}
+}
+/*-------END: Bordered input elements-------*/
+
+/*----------Multi selection----------*/
+span.select2-selection.select2-selection--multiple{
+	border: 0 !important;
+	border-radius: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+	padding: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	border: 0;
+	padding: 8px 6px;
+	border-radius: 0px;
+	color: #212121;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true]{
+	color: white;
+}
+
+.select2-dropdown{
+	border-color: $border-line;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	color: white;
+	background: #dbdbdb;
+	font-family: $p-medium;
+	transition: 0.2s ease;
+}
+
+.select2-results__option{
+	color: #dbdbdb;
+}
+/*----------END: Multi selection----------*/
+
+/*----------------Dropdown----------------*/
+.dropdown{
+	&--timesheet{
+		.work-note{
+			font-size: 12px;
+			justify-content: space-between;
+			padding: 0 10px;
+    		width: 100px;
+		}
+	}
+}
+/*----------------END: Dropdown----------------*/

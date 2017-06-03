@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "add-client";
+
+	include jade/base/header.jade
+	+header(page_name)
+
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+
+			//Tabs section
+			section.section--add-tabs-section
+				.container
+					include jade/components/add-tabs.jade
+
+			//END: Tabs section
+
+			section.section
+				.container
+					.tab-content.add-tabs-pane-container
+
+						//Add Client Tab container pane
+						include jade/components/add-client-tab-pane.jade
+						//END: Add Client Tab container pane
+
+						//Add Job Tab container pane
+						include jade/components/add-job-tab-pane.jade
+						//END: Add Job Tab container pane
+
+						//Assign Employee Tab container pane
+						include jade/components/assign-employee-tab-pane.jade
+						//END: Assign Employee Tab container pane
+
+						//Client popup
+						include jade/components/client-popup.jade
+						//END: Client popup
+
+						//Job popup
+						include jade/components/job-popup.jade
+						//END: Job popup
+
+						//Employee popup
+						include jade/components/add-employee-popup.jade
+						//END: Employee popup
+
+					//CTA section
+					.add-mod-navigation-block
+						.navigation-btn-wrapper
+							a.table-text.navigation-btn-wrapper__go-back(href="#") Back
+							a.btn.navigation-btn-wrapper__next-btn.next-tab(href="#" data-tab="client") Next
+							a.table-text.navigation-btn-wrapper__skip-step(href="#") Skip
+					//END: CTA section
+
+
+			include jade/components/sidebar.jade
+
+
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/bootstrap-datepicker.min.js')
+		script(src='js/datepicker.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/input-anim.js')
+		script(src='js/add-tabs.js')

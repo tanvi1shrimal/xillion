@@ -1,0 +1,117 @@
+//timesheet
+.timesheet-inner-list{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	@include font-style(Poppins-regular, 14px, $lightgray);
+
+	.time-sheet-items{
+		display: flex;
+		flex-direction: column;
+		line-height: 25px;
+		position: relative;
+		padding: 0;
+		padding-left: 20px;
+
+		&:after{
+			content: "";
+			top: 10px;
+			right: 0;
+			width: 2px;
+			height: 28px;
+			background: $border-line;
+			position: absolute;
+		}
+		.time-sheet-date{
+			@include font-style(Poppins-semibold, 18px, $black);
+		}
+
+		.timesheet-brief-label{
+			font-size: 10px;
+		}
+	}
+	li.time-sheet-items:last-child:after{
+			width: 0;
+			height: 0;
+		}
+}
+//timesheet table
+.time-sheet-block1{
+	.edit-link, .save-link{
+		padding: 10px 10px 0 0;
+	}
+
+	&--job-sheet{
+		padding-top: 20px;
+		position: relative;
+
+		.edit-link, .save-link{
+			padding: 0px;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+	}
+}
+.time-sheet-block2{
+	padding: 0 40px 30px 40px;
+	.prev-back{
+		text-decoration: underline;
+		a{
+			@include font-style(Poppins-medium, 14px, $lightgray);
+
+		}
+	}
+}
+
+.time-sheet-table{
+	.time-sheet-table-row{
+		th{
+			padding: 30px 0;
+			@include font-style(Poppins-regular, 14px, $lightblack);
+			border-bottom: 1px solid #f3f3f3;
+		}
+
+		.timesheet-cell{
+			font-size: 16px;
+    		color: $gray-2;
+		}
+
+		input[type="file"]{
+			display: none;
+		}
+
+		.time-sheet-data{
+			border-bottom: 1px solid #f3f3f3;
+			@include font-style(Poppins-regular, 16px, $lightblack);
+			padding: 20px 0;
+			.company-names{
+				display: flex;
+				@include font-style(Poppins-regular, 14px, $lightgray);
+			}
+			.upload-invoice{
+				color: $blue;
+				font-family: $p-medium;
+				cursor: pointer;
+
+				&:hover, &:active, &:focus{
+					color: $blue;
+					font-family: $p-medium;
+				}
+			}
+		}
+
+		&--attendence{
+			.time-sheet-data{
+				color: $gray-2;
+			}
+		}
+		&--billing-history{
+			th{
+				width: 25%;
+			}
+		}
+
+	}
+}

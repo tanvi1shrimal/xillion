@@ -1,0 +1,128 @@
+.ind-content-wrapper{
+	padding-right: 10%;
+	height: 50vh;
+	overflow-y: auto;
+
+	@media(min-height: 800px){
+		height: 55vh;
+	}
+}
+
+.job-status-parent-wrapper{
+	.nav-tabs{
+		border: 0;
+	}
+
+	.job-status-cards-wrapper{
+		padding: 0;
+		background: none;
+		border: 0;
+//		padding-right: 10%;
+//		height: 50vh;
+//		overflow-y: auto;
+//
+//		@media(min-height: 800px){
+//			height: 55vh;
+//		}
+	}
+
+	.job-detail-nav-list .job-detail-nav-item{
+		&:first-child{
+			padding-left: 0px;
+		}
+
+		&.active{
+			.job-detail-nav-links{
+				background: none;
+			}
+
+			.job-link-text{
+				position: relative;
+				color: $blue;
+
+				&:after{
+					content: "";
+					position: absolute;
+					height: 2px;
+					width: 100%;
+					background: $blue;
+					left: 0;
+					bottom: 0px;
+				}
+			}
+		}
+	}
+}
+
+.updated-status-card{
+
+	.dropdown-toggle{
+		width: 120px;
+		padding-left: 10px;
+		padding-right: 10px;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 4px;
+	}
+
+//	&.pending{
+//		.dropdown{
+//			.dropdown-toggle{
+//				background: red;
+//			}
+//		}
+//	}
+//
+//	&.wip{
+//		.work-note{
+//			background: $yellow;
+//		}
+//	}
+//
+//	&.approved{
+//		.work-note{
+//			background: $orange;
+////			background: $turquoise;
+//		}
+//	}
+
+	.column-width2{
+		height: auto;
+	}
+
+	.status-card-inner{
+		.block-display, .status-card-details, .status-contact-list{
+			float: left;
+		}
+
+		.status-contact-list{
+			height: 50px;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			margin-left: 60px;
+		}
+
+		.status-contact-items{
+			padding: 0;
+			margin-left: 60px;
+
+			&:first-child{
+				margin-left: 0px;
+			}
+		}
+	}
+}
+
+/*-----------------Form Parts-----------------*/
+.form-parts{
+	&--search-type-inputs{
+		float: none;
+	}
+}
+
+.search-input-wrapper{
+	float: none;
+	margin-top: 30px;
+}
+/*-----------------END: Form Parts-----------------*/

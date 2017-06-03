@@ -1,0 +1,27 @@
+mixin leaves_history_cell(from, to, status, leave_type)
+	tr.leaves-history-row
+		td.table-cell.leaves-history= from
+		td.table-cell.leaves-history= to
+		td.table-cell.leaves-history= status
+		td.table-cell.leaves-history= leave_type
+		td.table-cell.leaves-history.dropdown-cell
+			.form-element
+				select.select-menu
+					option(value="" data-option="")
+					option(value="information" data-option="option-1") Information Industry
+					option(value="housing" data-option="option-2") housing industry
+					option(value="radio" data-option="option-3") radio industry
+					option(value="leisure" data-option="option-4") leisure industry
+				.dropdown.dropdown--input.dropdown--bordered
+					a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+						| Edit
+						span.icon-arrow-down
+					ul.dropdown-menu
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Information Industry
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Housing Industry
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") Radio Industry
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#' data-item="option-4") Leisure Industry

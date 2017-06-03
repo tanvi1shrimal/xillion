@@ -1,0 +1,43 @@
+mixin table_row(client_name, job_name, priority, status, status_val, end_date, due_days, mem_1, mem_2, mem_3)
+	tr.table-row
+		td.table-text.table-content.table-content--client-name
+			a.tb-link(href="individual-client.html")= client_name
+		td.table-text.table-content.table-content--job-name
+			a.tb-link(href="individual-job.html")= job_name
+		td.table-text.table-content= priority
+		td.table-text.table-content.job-status(class="job-status--"+status_val)= status
+		td.table-text.table-content= end_date
+		td.table-text.table-content= due_days
+		td.table-text.table-content
+			ul.table-content--multiple
+				if(mem_1!=="")
+					li.team-list-item: span.round.round--white= mem_1
+				if(mem_2!=="")
+					li.team-list-item: span.round.round--white= mem_2
+				if(mem_3!=="")
+					li.team-list-item: span.round.round--white= mem_3
+
+
+
+
+mixin table_hd
+	tr.table-row.table-row--heading
+		th.table-headings
+			span.table-text.t-header.table-header Client Name
+			span.icon-sort.sorting-icon
+		th.table-headings
+			span.table-text.t-header.table-header Job Name
+			span.icon-sort.sorting-icon
+		th.table-headings
+			span.table-text.t-header.table-header Priority
+			span.icon-sort.sorting-icon
+		th.table-headings
+			span.table-text.t-header.table-header Status
+		th.table-headings
+			span.table-text.t-header.table-header End Date
+			span.icon-sort.sorting-icon
+		th.table-headings
+			span.table-text.t-header.table-header Days to Due Date
+			span.icon-sort.sorting-icon
+		th.table-headings
+			span.table-text.t-header.table-header Assigned Team

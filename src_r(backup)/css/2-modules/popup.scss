@@ -1,0 +1,145 @@
+.add-member-pop{
+	.sub-title{
+		@include font-style(Poppins-regular, 20px, $black);
+		margin-top: 30px;
+		margin-bottom: 0px;
+		position: absolute;
+		
+	}
+	.modal-body{
+		@include font-style(Poppins-regular, 14px, $lightblack);
+		p{
+			line-height: 45px;
+		}
+		.modal-body-small-content{
+			@include font-style(Poppins-regular, 12px, $lightgray);
+		}
+		.fa{
+			font-size: 115px;
+			color: $lightgray;
+		}
+	}
+}
+.modal-header{
+	border-bottom: none;
+
+	.close{
+		font-size: 45px;
+		font-family: poppins;
+	}
+}
+
+.modal-body{
+	border-top: 1px solid #f7f5ef;
+	border-bottom: 1px solid #f7f5ef;
+	margin: 15px 20px;
+	padding: 20px 0;
+	.drag-drop{
+		display: block;
+		@include font-style(Poppins-regular, 14px, $lightblack);
+		padding: 20px 0;
+		}
+		.uploading-inner-content{
+			@include padding-spacing(40px, 10px);
+		}
+	.conformation-btn{
+		padding: 10px 35px;
+		border-color: none;
+		display: block;
+		}
+}
+.modal-content{
+	.sidebar-header__header:before{
+		height: 100%;
+		top: -3px;
+	}
+
+}
+
+.download-link{
+	border: none;
+	@include padding-spacing(10px, 30px);
+	a{
+		@include font-style(Poppins-regular, 12px, $lightblack);
+			
+	}
+	img{
+		padding-right: 10px;
+		vertical-align: middle;
+	}
+	span{
+		border-bottom: 1px solid #b2b2b2;
+	}
+	
+}
+//file upload
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    @include font-style(Poppins-medium, 12px, $white);
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+//Edit employee popup
+.employee-edit-pop{
+	.modal-dialog{
+		width: 840px;
+	}
+	.modal-body{
+		/*margin: 0 20px;*/
+		.input-style-detail{
+			width: 245px;
+			position: relative;
+
+			
+		}
+		.fa-down{
+			font-size: 15px;
+			position: absolute;
+			right: 0;
+		}
+		.dropdown-menu{
+			width: 245px;
+			left: 15px;
+
+		}
+	}
+}
+.employee-drop{
+	.input-style-detail{
+		padding-bottom: 30px;
+		margin-bottom: 0;
+	}
+	.dropdown-menu-link{
+		padding: 20px;
+	}
+}
+.radio-selection{
+	padding-top: 50px;
+
+		.radio-selection-list{
+			display: flex;
+			.radio-selection-items{
+				padding-right: 50px;
+			}
+	}
+}
+.client-popup-form{
+	.conformation-btn{
+		padding-top: 50px;
+		padding-left: 0;
+		.save-btn{
+			padding: 10px 40px;
+		}
+	}
+}

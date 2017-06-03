@@ -1,0 +1,92 @@
+mixin card_type(status, status_text)
+	// Finished card section starts
+	.updated-status-card
+		.status-card-inner
+			.block-display
+				span.round RK
+			.status-card-details
+				a.status-card-sub-head(href='#') rksv
+				span.status-small-details Audit-Non-coy-Tax Audit
+			.status-contact-list
+				.status-contact-items
+					img.img-position(src='img/person.png', alt='name')
+					a.status-card-item-link(href='#') Ram Kumar
+				.status-contact-items
+					img.img-position(src='img/calender.png', alt='calender')
+					span.status-card-item-link
+						| 23 Aug -
+						//img.img-position(src='img/arrow.png', alt='name')
+						|  04 Sep
+			.clearfix
+			.status-card-patch.status-card-patch-dropdown
+				.dropdown.dropdown--status
+					a.dropdown-toggle.work-note.status-display(href='#', data-toggle='dropdown' data-status=status)
+						.selected-value= status_text
+						i.fa.fa-angle-down.fa-down(aria-hidden='true')
+					ul.dropdown-menu.dropdown-menu--status
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="open") Open
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="wip") WIP
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="approved") Approved
+						li.dropdown-list-item
+							a.dropdown-menu-link(href='#' data-status-link="finished") Finished
+
+				if(status==="open")
+					span.pending-notes Delayed by 2 days
+
+
+		//Card cta block
+		.status-card-comment-line
+
+			//Note input element
+			.write-note-block
+				span.icon-chat.write-note-icon
+				.note-input-wrapper
+					input.note-input-wrapper__field.note-field(placeholder="Enter your comment")
+					span.icon-return
+			//END: Note input element
+
+			ul.status-comment-line-list
+				li.status-comment-line-item
+					img(src='img/note.png', alt='note')
+					a.status-comment-link.add-note(href='#')
+						span.status-comment-link__text Add note
+				li.status-comment-line-item
+					img(src='img/note.png', alt='note')
+					a.status-comment-link.expand-notes(href='#')
+						span.status-comment-link__text View notes
+						span.notes-count 4
+				li.status-comment-line-item
+					img(src='img/schedule.png', alt='schedule')
+					a.status-comment-link(href='#')
+						span.status-comment-link__text Schedule activity
+				li.status-comment-line-item
+					img(src='img/time.png', alt='time')
+					a.status-comment-link(href='#')
+						span.status-comment-link__text View Timesheet
+		//END: Card cta block
+
+		//More notes block
+		//.status-card-inner.view-card-inner
+		.view-card-inner
+			.square
+			ul.view-note-card
+				li.view-note-card-item
+					.block-display
+						span.round RK
+					p.view-note-content
+						span Shyam Kumar:
+						|  Some minor changes are pending. please resolve them.
+					span.last-seen.pull-right 29 min ago
+				li.view-note-card-item
+					.block-display
+						span.round RK
+					p.view-note-content
+						span Shyam Kumar:
+						|  Some minor changes are pending. please resolve them.
+					span.last-seen.pull-right 29 min ago
+		//END: More notes block
+
+	// Finished card section ended

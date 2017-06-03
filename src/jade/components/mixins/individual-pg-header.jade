@@ -1,0 +1,20 @@
+mixin individual_pg_hd(page_link, add_popup_link, import_popup_link, link_text, add_popup_text, import_popup_text, mod)
+	.back-to-client.col-md-10.col-md-offset-1
+		ul.add-member-subhead
+			li.member-side-head
+				a.back-to-link(href= page_link)
+					i.fa.fa-angle-left.fa-left(aria-hidden='true')
+					= link_text
+
+			if(mod==null)
+				li.add-button-style.pull-right
+					a.btn(href="#", data-toggle='modal', data-target=add_popup_link)
+						i.fa.fa-plus(aria-hidden='true')
+						= " "+add_popup_text
+					a.import-btn.btn(href="#", data-toggle='modal', data-target= import_popup_link)
+						img(src='img/chart.png', alt='')
+						span.small-info= " "+import_popup_text
+			else if(mod=="leave")
+				li.add-button-style.pull-right
+					a.btn(href="#", data-toggle='modal', data-target="#apply-leave")
+						| Apply Leave

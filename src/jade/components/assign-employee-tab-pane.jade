@@ -1,0 +1,87 @@
+.tab-pane.add-tabs-pane(id="employees")
+	a.add-popup(href='#', data-toggle='modal', data-target='#employee-popup')
+		span.icon-plus
+		span.add-text.add-popup__text add new employee
+	h4.header-4.add-tabs-pane__header Assign an Employee
+
+	.search-field-wrapper
+		form.search-form-input(action="#")
+			input.search-form-input__input-field(placeholder="Search For Client")
+			button.search-form-input__btn.icon-search(type="submit")
+
+
+	h3.header-3.semibold.add-tabs-pane__header--middle Top 5 Performing Employees
+
+	//Table Section
+	.activity-wrapper
+		table.activity-table
+			thead
+				tr.activity-table-row
+					th
+					th.table-header-sm.activity-tab-header.activity-tab-header--employees Name
+					th.table-header-sm.activity-tab-header.activity-tab-header--employees Role
+					th.table-header-sm.activity-tab-header.activity-tab-header--employees Experience
+					th.table-header-sm.activity-tab-header.activity-tab-header--employees Performance
+					th.table-header-sm.activity-tab-header.activity-tab-header--employees Joined on
+
+			tbody
+				tr.activity-table-row.activity-table-row__body.select-employee
+					td.radio-table-cell
+						.checkbox-btn-wrapper
+							input(type="checkbox" name="employee")
+							span.checkbox-shape.custom-checkbox
+								span.icon-check
+					td: h3.header-3 Atul Ramshekar
+					td.simple-text.dark Article Assistant
+					td.simple-text.dark 7 Years
+					td.simple-text.dark 70%
+					td.simple-text.dark Jun 2013
+
+				tr.activity-table-row.activity-table-row__body.select-employee
+					td.radio-table-cell
+						.checkbox-btn-wrapper
+							input(type="checkbox" name="employee")
+							span.checkbox-shape.custom-checkbox
+								span.icon-check
+					td: h3.header-3 Sheetal Jain
+					td.simple-text.dark Manager
+					td.simple-text.dark 5 Years
+					td.simple-text.dark 80%
+					td.simple-text.dark Aug 2015
+
+				tr.activity-table-row.activity-table-row__body.select-employee
+					td.radio-table-cell
+						.checkbox-btn-wrapper
+							input(type="checkbox" name="employee")
+							span.checkbox-shape.custom-checkbox
+								span.icon-check
+					td: h3.header-3 Ramya Kolur
+					td.simple-text.dark Paid Assistant
+					td.simple-text.dark 2 Years
+					td.simple-text.dark 60%
+					td.simple-text.dark Sep 2013
+
+				tr.activity-table-row.activity-table-row__body.select-employee
+					td.radio-table-cell
+						.checkbox-btn-wrapper
+							input(type="checkbox" name="employee")
+							span.checkbox-shape.custom-checkbox
+								span.icon-check
+					td: h3.header-3 Tony Tailor
+					td.simple-text.dark Partner
+					td.simple-text.dark 9 Years
+					td.simple-text.dark 60%
+					td.simple-text.dark Feb 2011
+
+				tr.activity-table-row.activity-table-row__body.select-employee
+					td.radio-table-cell
+						.checkbox-btn-wrapper
+							input(type="checkbox" name="employee")
+							span.checkbox-shape.custom-checkbox
+								span.icon-check
+					td: h3.header-3 Soumya Sarangi
+					td.simple-text.dark Senior Partner
+					td.simple-text.dark 10 Years
+					td.simple-text.dark 85%
+					td.simple-text.dark Dec 2010
+	//END: Table Section

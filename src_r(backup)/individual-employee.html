@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>individual-employee</title>
+    <meta name="description" content="">  
+<!--    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />-->
+    <link rel="stylesheet" href="css/main.css">
+   
+</head>
+<body>
+	
+<!--	Nav header-->
+	<header class="header">
+		
+		<nav class="nav-bar">
+			<div class="nav-block-1">
+				
+				<a href="#" class="menu-icon">
+					<img src="img/icons/hamburger.png" alt="Hamburger menu icon">
+				</a>
+				<a href="#" class="nav-company-logo">
+					<img src="img/logo/logo.png" alt="">
+				</a>
+				<form action="#" class="search-form">
+					<input class="search-form__input-field" type="text" placeholder="Search">
+					<button class="search-form__cta" type="submit">
+						<img src="img/icons/search.png" alt="Search icon">
+					</button>
+				</form>
+				
+			</div>
+			<div class="nav-block-2">
+				
+				<div class="notifications-block">
+					
+					<a href="#" class="circular-link-blocks open-notification">
+						<img src="img/icons/notification.png" alt="Notifications Image">
+						<span class="round">1</span>
+					</a>
+					<div class="dropdown">
+					<a href="#" class="circular-link-blocks dropdown-toggle" data-toggle="dropdown">
+						<span class="circular-link-text">AR</span>
+					</a>
+					<ul class="dropdown-menu">
+            			<li class="dropdown-items"><a href="#">Profile</a></li>
+            			<li class="dropdown-items"><a href="#">Preferences</a></li>
+            			<li class="dropdown-items"><a href="#">Settings</a></li>
+            			<li class="dropdown-items"><a href="#">Sign Out</a></li>
+        			</ul>
+				</div>
+			</div>
+				
+			</div>
+			
+		</nav>
+		
+	</header>
+<!--	END: Nav header-->
+
+<main>
+    <div class="fixed-side-bar">
+
+      <div class="tabs-left column-width1">
+      	<div class="side-nav-head">
+		<span class="round">RK</span>
+		<h3 class="side-head-name">RKSV <span class="side-head-id">1000</span></h3>
+		</div>
+	        <ul class="nav nav-tabs job-activity-list">
+		          <li class="active job-activity-item"><a href="#all-jobs" data-toggle="tab">All jobs</a></li>
+		          <li class="job-activity-item"><a href="#recent-activity" data-toggle="tab">Recent Activity</a></li>
+		          <li class="job-activity-item"><a href="#time-sheet" data-toggle="tab">timesheet</a></li>
+		          <li class="job-activity-item"><a href="#" data-toggle="tab">pay roll</a></li>
+		          <li class="job-activity-item"><a href="#client-profile" data-toggle="tab">employee profile</a></li> 
+	        </ul>
+        </div>
+
+		<div class=" column-width2">
+		<!--fixed section top-->
+		<div class="back-to-client">
+		
+			<ul class="add-member-subhead">
+				<li class="member-side-head"><a href="#" class="back-to-link">back to client list</a></li>
+				<li class="add-button-style pull-right">
+					<button type="button" class="btn"><i class="fa fa-plus" aria-hidden="true"></i>
+					Add Client</button>
+					<button type="button" class="import-btn btn"><img src="images/chart.png" alt=""> <span class="small-info">Import Clients</span></button>
+				</li>
+			</ul>
+
+		</div>
+	<!--fixed top section ended-->
+
+
+        <div class="tab-content">
+        <!--All job section starts-->
+
+        <div class="tab-pane active activity-section" id="all-jobs">
+			
+			<div class="col-md-10 col-md-offset-1">
+				<ul class="job-detail-nav-list">
+					<li class="job-detail-nav-item"><a class="job-detail-nav-links" href="#">All Jobs</a></li>
+					<li class="job-detail-nav-item"><a class="job-detail-nav-links" href="#">Pending</a></li>
+					<li class="job-detail-nav-item"><a class="job-detail-nav-links upper" href="#">Wip</a></li>
+					<li class="job-detail-nav-item"><a class="job-detail-nav-links" href="#">Finished</a></li>
+					<li class="job-detail-nav-item"><a class="job-detail-nav-links" href="#">Approved</a></li>
+				</ul>
+					
+				<!--Finished card section starts-->
+				<div class="updated-status-card">
+
+					<div class="status-card-inner">
+						<div class="block-display">
+							<span class="round">RK</span>
+						</div>
+						<div class="status-card-details">
+							<h3 class="status-card-sub-head">rksv</h3>
+								<span class="status-small-details">Audit-Non-coy-Tax Audit</span>
+							<ul class="status-contact-list">
+								<li class="status-contact-items splited-line">
+									<img class="img-position" src="images/person.png" alt="name">
+									<span>Ram Kumar</span>
+								</li>
+								<li class="status-contact-items">
+									<img  class="img-position" src="images/calender.png" alt="calender">
+									<span>23 Aug <img class="img-position" src="images/arrow.png" alt="name"> 04 Sep</span>
+								</li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+						<div class="status-card-patch">
+							<span class="work-note">Finished</span>
+						</div>
+					</div>
+					<div class="status-card-comment-line">
+						<ul class="status-comment-line-list">
+							<li class="status-comment-line-item">
+								<img src="images/note.png" alt="note">
+								<a class="status-comment-link" href="#">Add note</a>
+							</li>
+							<li class="status-comment-line-item">
+								<img src="images/note.png" alt="note">
+								<a class="status-comment-link" href="#">View notes</a>
+							</li>
+							<li class="status-comment-line-item">
+								<img src="images/schedule.png" alt="schedule">
+								<a class="status-comment-link" href="#">Schedule activity</a>
+							</li>
+							<li class="status-comment-line-item">
+								<img src="images/time.png" alt="time">
+								<a class="status-comment-link" href="#">View Timesheet</a>
+							</li>
+						</ul>
+					</div>		
+				</div>
+					<!--Finished card section ended-->
+
+					<!--pending card section starts-->
+				<div class="updated-status-card pending">
+
+					<div class="status-card-inner">
+						<div class="block-display">
+							<span class="round">RK</span>
+						</div>
+					<div class="status-card-details">
+						<h3 class="status-card-sub-head">rksv</h3>
+						<span class="status-small-details">Audit-Non-coy-Tax Audit</span>
+						<ul class="status-contact-list">
+							<li class="status-contact-items splited-line">
+							<img class="img-position" src="images/person.png" alt="name">
+							<span>Ram Kumar Ram Kumar </span>
+							</li>
+							<li class="status-contact-items">
+							<img  class="img-position" src="images/calender.png" alt="calender">
+							<span>23 Aug <img class="img-position" src="images/arrow.png" alt="name"> 04 Sep</span>
+							</li>
+						</ul>			
+					</div>
+					<div class="clearfix"></div>
+					<div class="status-card-patch">
+						<span class="work-note pending">Pending</span>
+						<span class="pending-notes">Delayed by 2 days</span>
+					</div>
+				</div>
+				<div class="status-card-comment-line">
+					<ul class="status-comment-line-list">
+						<li class="status-comment-line-item">
+							<img src="images/note.png" alt="note">
+							<a class="status-comment-link" href="#">Add note</a>
+						</li>
+						<li class="status-comment-line-item">
+							<img src="images/note.png" alt="note">
+							<a class="status-comment-link" href="#">View notes</a>
+						</li>
+						<li class="status-comment-line-item">
+							<img src="images/schedule.png" alt="schedule">
+							<a class="status-comment-link" href="#">Schedule activity</a>
+						</li>
+						<li class="status-comment-line-item">
+							<img src="images/time.png" alt="time">
+							<a class="status-comment-link" href="#">View Timesheet</a>
+						</li>
+					</ul>
+				</div>		
+			</div>
+			<!--Finished card section starts-->
+					<div class="updated-status-card">
+
+						<div class="status-card-inner">
+							<div class="block-display">
+								<span class="round">RK</span>
+							</div>
+							<div class="status-card-details">
+								<h3 class="status-card-sub-head">rksv</h3>
+								<span class="status-small-details">Audit-Non-coy-Tax Audit</span>
+								<ul class="status-contact-list">
+									<li class="status-contact-items splited-line">
+										<img class="img-position" src="images/person.png" alt="name">
+										<span>Ram Kumar</span>
+									</li>
+									<li class="status-contact-items">
+										<img  class="img-position" src="images/calender.png" alt="calender">
+										<span>23 Aug <img class="img-position" src="images/arrow.png" alt="name"> 04 Sep</span>
+									</li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+							<div class="status-card-patch">
+								<span class="work-note">Finished</span>
+							</div>
+						</div>
+							
+
+							<div class="status-card-comment-line">
+								<ul class="status-comment-line-list">
+									<li class="status-comment-line-item">
+										<img src="images/note.png" alt="note">
+										<a class="status-comment-link" href="#">Add note</a>
+									</li>
+									<li class="status-comment-line-item">
+										<img src="images/note.png" alt="note">
+										<a class="status-comment-link" href="#">View notes</a>
+									</li>
+									<li class="status-comment-line-item">
+										<img src="images/schedule.png" alt="schedule">
+										<a class="status-comment-link" href="#">Schedule activity</a>
+									</li>
+									<li class="status-comment-line-item">
+										<img src="images/time.png" alt="time">
+										<a class="status-comment-link" href="#">View Timesheet</a>
+									</li>
+								</ul>
+							</div>	
+							<div class="status-card-inner view-card-inner">
+							  <ul class="view-note-card">
+								  <li class="view-note-card-item">
+									<div class="block-display">
+										<span class="round">RK</span>
+									</div>
+									<p class="view-note-content"><span>Shyam Kumar:</span> Some minor changes are pending. please resolve them.</p>
+									<span class="last-seen pull-right">29 min ago</span>
+									</li>
+									<li class="view-note-card-item">
+									<div class="block-display">
+										<span class="round">RK</span>
+									</div>
+									<p class="view-note-content"><span>Shyam Kumar:</span> Some minor changes are pending. please resolve them.</p>
+									<span class="last-seen pull-right">29 min ago</span>
+									</li>
+								</ul>
+							</div>	
+					</div>
+					<!--Finished card section ended-->
+			<!--pending card section ended-->
+		</div>
+	</div>
+        <!--All job section ended-->
+        <!--Recent activity-->
+	        <div class="tab-pane activity-section" id="recent-activity">
+					<div class="col-md-10 col-md-offset-1">
+					<h3 class="recent-sub-head">Recent Activity</h3>
+					<div class="updated-status-card">
+						<ul class="detail-recent-activity">
+						<!--activity status block1-->
+							<li class="activity-inner-list">
+								<div class="activity-inner-items">
+									<span class="round">RK</span>
+									<p class="recent-inner-content">Ram Kumar changed status of <span class="highlight-text">RVSK </span>job from WIP to finished</p>
+								</div>							
+								<span class="last-seen pull-right">29 min ago</span>
+							</li>
+							<!--activity status block ended-->
+
+							<!--activity status block1-->
+							<li class="activity-inner-list">
+								<div class="activity-inner-items">
+									<span class="round">RK</span>
+									<p class="recent-inner-content">Ram Kumar changed status of <span class="highlight-text">RVSK</span>  job from WIP to finished</p>
+								</div>							
+								<span class="last-seen pull-right">29 min ago</span>
+							</li>
+							<!--activity status block ended-->
+
+							<!--activity status block2-->
+							<li class="activity-inner-list">
+								<div class="activity-inner-items">
+									<span class="round">RK</span>
+									<p class="recent-inner-content">Ram Kumar changed status of <span class="highlight-text">RVSK</span>  job from WIP to finished</p>
+								</div>							
+								<span class="last-seen pull-right">29 min ago</span>
+							</li>
+							<!--activity status block ended-->
+
+							<!--activity status block3-->
+							<li class="activity-inner-list">
+								<div class="activity-inner-items">
+									<span class="round">RK</span>
+									<p class="recent-inner-content">Ram Kumar changed status of <span class="highlight-text">RVSK</span>  job from WIP to finished</p>
+								</div>							
+								<span class="last-seen pull-right">29 min ago</span>
+							</li>
+							<!--activity status block ended-->
+
+							<!--activity status block4-->
+							<li class="activity-inner-list">
+								<div class="activity-inner-items">
+									<span class="round">RK</span>
+									<p class="recent-inner-content">Ram Kumar changed status of <span class="highlight-text">RVSK</span>  job from WIP to finished</p>
+								</div>							
+								<span class="last-seen pull-right">29 min ago</span>
+							</li>
+							<!--activity status block ended-->
+						</ul>
+						<span class="upper"><a class="load-more" href="#">load more</a></span>
+					</div>
+				</div>
+	        </div>
+	    <!--Recent activity-->
+
+	  <!--Employee profile starts-->
+	          
+	          <div class="tab-pane client-section" id="client-profile">
+				<div class="col-md-10 col-md-offset-1">
+
+				<h3 class="recent-sub-head">Employee Profile</h3>
+					<ul class="updated-status-card detail-recent-activity">
+						<a class="pull-right edit-link " data-toggle="modal" data-target="#edit-popup" href="#">EDIT</a>
+
+					<!--activity status block1-->
+						<li class="activity-inner-list client-profile">
+
+							<h3 class="recent-sub-head">Basic Information</h3>
+								<ul class="client-base-details">
+									<li class="client-base-items col-md-4">
+										Employee Id 
+										<span class="client-base-details">1001</span>
+									</li>
+									<li class="client-base-items col-md-4">
+										First Name
+										<span class="client-base-details upper">RKSV</span>
+									</li>
+									<li class="client-base-items col-md-4">
+										Last Name 
+										<span class="client-base-details">Kumar	</span>
+									</li>
+								</ul>														
+						</li>
+						<!--activity status block ended-->
+
+						<!--activity status block1-->
+						<li class="activity-inner-list client-profile">
+							<h3 class="recent-sub-head">Contact</h3>
+								<ul class="client-base-details">
+									<li class="client-base-items col-md-4">
+										Contact Number
+										<span class="client-base-details">1001</span>
+									</li>
+									<li class="client-base-items col-md-4">
+										Email Address
+										<span class="client-base-details upper">ravi@rksv.com</span>
+									</li>
+									<li class="client-base-items col-md-4">
+										Residence Address
+										<span class="client-base-details">30th Floor,Sunshine Towers, Mumbai</span>
+									</li>
+								</ul>														
+						</li>
+						<!--activity status block ended-->
+						<!--activity status block1-->
+						<li class="activity-inner-list client-profile">
+							<h3 class="recent-sub-head">Company</h3>
+								<ul class="client-base-details">
+									<li class="client-base-items  col-md-4">
+										Position
+										<span class="client-base-details">Manager</span>
+									</li>
+									<li class="client-base-items  col-md-4">
+										Department
+										<span class="client-base-details">Accounting</span>
+									</li>
+									<li class="client-base-items  col-md-4">
+										Report To
+										<span class="client-base-details">Admin</span>
+									</li>
+									<li class="client-base-items col-md-4">
+										Date of joining
+										<span class="client-base-details">21 Aug 2010</span>
+									</li>
+									<li class="client-base-items col-md-4">
+									Salary
+										<span class="client-base-details">25000</span>
+									</li>
+									<li class="client-base-items col-md-4">
+									Position
+										<span class="client-base-details">Manager</span>
+									</li>
+								</ul>														
+						</li>
+						<!--activity status block ended-->
+
+						<!--activity status block1-->
+						<li class="activity-inner-list client-profile">
+							<h3 class="recent-sub-head">Personal</h3>
+								<ul class="client-base-details">
+									<li class="client-base-items col-md-4">
+										Date of Birth
+										<span class="client-base-details">1 Jan 1980</span>
+									</li>
+									
+								</ul>														
+						</li>
+						<!--activity status block ended-->
+					</ul>
+				</div>
+			</div>
+
+	          <!--client profile ended-->
+
+	          <!--Timesheet starts-->
+	          
+			<div class="tab-pane activity-section" id="time-sheet">
+				<div class="col-md-10 col-md-offset-1">
+				<h3 class="recent-sub-head">Timesheet</h3>
+				<div class="updated-status-card time-sheet-block1">
+				<ul class="timesheet-inner-list">
+					<li class="time-sheet-items">
+						Week
+						<span class="time-sheet-date">1 sep - 7 sep</span>
+					</li>
+					<li class="time-sheet-items">
+						Total Hours this Week
+						<span class="time-sheet-date">113</span>
+					</li>
+					<li class="time-sheet-items">
+						Total Cost
+						<span class="time-sheet-date">20k</span>
+					</li>
+					<li class="time-sheet-items">
+						Total Revenue
+						<span class="time-sheet-date">2,260,000</span>
+					</li>
+				</ul>	
+				</div>	
+				<div class="updated-status-card time-sheet-block2">
+					 <table class="table time-sheet-table">
+				        <thead>
+				            <tr class="time-sheet-table-row">
+				                <th>Job Name</th>
+				                <th class="width-space">Today</th>
+				                <th>Total Hours this week</th>
+				                <th>Cost</th>
+				                <th>Revenue</th>
+
+				            </tr>
+				        </thead>
+				        <tbody>
+				            <tr class="time-sheet-table-row">
+				                <td class="time-sheet-data">Income Tax <span class="company-names">Lollypop Studio</span></td>
+				                <td class="time-sheet-data">2 hr</td>
+				                <td class="time-sheet-data">10</td>
+				                <td class="time-sheet-data">5K/hr</td>
+				                <td class="time-sheet-data">5000000</td>
+				            </tr>
+				            <tr class="time-sheet-table-row">
+				                <td class="time-sheet-data">Income Tax <span class="company-names">Lollypop Studio</span></td>
+				                <td class="time-sheet-data">2 hr</td>
+				                <td class="time-sheet-data">10</td>
+				                <td class="time-sheet-data">5K/hr</td>
+				                <td class="time-sheet-data">5000000</td>
+				            </tr>
+				            <tr class="time-sheet-table-row">
+				                <td class="time-sheet-data">Income Tax <span class="company-names">Lollypop Studio</span></td>
+				                <td class="time-sheet-data">2 hr</td>
+				                <td class="time-sheet-data">10</td>
+				                <td class="time-sheet-data">5K/hr</td>
+				                <td class="time-sheet-data">5000000</td>
+				            </tr>
+				        </tbody>
+    				</table>
+    				<span class="prev-back"><a href="#">Prev Week</a></span>
+
+				</div>
+
+			</div>
+	</div>
+
+	          <!--Timesheet ended-->
+
+       	</div><!-- /tab-content-->
+      </div><!-- column width2 -->
+      </div><!--wrap section-->
+      <!---edit popup-->
+				<div id="edit-popup" class="modal fade add-member-pop employee-edit-pop">
+					<div class="modal-dialog">
+
+			            <div class="modal-content">
+					        <div class="modal-header">
+					            <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+					            <h4 class="sub-title sidebar-header__header">Edit this Employee</h4>
+					        </div>
+					        <div class="modal-body">
+					            <form action="" class="client-popup-form">
+					                <div class="row">
+						                <div class="col-md-4 signup-detail">
+								   			<label for="first_name">Employee ID</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">First Name</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Last Name</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Date of Birth</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Date of joining</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Address</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Phone</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Email Address</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="col-md-4 signup-detail">
+								   			<label for="first_name">Position</label>
+											<input class="input-style-detail" type="text" name="firstname">
+										</div>
+										<div class="dropdown col-md-4 employee-drop">
+        									<a href="#" data-toggle="dropdown" class="dropdown-toggle input-style-detail">Reports to <i class="fa fa-angle-down fa-down" aria-hidden="true"></i></a>
+        									<ul class="dropdown-menu">
+            									<li><a class="dropdown-menu-link" href="#">Admin</a></li>
+            									<li><a class="dropdown-menu-link" href="#">Manager</a></li>
+            									<li><a class="dropdown-menu-link" href="#">Employee</a></li>
+       									    </ul>
+    									</div>
+    									<div class="dropdown col-md-4 employee-drop">
+        									<a href="#" data-toggle="dropdown" class="dropdown-toggle input-style-detail">Reports to <i class="fa fa-angle-down fa-down" aria-hidden="true"></i></a>
+        									<ul class="dropdown-menu">
+            									<li><a class="dropdown-menu-link" href="#">Admin</a></li>
+            									<li><a class="dropdown-menu-link" href="#">Manager</a></li>
+            									<li><a class="dropdown-menu-link" href="#">Employee</a></li>
+       									    </ul>
+    									</div>
+    									<div class="dropdown col-md-4 employee-drop">
+        									<a href="#" data-toggle="dropdown" class="dropdown-toggle input-style-detail">Reports to <i class="fa fa-angle-down fa-down" aria-hidden="true"></i></a>
+        									<ul class="dropdown-menu">
+            									<li><a class="dropdown-menu-link" href="#">Admin</a></li>
+            									<li><a class="dropdown-menu-link" href="#">Manager</a></li>
+            									<li><a class="dropdown-menu-link" href="#">Employee</a></li>
+       									    </ul>
+    									</div>
+    									
+									</div>
+									<div class="radio-selection">
+    									<h3 class="recent-sub-head">Company</h3>
+    									<ul class="radio-selection-list">
+    										<li class="radio-selection-items"><input type="radio" name="gender" value="male" checked> <span class="radio-name"></span>Manager</li>
+    										<li class="radio-selection-items"><input type="radio" name="gender" value="male" checked> <span class="radio-name"></span>Manager</li>
+    										<li class="radio-selection-items"><input type="radio" name="gender" value="male" checked> <span class="radio-name"></span>Manager</li>
+    									</ul>   									
+    								</div>
+    								<div class="conformation-btn">	
+										<a type="submit" href="#" class="btn save-btn">Save</a>
+									</div>
+					            </form>         					               
+					        </div>					                
+					        
+					    </div>
+					</div>
+    			</div>
+
+<!--edit popup ended-->
+    
+		<!-- Side bar -->
+		<div class="sidebar">
+			
+			<div class="sidebar-header">
+				<h2 class="sidebar-header__header">Notifications</h2>
+				<a href="#" class="close-notification-sidebar">
+					<img src="img/icons/close.png" alt="Close image">
+				</a>
+			</div>
+			
+			<div class="notification-list-container">
+				
+				<ul class="notification-list">
+					
+					<li class="notification-list-item">
+						
+						<a href="#" class="notification-list-item__link">
+							<span class="logo-block round">
+								AM
+							</span>
+							<span class="notification-list-brief">
+								Welcome to Xillion! Here are
+								some tips and tricks for you.
+							</span>
+						</a>
+						
+					</li>
+					
+				</ul>
+				
+			</div>
+			
+		</div>
+	</main>
+	
+	<script src="js/jquery.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="js/open-sidebar.js"></script>
+	<script src="javascripts/main.js"></script>
+</body>
+</html>

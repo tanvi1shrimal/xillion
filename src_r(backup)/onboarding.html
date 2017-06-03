@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Onboarding Page</title>
+    <meta name="description" content="">  
+<!--    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />-->
+    <link rel="stylesheet" href="css/main.css">
+   
+</head>
+<body>
+	
+<!--	Nav header-->
+	<header class="header">
+		
+		<nav class="nav-bar">
+			<div class="nav-block-1">
+				<div class="logo-section">
+					<a href="#" class="menu-icon">
+<!--						<img src="img/icons/hamburger.png" alt="Hamburger menu icon">-->
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="nav-company-logo">
+						<img src="img/logo/logo.png" alt="">
+					</a>
+				</div>
+				<div class="search-form-wrapper">
+					<form action="#" class="search-form">
+						<input class="search-form__input-field" type="text" placeholder="Search">
+						<button class="search-form__cta" type="submit">
+							<img src="img/icons/search.png" alt="Search icon">
+						</button>
+					</form>
+				</div>
+				
+			</div>
+			<div class="nav-block-2">
+				
+				<div class="notifications-block">
+					
+					<a href="#" class="circular-link-blocks open-notification">
+						<img src="img/icons/notification.png" alt="Notifications Image">
+						<span class="round">1</span>
+					</a>
+					<div class="dropdown">
+					<a href="#" class="circular-link-blocks dropdown-toggle" data-toggle="dropdown">
+						<span class="circular-link-text">AR</span>
+					</a>
+					<ul class="dropdown-menu">
+            			<li class="dropdown-items"><a href="#">Profile</a></li>
+            			<li class="dropdown-items"><a href="#">Preferences</a></li>
+            			<li class="dropdown-items"><a href="#">Settings</a></li>
+            			<li class="dropdown-items"><a href="#">Sign Out</a></li>
+        			</ul>
+				</div>
+			</div>
+				
+			</div>
+			
+		</nav>
+		
+		<!--		Hamburger menu-->
+		<div class="hamburger-menu">
+			<ul class="menu-list">
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Dashboard</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Jobs</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Clients</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Employees</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Timesheet</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Settings</a>
+				</li>
+			</ul>
+		</div>
+		<!--		END: Hamburger menu-->
+		
+	</header>
+<!--	END: Nav header-->
+
+	<main>
+		
+		<div class="nav-overlay"></div>
+		
+		<section class="section">
+			
+			<div class="container">
+				
+				<div class="intro-block">
+				
+					<h3 class="orange">Hey Anil, Welcome!</h3>
+					<h3 class="default-header">Here are the 4 simple steps to get you started</h3>
+				</div>
+
+				<div class="card-wrapper">
+
+					<ul class="card-list row">
+					
+<!--						Card for adding clients-->
+						<li class="col-md-3">
+							<div class="card-list-item card-popup">
+								
+								<div class="card-type">
+									<div class="card-type-block-1">
+										<div class="card-type-img-wrapper">
+											<img src="img/icons/add-client.png" alt="">
+										</div>
+										<a href="#" class="card-text card-type-text uppercase">add your Clients</a>
+
+									</div>
+									<a href="#" class="card-type-block-2" data-toggle="modal" data-target="#card-popup1">
+
+										<span class="short-description short-text">Add Clients <br>
+	in bulk</span>
+
+									</a>
+								</div>
+							</div>
+<!--							</a>-->
+						</li>
+					<!--Card popup for Add client -->	
+					<!-- modal dialog for client-list-->
+						<div id="card-popup1" class="modal fade add-member-pop">
+					        <div class="modal-dialog">
+
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+					                    <h4 class="sub-title sidebar-header__header">Upload clients</h4>
+					                </div>
+					                <div class="modal-body">
+					                    <p>To upload a bulk list of client from your computer,upload a spreadsheet. </p>
+					                    <span class="modal-body-small-content"> (File Format should be in .xls format)</span>
+					                    <div class="text-center uploading-inner-content">
+					                    <a href="#">
+					                    	<img src="images/upload.png" alt="">
+					                    	<span class="drag-drop">Drag and drop files here</span>
+					                    </a>
+					                    	<span class="else">or</span>
+					                    	<!-- <span class="conformation-btn"><a href="#" class="browse-btn"><button type="button" class="btn">Browse</button></a></span> -->
+					                    	<span class="conformation-btn">
+					                    	<a href="#" class="fileUpload btn ">
+   												 Browse
+   												 <input type="file" class="upload" />
+											</a>
+											</span>	                    	
+					                    </div>
+					                    					               
+					                </div>
+					                
+					                <div class="modal-footer download-link">
+					                    <a href="#" class=" pull-left"> <img src="images/download.png" alt=""><span>Download Sample</span></a>
+					                </div>
+					            </div>
+					        </div>
+    					</div>
+    				<!--modal dialog-->
+    					<!--Card popup for Add client -->	
+<!--						END: Card for adding clients-->
+					
+<!--						Card for adding jobs-->
+						<li class="col-md-3">
+							<div class="card-list-item card-popup">
+								<div class="card-type">
+									<div class="card-type-block-1">
+										<div class="card-type-img-wrapper">
+											<img src="img/icons/add-job.png" alt="">
+										</div>
+										<a href="#" class="card-text card-type-text uppercase">add your jobs</a>
+
+									</div>
+									<div class="card-type-block-2">
+
+										<a href="#" data-toggle="modal" data-target="#card-popup2" class="short-description short-text">Add jobs <br>
+	in bulk</a>
+
+									</div>
+								</div>
+							</div>
+<!--							</a>-->
+						</li>
+						<!-- modal dialog-->
+						<div id="card-popup2" class="modal fade add-member-pop">
+					        <div class="modal-dialog">
+
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+					                    <h4 class="sub-title sidebar-header__header">Upload job category list</h4>
+					                </div>
+					                <div class="modal-body">
+					                    <p>To upload a bulk list of client from your computer,upload a spreadsheet. </p>
+					                    <span class="modal-body-small-content"> (File Format should be in .xls format)</span>
+					                    <div class="text-center uploading-inner-content">
+					                    <a href="#">
+					                    	<img src="images/upload.png" alt="">
+					                    	<span class="drag-drop">Drag and drop files here</span>
+					                    </a>
+					                    	<span class="else">or</span>
+					                    	<!-- <span class="conformation-btn"><a href="#" class="browse-btn"><button type="button" class="btn">Browse</button></a></span> -->
+					                    	<span class="conformation-btn">
+					                    	<a href="#" class="fileUpload btn ">
+   												 Browse
+   												 <input type="file" class="upload" />
+											</a>
+											</span>	                    	
+					                    </div>
+					                    					               
+					                </div>
+					                
+					                <div class="modal-footer download-link">
+					                    <a href="#" class=" pull-left"> <img src="images/download.png" alt=""><span>Download Sample</span></a>
+					                </div>
+					            </div>
+					        </div>
+    					</div>
+    				<!--modal dialog-->
+
+<!--						END: Card for adding jobs-->
+					
+<!--						Card for adding team-->
+						<li class="col-md-3">
+							<div class="card-list-item">
+								
+								<div class="card-type">
+									<div class="card-type-block-1">
+										<div class="card-type-img-wrapper">
+											<img src="img/icons/add-team.png" alt="">
+										</div>
+										<a href="#" class="card-text card-type-text uppercase">add your team</a>
+
+									</div>
+									<div class="card-type-block-2">
+
+										<a href="#" class="short-description short-text" data-toggle="modal" data-target="#card-popup3">Add employees <br>
+	in bulk</a>
+
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- modal dialog-->
+						<div id="card-popup3" class="modal fade add-member-pop">
+					        <div class="modal-dialog">
+
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+					                    <h4 class="sub-title sidebar-header__header">Upload employee list</h4>
+					                </div>
+					                <div class="modal-body">
+					                    <p>To import employees in bulk from your computer, upload a spreadsheet. </p>
+					                    <span class="modal-body-small-content"> (File Format should be in .xls format)</span>
+					                    <div class="text-center uploading-inner-content">
+					                    <a href="#">
+					                    	<img src="images/upload.png" alt="">
+					                    	<span class="drag-drop">Drag and drop files here</span>
+					                    </a>
+					                    	<span class="else">or</span>
+					                    	<!-- <span class="conformation-btn"><a href="#" class="browse-btn"><button type="button" class="btn">Browse</button></a></span> -->
+					                    	<span class="conformation-btn">
+					                    	<a href="#" class="fileUpload btn ">
+   												 Browse
+   												 <input type="file" class="upload" />
+											</a>
+											</span>	                    	
+					                    </div>
+					                    					               
+					                </div>
+					                
+					                <div class="modal-footer download-link">
+					                    <a href="#" class=" pull-left"> <img src="images/download.png" alt=""><span>Download Sample</span></a>
+					                </div>
+					            </div>
+					        </div>
+    					</div>
+    				<!--modal dialog-->
+<!--						END: Card for adding team-->
+
+<!--						Card for mapping all 3-->
+						<li class="col-md-3">
+							<a href="#" class="card-list-item activate" data-toggle="modal" data-target="#card-popup">
+
+								<div class="card-type">
+									<div class="card-type-block-2">
+										<div class="card-type-img-wrapper">
+											<img src="img/icons/share.png" alt="">
+										</div>
+										<span class="card-text card-type-text uppercase">now <br> map all three</span>
+
+									</div>
+								</div>
+							</a>
+						</li>
+<!--						END: Card for mapping all 3-->
+				
+					</ul>
+
+
+				</div>
+				
+			</div>
+			
+		</section>
+		
+		<div class="sidebar">
+			
+			<div class="sidebar-header">
+				<h2 class="sidebar-header__header">Notifications</h2>
+				<a href="#" class="close-notification-sidebar">
+					<img src="img/icons/close.png" alt="Close image">
+				</a>
+			</div>
+			
+			<div class="notification-list-container">
+				
+				<ul class="notification-list">
+					
+					<li class="notification-list-item">
+						
+						<a href="#" class="notification-list-item__link">
+							<span class="logo-block round">
+								AM
+							</span>
+							<span class="notification-list-brief">
+								Welcome to Xillion! Here are
+some tips and tricks for you.
+							</span>
+						</a>
+						
+					</li>
+					
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+	</main>
+	
+	<script src="js/jquery.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="js/open-sidebar.js"></script>
+	<script src="javascripts/main.js"></script>
+	<script src="js/hamburger-menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+#billing-history.tab-pane.activity-section.clearfix
+	.col-md-10.col-md-offset-1
+		h3.recent-sub-head Billing History
+		.updated-status-card.time-sheet-block1.time-sheet-block1--job-sheet
+			a.pull-right.edit-link(href='#') EDIT
+			include mixins/timesheet-cell.jade
+			+timesheet_brief("Client Name", "Billing Basis", "Billing Rate (INR)", "No. of Hours", "RKSV", "Flat Fee", "2000/Hr", "150", "editable-section")
+		.updated-status-card.time-sheet-block2
+			table.table.time-sheet-table
+				thead
+					+attendence_hd("Billing Date", "Billed Amount", "Invoice", "Status", "billing-history")
+				tbody
+					+table_cell("1 Aug 2016", "279000 INR", "Paid", "1")
+					+table_cell("1 Aug 2016", "279000 INR", "Paid", "2")
+					+table_cell("1 Aug 2016", "279000 INR", "Paid", "3")
+					+table_cell("1 Aug 2016", "279000 INR", "Paid", "4")
+					+table_cell("1 Aug 2016", "279000 INR", "Paid", "5")
+					+table_cell("1 Aug 2016", "279000 INR", "Paid", "6")
+			span.prev-back
+				a(href='#') Show Older

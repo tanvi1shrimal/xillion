@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Individual Jobs</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<!--	Nav header-->
+	<header class="header">
+		
+		<nav class="nav-bar">
+			<div class="nav-block-1">
+				<div class="logo-section">
+					<a href="#" class="menu-icon">
+<!--						<img src="img/icons/hamburger.png" alt="Hamburger menu icon">-->
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="nav-company-logo">
+						<img src="img/logo/logo.png" alt="">
+					</a>
+				</div>
+				<div class="search-form-wrapper">
+					<form action="#" class="search-form">
+						<input class="search-form__input-field" type="text" placeholder="Search">
+						<button class="search-form__cta" type="submit">
+							<img src="img/icons/search.png" alt="Search icon">
+						</button>
+					</form>
+				</div>
+				
+			</div>
+			<div class="nav-block-2">
+				
+				<div class="notifications-block">
+					
+					<a href="#" class="circular-link-blocks open-notification">
+						<img src="img/icons/notification.png" alt="Notifications Image">
+						<span class="round">1</span>
+					</a>
+					<div class="dropdown">
+					<a href="#" class="circular-link-blocks dropdown-toggle" data-toggle="dropdown">
+						<span class="circular-link-text">AR</span>
+					</a>
+					<ul class="dropdown-menu">
+            			<li class="dropdown-items"><a href="#">Profile</a></li>
+            			<li class="dropdown-items"><a href="#">Preferences</a></li>
+            			<li class="dropdown-items"><a href="#">Settings</a></li>
+            			<li class="dropdown-items"><a href="#">Sign Out</a></li>
+        			</ul>
+				</div>
+			</div>
+				
+			</div>
+			
+		</nav>
+		
+		<!--		Hamburger menu-->
+		<div class="hamburger-menu">
+			<ul class="menu-list">
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Dashboard</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Jobs</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Clients</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Employees</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Timesheet</a>
+				</li>
+				<li class="menu-list-item">
+					<a href="#" class="list-link menu-text"> Settings</a>
+				</li>
+			</ul>
+		</div>
+		<!--		END: Hamburger menu-->
+		
+	</header>
+<!--	END: Nav header-->
+
+	<main>
+		<div class="nav-overlay"></div>
+		<div class="left-panel">
+			<div class="panel-block-1">
+				<h3 class="job-name">RKSV: Income Tax</h3>
+				
+				<div class="job-status-block" data-job-status="pending">
+					<span class="current-job-status">
+						<span class="current-job-status-text">Pending</span>
+						<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</span>
+					<ul class="job-status-list">
+						<li class="job-status-list-item">
+							<a href="#" class="job-status" data-job="pending">Pending</a>
+						</li>
+						<li class="job-status-list-item">
+							<a href="#" class="job-status" data-job="wp">Work in progress</a>
+						</li>
+						<li class="job-status-list-item">
+							<a href="#" class="job-status" data-job="finished">Finished</a>
+						</li>
+						<li class="job-status-list-item">
+							<a href="#" class="job-status" data-job="approved">Approved</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="job-details">
+					
+					<div class="job-owner">
+						.job-icon
+					</div>
+					<div class="job-duration"></div>
+					
+				</div>
+				
+			</div>
+			<div class="panel-block-2"></div>
+		</div>
+		
+	</main>
+<script src="javascripts/jquery-2.1.4.js"></script>
+<script src="js/hamburger-menu.js"></script>
+
+</body>
+</html>

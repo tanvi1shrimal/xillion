@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "emp-list";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Employee list page starts
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			section.add-member-section
+				.container
+					ul.add-member-subhead
+						li.member-side-head
+							| employees:
+							span.count 50
+						li.add-button-style.pull-right
+							a.btn(href='#', data-toggle='modal', data-target='#employee-popup')
+								i.fa.fa-plus(aria-hidden='true')
+								| Add Employee
+							a.import-btn.btn(href='#', data-toggle='modal', data-target='#card-popup3')
+								img(src='img/chart.png', alt='')
+								span.small-info Import Employee
+			section
+				.container
+					.add-member-table-wrap.employee-data
+						table.table.add-member-table-structure
+							thead
+								tr.emp-table-head-spacing
+									th
+										| Name
+										i.fa.fa-exchange(aria-hidden='true')
+									th
+										| Current Clients
+										i.fa.fa-exchange(aria-hidden='true')
+									th
+										| Open Jobs
+										i.fa.fa-exchange(aria-hidden='true')
+									th
+										| Salary
+										i.fa.fa-exchange(aria-hidden='true')
+									th.item-spacing
+										| Allocated Hours/Week
+										i.fa.fa-exchange(aria-hidden='true')
+									th
+										| Profit
+										i.fa.fa-exchange(aria-hidden='true')
+							tbody.emp-table-body
+								include jade/components/mixins/employee-cell.jade
+								+employee_list_cell("Ram Kumar", "Manager", "AM", "LP", "RK", "8", "5", "30", "30%")
+								+employee_list_cell("Ram Kumar", "Manager", "AM", "LP", "", "8", "5", "30", "30%")
+								+employee_list_cell("Ram Kumar", "Manager", "AM", "LP", "", "8", "5", "30", "30%")
+								+employee_list_cell("Ram Kumar", "Manager", "", "LP", "", "8", "5", "30", "30%")
+								+employee_list_cell("Ram Kumar", "Manager", "", "LP", "", "8", "5", "30", "30%")
+								+employee_list_cell("Ram Kumar", "Manager", "AM", "LP", "", "8", "5", "30", "30%")
+						//a.next-link.pull-right(href='#')
+							| Next
+							span (10-20 OF 25)
+
+		//popups
+		include jade/components/add-employee-popup.jade
+		include jade/components/employee-list-popup.jade
+
+		.sidebar
+			.sidebar-header
+				h2.sidebar-header__header Notifications
+				a.close-notification-sidebar(href='#')
+					img(src='img/icons/close.png', alt='Close image')
+			.notification-list-container
+				ul.notification-list
+					li.notification-list-item
+						a.notification-list-item__link(href='#')
+							span.logo-block.round
+								| AM
+							span.notification-list-brief
+								| Welcome to Xillion! Here are
+								| some tips and tricks for you.
+		// Employee page ended
+	script(src='js/jquery-2.1.4.js')
+	script(src='js/bootstrap.min.js')
+	script(src='js/open-sidebar.js')
+	script(src='js/hamburger-menu.js')
+	script(src='js/input-anim.js')
+	script(src='js/dropdown.js')

@@ -1,0 +1,69 @@
+.tab-pane.add-tabs-pane(id="job")
+	a.add-popup(href='#', data-toggle='modal', data-target='#job-popup')
+		span.icon-plus
+		span.add-text.add-popup__text add new new job category
+	h4.header-4.add-tabs-pane__header Select a Job
+
+	.job-list-wrapper
+		ul.job-list
+			include mixins/list-item.jade
+			+list_item("1", "2001 Audit")
+			+list_item("2", "2002 Tax")
+			+list_item("3", "2003 FCRA")
+			+list_item("4", "2004 Accounts")
+			+list_item("5", "2005 Income tax")
+			+list_item("6", "2006 MIS")
+			+list_item("7", "2007 Miscellaneous")
+			+list_item("8", "2008 Partnership Deed")
+			+list_item("9", "2009 RBI")
+			+list_item("10", "2010 Reg of Soc")
+			+list_item("11", "2011 ROC")
+			+list_item("12", "2012 STPI")
+			+list_item("13", "2013 Service Tax")
+			+list_item("14", "2014 TFR Pricing")
+			+list_item("15", "2015 VAT")
+			+list_item("16", "2016 Voluntary Disclosure")
+			+list_item("17", "2017 Wealth Management")
+
+	h4.header-4.add-tabs-pane__header Set Deadlines for this job
+
+	.form-wrapper.clearfix
+		.col-md-4
+			.form-element
+				.dropdown.dropdown--input
+					a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+						| Start Date
+						i.fa.fa-angle-down.fa-down(aria-hidden='true')
+					ul.dropdown-menu
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') Finished
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') WIP
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') Approved
+		.col-md-4
+			.form-element
+				.dropdown.dropdown--input
+					a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+						| End Date
+						i.fa.fa-angle-down.fa-down(aria-hidden='true')
+					ul.dropdown-menu
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') Finished
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') WIP
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') Approved
+		.col-md-4
+			.form-element
+				.dropdown.dropdown--input
+					a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+						| Due Date
+						i.fa.fa-angle-down.fa-down(aria-hidden='true')
+					ul.dropdown-menu
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') Finished
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') WIP
+						li.dropdown-menu-list-item
+							a.dropdown-menu-link.dropdown-text(href='#') Approved

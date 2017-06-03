@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Xillion-emp-signup
+		link(rel='stylesheet', href='css/main.css')
+	body
+		// Employee Signup page starts
+		main
+			section.employee-login
+				.container-fluid
+					.row
+						.col-md-5.login-bgimage_position
+							a(href='#')
+								img.img-responsive.logo-spacing(src='img/logo.png', alt='logo')
+						.col-md-7.emp-sign-up
+							.main-form-spacing
+								h3.main-form-head Join your Company at Xillion
+								.row.remove-space
+									form.signup-form.signup-form--emp.invite-signup-form(action='' id="signup-invity")
+										.col-md-4.form-field-container.no-float
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Email
+												input.input-style-detail.field-text.form-element__input.validate-field(name='mail' id="email-id")
+											span.error-message
+										.col-md-4.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Password
+												input.input-style-detail.field-text.form-element__input.validate-field(type='password', name='set-pwd' id="password")
+											span.error-message
+										.col-md-4.col-md-offset-1.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Confirm Password
+												input.input-style-detail.field-text.form-element__input.validate-field(type='password', name='pwd' id="confirm-pw")
+											span.error-message
+										// button
+										.clearfix
+										.conformation-btn
+											button.btn(type='submit') Sign Up
+			// Signup page ended
+	script(src='js/jquery-2.1.4.js')
+	script(src='js/input-anim.js')
+	script(src='js/validation.js')

@@ -1,0 +1,106 @@
+.dashboard-header{
+	align-items: center;
+}
+
+.job-status-cards-wrapper{
+	border: 1px solid $border-gray;
+	border-radius: 4px;
+	background: $lighter-gray-2;
+	padding: 0 15px;
+	padding-top: 25px;
+    padding-bottom: 40px;
+	
+	.job-card-list-item{
+		margin-top: 25px;
+	}
+	
+	.job-type, .job-status{
+		display: block;
+	}
+	
+	.job-status{
+		&--delayed{
+			color: $brightred;
+		}
+		&--completed{
+			color: $green;
+		}
+	}
+	
+	.job-status-card{
+		background: white;
+		padding: 0 15px;
+		padding-top: 15px;
+		border: 1px solid $border-line;
+		border-radius: 4px;
+	}
+}
+
+.job-card-detail{
+	display: flex;
+	
+	.job-status-company-detail{
+		margin-left: 15px;
+		padding-bottom: 20px;
+	}
+}
+
+.job-detail{
+	padding: 15px 0;
+	border-top: 1px solid $border-line;
+	display: flex;
+    align-items: center;
+
+	&-icon{
+		color: $icon-gray;
+	}
+	
+	&-text{
+		margin-left: 15px;
+	}
+}
+
+.card-header{
+	display: flex;
+	
+	.status-count{
+		margin-left: 10px;
+	}
+	
+	&.card-wrapper-type{
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			height: 80%;
+			top: 0;
+			width: 4px;
+			left: -15px;
+		}
+
+		&--pending{
+			&:before{
+				background: $brightred;
+			}
+		}
+
+		&--in-progress{
+			&:before{
+				background: $yellow;
+			}
+		}
+
+		&--finished{
+			&:before{
+				background: $green;
+			}
+		}
+
+		&--approved{
+			&:before{
+				background: $orange;
+			}
+		}
+	}
+}

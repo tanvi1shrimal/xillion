@@ -1,0 +1,42 @@
+.custom-checkbox{
+	background: transparent;
+	transition: 0.2s ease;
+}
+
+.checkbox-label{
+	.radio-btn-container{
+		display: flex;
+		align-items: center;
+	}
+	
+	.checkbox-shape{
+		width: 15px;
+		height: 15px;
+		border: 1px solid #c6c6c6;
+		display: inline-flex;
+		font-size: 10px;
+		justify-content: center;
+		align-items: center;
+		color: white;
+	}
+	
+	.checkbox-text{
+		margin-left: 10px;
+	}
+	
+	input[type="checkbox"]{
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+	
+	&.anim{
+		.checkbox-shape{
+			border-color: $blue;
+		}
+		
+		.custom-checkbox{
+			background: $blue;
+		}
+	}
+}

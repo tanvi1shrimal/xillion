@@ -1,0 +1,47 @@
+.sidebar{
+	position: fixed;
+	height: calc(100% - 80px);
+	background: white;
+	width: 30%;
+	right: 0;
+	transform: translateX(100%);
+	z-index: 100;
+	bottom: 0;
+	border-left: 2px solid $lighter-gray-2;
+	padding: 15px 25px;
+	transition: 0.8s ease;
+	
+	&.active{
+		transform: translateX(0%);
+	}
+	
+	&-header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		&__header{
+			padding-left: 20px;
+			position: relative;
+			
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 85%;
+				width: 6px;
+				background: black;
+			}
+		}
+	}
+	
+	/*Notifications list*/
+	.notification-list-item{
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		padding: 30px 0px;
+		color: $black;
+	}
+	/*END: Notifications list*/
+	
+}

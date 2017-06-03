@@ -1,0 +1,71 @@
+.timesheet-table-container{
+	.timesheet-table{
+		width: 100%;
+	}
+
+	.table-header-txt{
+		padding: 15px 0px;
+		display: block;
+	}
+
+	.sub-form-header-text{
+		padding: 0px;
+	}
+
+	.step-header{
+		width: 10%;
+	}
+
+	.end-header{
+		width: 20%;
+		vertical-align: bottom;
+	}
+
+	.timesheet-row{
+
+		border-bottom: 1px solid $border-line;
+
+		&--content{
+//			border-top: 1px solid $border-line;
+
+			th, td{
+				padding: 15px 0px;
+			}
+		}
+
+		.steps-block{
+			display: flex;
+    		flex-direction: column;
+		}
+
+		.jobs-block{
+			display: flex;
+			align-items: center;
+		}
+
+		.timesheet-job{
+			display: flex;
+			flex-direction: column;
+			margin-left: 20px;
+		}
+
+		.form-element{
+			padding: 0;
+			height: auto;
+			vertical-align: middle;
+		}
+	}
+}
+
+/*Timesheet update form*/
+.timesheet-update-form{
+	overflow: auto;
+
+	&__submit{
+		float: right;
+		margin: 0;
+		margin-top: 60px;
+		margin-bottom: 100px;
+	}
+}
+/*END: Timesheet update form*/

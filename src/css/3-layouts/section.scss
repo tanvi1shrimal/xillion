@@ -1,0 +1,25 @@
+.section{
+	padding: 60px 0px;
+	background: $lighter-gray;
+
+	&--welcome{
+		padding: 45px 0px;
+		background: $lighter-gray;
+		border-bottom: 1px solid $border-line;
+	}
+
+	&--white{
+		background: white;
+	}
+
+	&-header-text-wrapper{
+		padding: 30px 0px;
+		display: flex;
+    	align-items: center;
+		border-bottom: 1px solid $border-line;
+
+		&__text{
+			margin-left: 15px;
+		}
+	}
+}

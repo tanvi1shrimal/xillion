@@ -1,0 +1,101 @@
+// modal dialog for client-list
+#add-job-popup.modal.fade.add-member-pop
+	.modal-dialog.modal-dialog--add-popup
+		.modal-content
+			.modal-header
+				a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.sub-title.sidebar-header__header Add an Job
+			.modal-body
+				//Form 1
+				form.form-section-wrapper.form-section-wrapper--popup
+					.form-section
+
+						.form-wrapper.form-wrapper--add-popup
+							.form-parts.form-parts--search-type-inputs
+								.col-md-6.search-input-wrapper
+									.bordered-form-input
+										//span.placeholder-ele Search For Client
+										select.multi-list(multiple='', style='width:300px')
+											option(value='AL') Alabama
+											option(value='Am') Amalapuram
+											option(value='An') Anakapalli
+											option(value='Ak') Akkayapalem
+											option(value='WY') Wyoming
+
+										span.icon-search
+									//.bordered-form-input(action="#")
+										input.bordered-form-input__input-field(placeholder="Search For Client")
+										button.bordered-form-input__btn.icon-search(type="submit")
+								.col-md-6.search-input-wrapper
+									.bordered-form-input
+										//span.placeholder-ele Search For Job
+										select.multi-list(multiple='', style='width:300px')
+											option(value='AL') Alabama
+											option(value='Am') Amalapuram
+											option(value='An') Anakapalli
+											option(value='Ak') Akkayapalem
+											option(value='WY') Wyoming
+
+										span.icon-search
+										//input.bordered-form-input__input-field(placeholder="Search a Job Category")
+										//button.bordered-form-input__btn.icon-search(type="submit")
+								.col-md-6.search-input-wrapper
+									.bordered-form-input
+										//span.placeholder-ele Search For Team
+										select.multi-list(multiple='', style='width:300px')
+											option(value='AL') Alabama
+											option(value='Am') Amalapuram
+											option(value='An') Anakapalli
+											option(value='Ak') Akkayapalem
+											option(value='WY') Wyoming
+
+										span.icon-search
+										//input.bordered-form-input__input-field(placeholder="Assign Employees")
+										//button.bordered-form-input__btn.icon-search(type="submit")
+
+								.dropdowns-wrapper
+									.col-md-3
+										.form-element
+											.dropdown.dropdown--input.dropdown--bordered
+												a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+													| Start Date
+													span.icon-arrow-down
+												ul.dropdown-menu
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') Finished
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') WIP
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') Approved
+
+									.col-md-3
+										.form-element
+											.dropdown.dropdown--input.dropdown--bordered
+												a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+													| End Date
+													span.icon-arrow-down
+												ul.dropdown-menu
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') Finished
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') WIP
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') Approved
+
+									.col-md-3
+										.form-element
+											.dropdown.dropdown--input.dropdown--bordered
+												a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+													| Due Date
+													span.icon-arrow-down
+												ul.dropdown-menu
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') Finished
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') WIP
+													li.dropdown-menu-list-item
+														a.dropdown-menu-link.dropdown-text(href='#') Approved
+
+					button.btn.btn--popup-btn Save
+
+				//END: Form 1

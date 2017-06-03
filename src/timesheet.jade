@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "timesheet";
+
+	include jade/base/header.jade
+	+header(page_name)
+
+	body
+
+		//Nav Header
+		include jade/components/navbar.jade
+		//END: Nav Header
+
+		main.with-nav
+			.nav-overlay
+			section.add-member-section
+				.container
+					ul.add-member-subhead
+						li.member-side-head
+							!= 'Update YOUR Timesheet : '
+							span.count.timesheet-duration
+								span.timesheet-from SEP 1
+								span.space!= ' - '
+								span.timesheet-to SEP 7
+
+			section.timesheet-table-section
+				.container
+					.timesheet-table-container
+						form.timesheet-update-form
+							include jade/components/timesheet-update.jade
+							.col-md-10.col-md-offset-1
+								button.btn.timesheet-update-form__submit(type='submit') Update
+
+
+
+			include jade/components/sidebar.jade
+
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/input-anim.js')
+		script(src='js/dropdown.js')
+		script(src='js/validation.js')

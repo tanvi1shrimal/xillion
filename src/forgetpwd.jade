@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "forgot-pw";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Forget page starts
+		main
+			section
+				.container-fluid
+					.row
+						.col-md-5.login-bgimage_position
+							a(href='#')
+								img.img-responsive.logo-spacing(src='img/logo.png', alt='logo')
+						.col-md-7
+							.main-form-spacing
+								h3.main-form-head.main-form-head--space-bottom Forgot password ?
+								form.signup-login-form(action='')
+									.forget-pwd
+										p
+											| Enter your registered email address to recieve reset password instructions
+										//input.input-style-detail.input-style-detail--default(type='email', name='mail')
+										.col-md-4.form-element-wrapper.form-field-container
+											.form-element.form-element--input
+												label.enter-input.form-text.form-element__label Email Address
+												input.input-style-detail.field-text.form-element__input(type='email', name='mail')
+										.conformation-btn
+											a.btn.btn--no-margin(href='https://www.google.co.in', type='submit') Submit
+			// Forget page ended
+	script(src='js/jquery-2.1.4.js')
+	script(src='js/input-anim.js')

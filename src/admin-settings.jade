@@ -1,0 +1,312 @@
+doctype html
+html(lang='en')
+
+	- var page_name = "admin-settings";
+
+	include jade/base/header.jade
+	+header(page_name)
+	body
+		// Nav header
+		include jade/components/navbar.jade
+		// END: Nav header
+		main.with-nav
+			.nav-overlay
+			section.section--welcome
+				.container
+					.header-text.section-header WELCOME! LET’S SET UP YOUR COMPANY
+			section
+				.container
+					.form-content-wrapper
+						.section-header-wrapper
+							.section-header-text-wrapper
+								span.round.round--big KVA
+								span.section-header-text.section-header-text-wrapper__text Admin Settings
+
+						form.multiple-forms-wrapper
+
+							//Form 1
+							.form-section-wrapper
+								.form-section
+									h3.header-3.form-section__header Company Profile
+									.form-wrapper.clearfix
+										.col-md-4
+											.form-element.form-element--input.animate-input
+												label.enter-input.form-text.form-element__label Company Name
+												input.input-style-detail.field-text.form-element__input
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="information" data-option="option-1") Information Industry
+													option(value="housing" data-option="option-2") housing industry
+													option(value="radio" data-option="option-3") radio industry
+													option(value="leisure" data-option="option-4") leisure industry
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Industry
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Information Industry
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Housing Industry
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") Radio Industry
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-4") Leisure Industry
+										.col-md-4
+											.form-element.form-element__attach-file-input#attach-file
+												label.choose-file-text.form-text(for="file-upload") Choose File
+													span.icon-wrapper: img(src="img/icons/camera.png")
+												input#file-upload(type="file" style="width:200px")
+
+								.form-section
+									h3.header-3.form-section__header Admin Profile
+									.form-wrapper.clearfix
+										.col-md-4
+											.form-element.form-element--input.animate-input
+												label.enter-input.form-text.form-element__label First Name
+												input.input-style-detail.field-text.form-element__input
+										.col-md-4
+											.form-element.form-element--input.animate-input
+												label.enter-input.form-text.form-element__label Last Name
+												input.input-style-detail.field-text.form-element__input
+										.col-md-4
+											.form-element.form-element--input.animate-input
+												label.enter-input.form-text.form-element__label Email Address
+												input.input-style-detail.field-text.form-element__input
+							//END: Form 1
+
+							//Form 2
+							.form-section-wrapper
+								.form-section
+									h3.header-3.form-section__header Timesheet Settings
+									.form-wrapper.clearfix
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="") Time update frequency
+													option(value="finished" data-option="option-1") Finished
+													option(value="pending" data-option="option-2") Pending
+													option(value="wip" data-option="option-3") WIP
+													option(value="approved" data-option="option-4") Approved
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Timesheet update frequency
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Finished
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Pending
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") WIP
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-4") Approved
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="mon-to-fri" data-option="option-1") mon - fri
+													option(value="mon-to-sat" data-option="option-2") mon - sat
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Working Days
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Monday - Friday
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Monday - Saturday
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="8" data-option="option-1") 8
+													option(value="9" data-option="option-2") 9
+													option(value="10" data-option="option-3") 10
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Working hours/day
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") 8
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") 9
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") 10
+
+								.form-section
+									h3.header-3.form-section__header Choice of words
+									.form-wrapper.clearfix
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="client" data-option="option-1") client
+													option(value="customer" data-option="option-2") customer
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Client
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Client
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Customer
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="assignment" data-option="option-1") assignment
+													option(value="task" data-option="option-2") task
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Job
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Assignment
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Task
+
+
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="resource" data-option="option-1") resource
+													option(value="talent" data-option="option-2") talent
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Employee
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Resource
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Talent
+							//END: Form 2
+							//Form 3
+							.form-section-wrapper
+								.form-section
+									h3.header-3.form-section__header Company Structure
+									.form-wrapper.clearfix
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="hr" data-option="option-1") hr
+													option(value="pm" data-option="option-2") pm
+													option(value="finance" data-option="option-3") finance
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value List of Departments
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Human Resource
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Project Management
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") Finance
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="senior" data-option="option-1") senior
+													option(value="junior" data-option="option-2") junior
+													option(value="supervisor" data-option="option-3") supervisor
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value List of Designation
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") Senior
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Junior
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") Supervisor
+										.col-md-4
+
+								.form-section
+									h3.header-3.form-section__header Billing Information
+									.form-wrapper.clearfix
+										.col-md-4
+											.form-element
+												select.select-menu
+													option(value="" data-option="")
+													option(value="inr" data-option="option-1") inr
+													option(value="dollar" data-option="option-2") dollar
+													option(value="euro" data-option="option-3") euro
+												.dropdown.dropdown--input
+													a.dropdown-toggle.form-text(href='#', data-toggle='dropdown')
+														span.selected-value Current
+														i.fa.fa-angle-down.fa-down(aria-hidden='true')
+													.dropdown-menu
+														ul.dropdown-select
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-1") INR
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-2") Dollar
+															li.dropdown-menu-list-item
+																a.dropdown-menu-link.dropdown-text(href='#' data-item="option-3") EURO
+
+							//END: Form 3
+
+							//Permissions section
+							.form-section-wrapper.form-section-wrapper--no-border
+								h3.header-3.form-section__header Permissions
+								.permissions-wrapper.clearfix
+									.col-md-4
+										.perrmission-block
+											h3.permission-block__header Admin
+											ul.permission-block-list
+												li.simple-text.permission-detail Can view profitability/revenue
+												li.simple-text.permission-detail  Can view and edit job status
+												li.simple-text.permission-detail  Can assign and edit clients, jobs and employees
+
+									.col-md-4
+										.perrmission-block
+											h3.permission-block__header Manager
+											ul.permission-block-list
+												li.simple-text.permission-detail Can view and edit job status        	   of his team
+												li.simple-text.permission-detail Can assign and edit jobs and   	   employees
+
+									.col-md-4
+										.perrmission-block
+											h3.permission-block__header Employee
+											ul.permission-block-list
+												li.simple-text.permission-detail Can view and edit own job
+												li.simple-text.permission-detail Can add a job, but cannot   		   delete a job
+							//END: Permissions section
+
+							//Submit button
+							.form-section-wrapper
+								button.btn(type="submit") Save
+							//END: Submit button
+
+
+
+			include jade/components/sidebar.jade
+
+
+		script(src='js/jquery-2.1.4.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/open-sidebar.js')
+		script(src='js/main.js')
+		script(src='js/hamburger-menu.js')
+		script(src='js/input-anim.js')
+		script(src='js/dropdown.js')
+		script(src='js/validation.js')

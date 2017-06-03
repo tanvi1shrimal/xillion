@@ -1,0 +1,8 @@
+mixin recent_activity(user_initials, text_part_1, text_part_2, company_nm, time_ago)
+	li.activity-inner-list.activity-inner-list-padding
+		.activity-inner-items
+			//span.round= user_initials
+			p.recent-inner-content= text_part_1+" "
+				span.highlight-text= company_nm
+				= " "+text_part_2
+			span.last-seen.pull-right= time_ago+" min ago"

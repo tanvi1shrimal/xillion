@@ -1,0 +1,31 @@
+// modal dialog for client-list
+#job-popup.modal.fade.add-member-pop
+	.modal-dialog.modal-dialog--add-popup.modal-dialog--add-popup-small
+		.modal-content
+			.modal-header
+				a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.sub-title.sidebar-header__header Add a Job
+			.modal-body
+				//Form 1
+				form.form-section-wrapper.form-section-wrapper--popup
+					.form-section
+
+						.form-wrapper.form-wrapper--add-popup
+							.form-parts
+								.col-md-6
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Job Name*
+										input.input-style-detail.field-text.form-element__input
+								.col-md-6
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Job Code
+										input.input-style-detail.field-text.form-element__input
+								.col-md-6
+									.form-element.form-element--input
+										label.enter-input.form-text.form-element__label Job Sub Category
+										input.input-style-detail.field-text.form-element__input
+
+
+					button.btn.btn--no-margin.btn--popup-btn Save
+
+				//END: Form 1

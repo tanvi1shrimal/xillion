@@ -1,0 +1,40 @@
+#all-jobs.tab-pane.active.activity-section.job-status-parent-wrapper.clearfix
+	.col-md-10.col-md-offset-1
+		ul.nav.nav-tabs.job-detail-nav-list
+			li.job-detail-nav-item.active
+				a.job-detail-nav-links(href='#al-j' aria-controls="al-j" role="tab" data-toggle="tab")
+					span.job-link-text All Jobs
+			li.job-detail-nav-item
+				a.job-detail-nav-links(href='#pending-jobs' aria-controls="pending-jobs" role="tab" data-toggle="tab")
+					span.job-link-text Open
+			li.job-detail-nav-item
+				a.job-detail-nav-links.upper(href='#wip-jobs' aria-controls="wip-jobs" role="tab" data-toggle="tab")
+					span.job-link-text Wip
+			li.job-detail-nav-item
+				a.job-detail-nav-links(href='#finished-jobs' aria-controls="finished-jobs" role="tab" data-toggle="tab")
+					span.job-link-text Finished
+			li.job-detail-nav-item
+				a.job-detail-nav-links(href='#approved-jobs' aria-controls="approved-jobs" role="tab" data-toggle="tab")
+					span.job-link-text Approved
+
+		.job-status-cards-wrapper
+			.tab-pane.status-card-wrapper-job.active#al-j
+				include mixins/individual-client-card.jade
+				+card_type("finished", "Finished")
+				+card_type("open", "Open")
+			.tab-pane.status-card-wrapper-job#pending-jobs
+				include mixins/individual-client-card.jade
+				+card_type("open", "Open")
+				+card_type("open", "Open")
+			.tab-pane.status-card-wrapper-job#wip-jobs
+				include mixins/individual-client-card.jade
+				+card_type("wip", "WIP")
+				+card_type("wip", "WIP")
+			.tab-pane.status-card-wrapper-job#finished-jobs
+				include mixins/individual-client-card.jade
+				+card_type("finished", "Finished")
+				+card_type("finished", "Finished")
+			.tab-pane.status-card-wrapper-job#approved-jobs
+				include mixins/individual-client-card.jade
+				+card_type("approved", "Approved")
+				+card_type("approved", "Approved")

@@ -1,0 +1,86 @@
+#edit-popup.modal.fade.add-member-pop.employee-edit-pop
+	.modal-dialog
+		.modal-content
+			.modal-header
+				a.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.sub-title.sidebar-header__header Edit this Employee
+			.modal-body
+				form.client-popup-form(action='')
+					.row
+						.col-md-4.signup-detail
+							label(for='first_name') Employee ID
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') First Name
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Last Name
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Date of Birth
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Date of joining
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Address
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Phone
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Email Address
+							input.input-style-detail(type='text', name='firstname')
+						.col-md-4.signup-detail
+							label(for='first_name') Position
+							input.input-style-detail(type='text', name='firstname')
+						.dropdown.col-md-4.employee-drop
+							a.dropdown-toggle.input-style-detail(href='#', data-toggle='dropdown')
+								| Department
+								i.fa.fa-angle-down.fa-down(aria-hidden='true')
+							ul.dropdown-menu
+								li
+									a.dropdown-menu-link(href='#') Admin
+								li
+									a.dropdown-menu-link(href='#') Manager
+								li
+									a.dropdown-menu-link(href='#') Employee
+						.dropdown.col-md-4.employee-drop
+							a.dropdown-toggle.input-style-detail(href='#', data-toggle='dropdown')
+								| Salary
+								i.fa.fa-angle-down.fa-down(aria-hidden='true')
+							ul.dropdown-menu
+								li
+									a.dropdown-menu-link(href='#') Admin
+								li
+									a.dropdown-menu-link(href='#') Manager
+								li
+									a.dropdown-menu-link(href='#') Employee
+						.dropdown.col-md-4.employee-drop
+							a.dropdown-toggle.input-style-detail(href='#', data-toggle='dropdown')
+								| Reports to
+								i.fa.fa-angle-down.fa-down(aria-hidden='true')
+							ul.dropdown-menu
+								li
+									a.dropdown-menu-link(href='#') Admin
+								li
+									a.dropdown-menu-link(href='#') Manager
+								li
+									a.dropdown-menu-link(href='#') Employee
+					.radio-selection
+						h3.recent-sub-head Company
+						ul.radio-selection-list
+							li.radio-selection-items
+								input(type='radio', name='gender', value='male', checked='')
+								span.radio-name
+								| Manager
+							li.radio-selection-items
+								input(type='radio', name='gender', value='male', checked='')
+								span.radio-name
+								| Employee
+							li.radio-selection-items
+								input(type='radio', name='gender', value='male', checked='')
+								span.radio-name
+								| Admin
+					.conformation-btn
+						a.btn.save-btn(type='submit', href='#') Save

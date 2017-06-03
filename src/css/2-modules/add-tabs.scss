@@ -1,0 +1,263 @@
+.add-tabs-container, .add-tabs-pane-container, .add-mod-navigation-block{
+	width: 940px;
+}
+
+.tab-content .tab-pane{
+	overflow-y: visible !important;
+}
+
+.activity-wrapper{
+	margin-top: 40px;
+}
+
+.add-tab-link{
+	.round{
+		font-size: 16px;
+		height: 35px;
+		width: 35px;
+		color: $icon-gray;
+		background: white;
+		border-color: $icon-gray;
+	}
+
+	.link-sub-text{
+		color: $lightblack;
+	}
+}
+
+.add-tabs-container{
+	&.nav>li>a{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		border: 0;
+		padding: 35px 0;
+	}
+
+	&.nav-tabs{
+		border: 0;
+
+//		& >li{
+//			float: none;
+//			margin: 0;
+//		}
+	}
+
+	&.nav-tabs>li.active>a, &.nav-tabs>li.active>a:hover, &.nav-tabs>li.active>a:focus{
+		color: default;
+		border: 0;
+		cursor: none;
+		background: none;
+	}
+
+	&.nav-tabs>li>a:hover{
+		background: none;
+		border: 0;
+	}
+}
+
+.add-tab{
+	border-left: 1px solid $border-line;
+//
+//	&-link{
+//		display: flex;
+//		align-items: center;
+//    	width: 100%;
+//		padding: 35px 0;
+//	}
+
+	&-link-text{
+		margin-left: 10px;
+		position: relative;
+		display: block;
+		width: 70%;
+
+		&__sub-text{
+			visibility: hidden;
+			position: absolute;
+		}
+	}
+
+	&.active{
+		.add-tab-link-text{
+			&__header{
+				color: $orange;
+			}
+
+			&__sub-text{
+				visibility: visible;
+			}
+		}
+
+		.round{
+			color: $orange;
+			border-color: $orange;
+			background: white
+		}
+	}
+
+	&.done{
+		.add-tab-link-text{
+			&__header{
+				color: $orange;
+			}
+
+			&__sub-text{
+				visibility: visible;
+			}
+		}
+
+		.round{
+			background: $orange;
+			border-color: $orange;
+			color: white;
+		}
+	}
+}
+
+/*--------Add tabs pane container--------*/
+
+.add-tabs-pane{
+	position: relative;
+
+	.activity-wrapper{
+		/*-----------radio button-----------*/
+		.radio-btn-wrapper, .checkbox-btn-wrapper{
+			margin-right: 35px;
+	//		position: relative;
+		}
+
+		.checkbox-btn-wrapper{
+			display: flex;
+		}
+	/*-----------END: radio button-----------*/
+	}
+
+	.add-popup{
+		display: inline-flex;
+		position: absolute;
+		right: 0;
+		align-items: center;
+		color: $blue;
+
+		.icon-plus{
+			font-size: 10px;
+		}
+
+		&__text{
+			margin-left: 10px;
+		}
+	}
+
+	&__header{
+		&--middle{
+			margin-top: 60px;
+		}
+	}
+
+	.search-field-wrapper{
+		margin-top: 45px;
+	}
+
+	.activity-tab-header{
+		width: 25%;
+
+		&--employees{
+			width: 20%;
+		}
+	}
+
+	.activity-table-row{
+		&__body{
+			cursor: pointer;
+			border-bottom: 1px solid $border-line;
+		}
+
+		td{
+			padding: 15px 0px;
+		}
+	}
+}
+
+/*--------END :Add tabs pane container--------*/
+
+/*------------Navigation block------------*/
+//.add-mod-navigation-block{
+.navigation-btn-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 340px;
+	margin: 45px auto;
+
+	.btn{
+		margin: 0;
+		width: 125px;
+	}
+
+	&__go-back, &__skip-step{
+		color: $lightgray;
+		text-decoration: underline;
+
+		&:hover{
+			color: $lightgray;
+		}
+
+		&:link{
+			text-decoration: underline;
+		}
+	}
+}
+/*------------END: Navigation block------------*/
+
+/*-------------------Job list-------------------*/
+.job-list{
+	column-count: 3;
+
+	&-wrapper{
+		margin-top: 60px;
+	}
+
+	&-item{
+		line-height: 300%;
+	}
+}
+
+.radio-table-cell{
+	input[type="checkbox"]{
+		height: 0;
+		width: 0;
+		margin: 0;
+	}
+
+	.custom-checkbox{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 10px;
+		color: $blue;
+		position: relative;
+		top: 5px;
+
+		& .icon-check{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+		}
+
+		&.active{
+			border-color: $blue;
+
+			& .icon-check{
+				opacity: 1;
+			}
+		}
+	}
+
+	.checkbox-shape{
+		height: 15px;
+		width: 15px;
+	}
+}
+/*-------------------END: Job list-------------------*/

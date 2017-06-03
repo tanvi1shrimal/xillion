@@ -1,0 +1,58 @@
+header.header
+	nav.nav-bar
+		.nav-block-1
+			.logo-section
+				a.menu-icon(href='onboarding.html')
+					span.icon-hamburger.nav-dropdown-icon
+				a.nav-company-logo(href='#')
+					img(src='img/logo/logo.png', alt='')
+			.search-form-wrapper
+				form.search-form(action='#')
+					input.search-form__input-field(type='text', placeholder='Search')
+					button.search-form__cta(type='submit')
+						img(src='img/icons/search.png', alt='Search icon')
+		.nav-block-2
+			.notifications-block
+				a.circular-link-blocks.open-notification(href='#')
+					img(src='img/icons/notification.png', alt='Notifications Image')
+					span.round 1
+				.dropdown
+					a.circular-link-blocks.dropdown-toggle(href='#', data-toggle='dropdown')
+						span.circular-link-text AR
+					ul.dropdown-menu
+						li.dropdown-items
+							a(href='#') Profile
+						li.dropdown-items
+							a(href='#') Preferences
+						li.dropdown-items
+							a(href='admin-settings.html') Settings
+						li.dropdown-items
+							a(href='#') Sign Out
+	// Hamburger menu
+	.hamburger-menu
+		ul.menu-list
+			li.menu-list-item
+				a.list-link.menu-text(href='dashboard.html')
+					span.icon-dashboard.link-icon
+					span.text-only Dashboard
+			li.menu-list-item
+				a.list-link.menu-text(href='dashboard.html')
+					span.icon-briefcase.link-icon
+					span.text-only Jobs
+			li.menu-list-item
+				a.list-link.menu-text(href='client-list.html')
+					span.icon-hand-shake.link-icon
+					span.text-only Clients
+			li.menu-list-item
+				a.list-link.menu-text(href='employee-list.html')
+					span.icon-employees.link-icon
+					span.text-only Employees
+			li.menu-list-item
+				a.list-link.menu-text(href='timesheet.html')
+					span.icon-timesheet.link-icon
+					span.text-only Timesheet
+			li.menu-list-item
+				a.list-link.menu-text(href='admin-settings.html')
+					span.icon-settings.link-icon
+					span.text-only Settings
+	// END: Hamburger menu

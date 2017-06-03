@@ -1,0 +1,61 @@
+.status-card-comment-line{
+	position: relative;
+}
+
+.status-comment-line-list{
+	opacity: 1;
+	visibility: visible;
+	transition: 0.2s ease;
+
+	&.hide-block{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.write-note-block{
+	position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 10px;
+    bottom: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: 0.2s ease;
+
+	&.write-note{
+		transform: scaleX(1);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.write-note-icon{
+		width: 4%;
+		color: $blue;
+		font-size: 20px;
+	}
+
+	.note-input-wrapper{
+		width: 96%;
+		border-bottom: 1px solid $blue;
+
+		&__field{
+			width: 94%;
+			border: 0;
+		}
+
+		.icon-return{
+			width: 4%;
+			margin-left: 2%;
+			color: $gray;
+
+			&.change-color{
+				color: $blue;
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+doctype html
+html(lang='en')
+
+    - var page_name = "client-list";
+
+    include jade/base/header.jade
+    +header(page_name)
+  body
+    // Client list page starts
+    // Nav header
+    include jade/components/navbar.jade
+    // END: Nav header
+    main.with-nav
+      .nav-overlay
+      section.add-member-section
+        .container
+          ul.add-member-subhead
+            li.member-side-head
+              | Clients:
+              span.count 20
+            li.add-button-style.pull-right
+              a.btn(href='#', data-toggle='modal', data-target='#client-popup')
+                i.fa.fa-plus(aria-hidden='true')
+                | 					Add Client
+              a.import-btn.btn(href='#', data-toggle='modal', data-target='#card-popup1')
+                img(src='img/chart.png', alt='')
+                span.small-info Import Clients
+      section
+        .container
+          .add-member-table-wrap
+            table.table.add-member-table-structure
+              thead
+                tr.client-table-head-spacing
+                  th
+                    | Client Code
+                    i.fa.fa-exchange(aria-hidden='true')
+                  th.name-spacing
+                    | Name
+                    i.fa.fa-exchange(aria-hidden='true')
+                  th
+                    | Revenue
+                    i.fa.fa-exchange(aria-hidden='true')
+                  th
+                    | Profitablity
+                    i.fa.fa-exchange(aria-hidden='true')
+                  th
+                    | Priority
+                    i.fa.fa-exchange(aria-hidden='true')
+                  th
+                    | No.of jobs
+                    i.fa.fa-exchange(aria-hidden='true')
+                  th
+                    | Hours/Week
+                    i.fa.fa-exchange(aria-hidden='true')
+              tbody
+                include jade/components/mixins/client-list-row.jade
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+                +client_list_row("1000", "RKSV", "10,000", "60%", "Regular", "3", "25")
+
+            // <a href="#" class="next-link pull-right">Next <span>(10-20 OF 25)</span></a>
+    include jade/components/client-popup.jade
+    include jade/components/upload-client-popup.jade
+
+    .sidebar
+      .sidebar-header
+        h2.sidebar-header__header Notifications
+        a.close-notification-sidebar(href='#')
+          img(src='img/icons/close.png', alt='Close image')
+      .notification-list-container
+        ul.notification-list
+          li.notification-list-item
+            a.notification-list-item__link(href='#')
+              span.logo-block.round
+                | AM
+              span.notification-list-brief
+                | Welcome to Xillion! Here are some tips and tricks for you.
+    script(src='js/jquery-2.1.4.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/open-sidebar.js')
+    script(src='js/hamburger-menu.js')
+    script(src='js/input-anim.js')
+    script(src='js/dropdown.js')
